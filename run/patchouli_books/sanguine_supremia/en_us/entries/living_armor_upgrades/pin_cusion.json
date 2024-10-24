@@ -1,0 +1,32 @@
+{
+  "name": "Pin Cushion",
+  "icon": "minecraft:arrow",
+  "category": "patchouli:living_armor_upgrades",
+  "flag": "testing_mode",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Reduces damage taken from projectiles.$(br2)$(bold)Trained By:$()$(br)Taking Damage from Projectiles$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)30 Damage Taken$(br)$(li)Cost:$(br)$(li2)4 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-10% Damage Taken$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)200 Damage Taken$(br)$(li)Cost:$(br)$(li2)9 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-30% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)400 Damage Taken$(br)$(li)Cost:$(br)$(li2)16 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-40% Damage Taken$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)800 Damage Taken$(br)$(li)Cost:$(br)$(li2)30 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-50% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)1,500 Damage Taken$(br)$(li)Cost:$(br)$(li2)60 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-60% Damage Taken$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)2,500 Damage Taken$(br)$(li)Cost:$(br)$(li2)90 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-70% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)3,500 Damage Taken$(br)$(li)Cost:$(br)$(li2)125 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-75% Damage Taken$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)5,000 Damage Taken$(br)$(li)Cost:$(br)$(li2)165 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-77% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)7,000 Damage Taken$(br)$(li)Cost:$(br)$(li2)210 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-80% Damage Taken$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)15,000 Damage Taken$(br)$(li)Cost:$(br)$(li2)250 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-83% Damage Taken"
+    }
+  ]
+}

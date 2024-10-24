@@ -1,0 +1,31 @@
+{
+  "name": "Grave Digger",
+  "icon": "minecraft:iron_shovel",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Increases damage dealt when wielding shovels.$(br2)$(bold)Trained By:$()$(br)Dealing Damage with Shovels$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)200 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)5 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+1.0 Shovel Damage$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)800 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)12 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+2.0 Shovel Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)1,200 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)20 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+3.0 Shovel Damage$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)2,500 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)35 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+4.0 Shovel Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)3.800 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)49 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+5.0 Shovel Damage$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)5,000 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)78 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+6.0 Shovel Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)7,000 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)110 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+7.0 Shovel Damage$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)9,200 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)160 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+8.0 Shovel Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)11,500 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)215 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+9.0 Shovel Damage$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)140,000 Shovel Damage Dealt$(br)$(li)Cost:$(br)$(li2)320 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+10.0 Shovel Damage"
+    }
+  ]
+}

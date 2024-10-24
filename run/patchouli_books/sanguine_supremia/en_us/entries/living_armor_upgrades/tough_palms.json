@@ -1,0 +1,31 @@
+{
+  "name": "Tough Palms",
+  "icon": "bloodmagic:sacrificial_dagger",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Grants a bonus to Self-Sacrifice, up to an additional 150%.$(br2)$(bold)Trained By:$()$(br)Sacrificing Blood with the Sacrificial Knife$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)30 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)7 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+15% Sacrifice Multiplier$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)200 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)13 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+30% Sacrifice Multiplier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)400 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)22 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+45% Sacrifice Multiplier$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)700 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)40 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+60% Sacrifice Multiplier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)1,100 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)65 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+75% Sacrifice Multiplier$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)1,500 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)90 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+90% Sacrifice Multiplier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)2,000 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)130 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+105% Sacrifice Multiplier$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)2,800 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)180 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+120% Sacrifice Multiplier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)3,600 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)250 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+135% Sacrifice Multiplier$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)5,000 Health Sacrificed$(br)$(li)Cost:$(br)$(li2)350 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+150% Sacrifice Multiplier"
+    }
+  ]
+}

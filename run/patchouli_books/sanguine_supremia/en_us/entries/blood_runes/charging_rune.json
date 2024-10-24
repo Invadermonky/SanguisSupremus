@@ -1,0 +1,20 @@
+{
+  "name": "Charging Rune",
+  "icon": "bloodmagic:blood_rune:",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Charging Rune$() is a unique Rune upgrade. While the Blood Altar is not crafting or filling a Blood Orb, it will syphon $(blood)LP$() from the altar to fill an internal buffer.$(br2)When an item is placed inside the Altar, it will instantaneously consume the stored charge at a 1:1 ratio and apply it to the crafting process."
+    },
+    {
+      "type": "text",
+      "text": "The Blood Altar does one charging tick per 20 in-game ticks, which is reduced by 1 tick per Acceleration Rune.$(br2)The speed that the Blood Altar charges per charging tick is [$(blood)10LP$() * $(item)Charging Runes$() * (1 + Speed Runes/10)].$(br2)The maximum charge that a Blood Altar can hold is $(blood)1000 LP$() per $(item)Charging Rune$() multiplied by [(Blood Altar capacity)/20000] provided the value is greater than 1."
+    },
+    {
+      "type": "crafting",
+      "title": "Charging Rune",
+      "recipe": "bloodmagic:blood_rune/blood_rune_charging"
+    }
+  ]
+}

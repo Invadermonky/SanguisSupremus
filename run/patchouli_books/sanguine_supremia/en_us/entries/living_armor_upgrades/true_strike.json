@@ -1,0 +1,23 @@
+{
+  "name": "True Strike",
+  "icon": "minecraft:golden_sword",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Increases critical strike damage up to 50% additional damage.$(br2)$(bold)Trained By:$()$(br)Attacking Mobs While Falling$(br2)$(bold)Maximum Level:$() 5"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)200 Crit. Damage Dealt$(br)$(li)Cost:$(br)$(li2)5 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+10% Crit. Damage$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)800 Crit. Damage Dealt$(br)$(li)Cost:$(br)$(li2)12 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+20% Crit. Damage"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)1,300 Crit. Damage Dealt$(br)$(li)Cost:$(br)$(li2)22 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+30% Crit. Damage$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)2,500 Crit. Damage Dealt$(br)$(li)Cost:$(br)$(li2)35 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+40% Crit. Damage"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)3,800 Crit. Damage Dealt$(br)$(li)Cost:$(br)$(li2)49 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+50% Crit. Damage"
+    }
+  ]
+}

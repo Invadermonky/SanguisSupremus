@@ -1,0 +1,16 @@
+{
+  "name": "Displacement Rune",
+  "icon": "bloodmagic:blood_rune:5",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Displacement Rune$() increases the transfer rate of $(blood)Life Essence$() into and out of the Blood Altar when pumping to or from an external tank.$(br2)Each $(item)Displacement Rune$() increases this rate by (20 * n^1.2) where 'n' is the number of $(item)Displacement Runes$() in the altar."
+    },
+    {
+      "type": "crafting",
+      "title": "Displacement Rune",
+      "recipe": "bloodmagic:blood_rune/blood_rune_displacement"
+    }
+  ]
+}

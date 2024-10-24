@@ -1,0 +1,24 @@
+{
+  "name": "Sigil of Stone",
+  "icon": "sanguissupremus:sigil_stone",
+  "category": "patchouli:sigils",
+  "flag": "sanguissupremus:sigil_stone",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Sigil of Stone$() is a useful tool for placing blocks created by water and lava fluid interactions.$(br2)The sigil has three modes that can be cycled through using [$(k:sneak)] + [$(k:use)]:$(li)Cobblestone$(li)Stone$(li)Obsidian"
+    },
+    {
+      "type": "text",
+      "text": "Using [$(k:use)] on a surface in the world will place the specified block into the world and drain $(blood)LP$() from the bound player's Soul Network.$(br2)$(bold)Cost:$()$(li)Cobblestone: $(blood)50 LP$()/use$(li)Stone: $(blood)150 LP$()/use$(li)Obsidian: $(blood)1,500 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Stone Reagent",
+      "soulforge.output": "sanguissupremus:reagent_stone",
+      "array.heading": "Sigil of Stone",
+      "array.output": "sanguissupremus:sigil_stone",
+      "array.text": "$(italic)One block at a time...$()"
+    }
+  ]
+}

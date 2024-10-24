@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of Elemental Affinity",
+  "icon": "bloodmagic:sigil_elemental_affinity",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Elemental Affinity$() will grant you immunity from fire, drowning and fall damage.$(br2)$(bold)Cost:$() $(blood)100 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Elemental Aff. Reagent",
+      "soulforge.output": "bloodmagic:component:6",
+      "array.heading": "Sigil of Elemental Aff.",
+      "array.output": "bloodmagic:sigil_elemental_affinity"
+    }
+  ]
+}

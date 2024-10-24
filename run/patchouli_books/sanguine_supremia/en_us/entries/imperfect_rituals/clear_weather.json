@@ -1,0 +1,25 @@
+{
+  "name": "Clear Skies",
+  "icon": "minecraft:glass",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Sets the weather to clear.$(br2)$(li)Cost: $(blood)5000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:glass",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ],
+        "offset": [0,-1,0]
+      }
+    }
+  ]
+}

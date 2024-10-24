@@ -1,0 +1,22 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:items/sigil_stone_cobblestone"
+  },
+  "overrides": [
+    {
+      "__comment": "Placing Stone",
+      "predicate": {
+        "sanguissupremus:ordinal": 1
+      },
+      "model": "sanguissupremus:item/sigil/sigil_stone_1"
+    },
+    {
+      "__comment": "Placing Obsidian",
+      "predicate": {
+        "sanguissupremus:ordinal": 2
+      },
+      "model": "sanguissupremus:item/sigil/sigil_stone_2"
+    }
+  ]
+}

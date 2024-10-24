@@ -1,0 +1,24 @@
+{
+  "name": "Thunderstorm",
+  "icon": "minecraft:water_bucket",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Spawns a thunderstorm.$(br2)$(li)Cost: $(blood)5000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:water",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

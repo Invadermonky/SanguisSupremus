@@ -1,0 +1,20 @@
+{
+  "name": "Sigil of Earth",
+  "icon": "sanguissupremus:sigil_dirt",
+  "category": "patchouli:sigils",
+  "flag": "sanguissupremus:sigil_dirt",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On [$(k:use)], the $(item)Sigil of Earth$() attempts to place a dirt block on the targeted flat surface.$(br2)$(bold)Cost:$() $(blood)50 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Earth Reagent",
+      "soulforge.output": "sanguissupremus:reagent_dirt",
+      "array.heading": "Sigil of Earth",
+      "array.output": "sanguissupremus:sigil_dirt",
+      "array.text": "$(italic)Much better than a dirty stick$()"
+    }
+  ]
+}

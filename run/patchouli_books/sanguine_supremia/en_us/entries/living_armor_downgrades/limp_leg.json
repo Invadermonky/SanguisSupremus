@@ -1,0 +1,27 @@
+{
+  "name": "Limp Leg",
+  "icon": "minecraft:soul_sand",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Reduces movement speed significantly.$(br2)Effect caps out at a 70% reduction.$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Cost:$(br)$(li2)-10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-10% Movement Speed$(br2)$(bold)Level 2:$()$(br)$(li)Cost:$(br)$(li2)-17 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-20% Movement Speed$(br2)$(bold)Level 3:$()$(br)$(li)Cost:$(br)$(li2)-23 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-30% Movement Speed$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 4:$()$(br)$(li)Cost:$(br)$(li2)-35 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-40% Movement Speed$(br2)$(bold)Level 5:$()$(br)$(li)Cost:$(br)$(li2)-48 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-45% Movement Speed$(br2)$(bold)Level 6:$()$(br)$(li)Cost:$(br)$(li2)-60 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-50% Movement Speed$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Cost:$(br)$(li2)-80 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-55% Movement Speed$(br2)$(bold)Level 8:$()$(br)$(li)Cost:$(br)$(li2)-110 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-60% Movement Speed$(br2)$(bold)Level 9:$()$(br)$(li)Cost:$(br)$(li2)-160 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-65% Movement Speed$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 10:$()$(br)$(li)Cost:$(br)$(li2)-200 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-70% Movement Speed"
+    }
+  ]
+}

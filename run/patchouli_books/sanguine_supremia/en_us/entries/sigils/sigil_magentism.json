@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of Magnetism",
+  "icon": "bloodmagic:sigil_magnetism",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Magnetism$() increases the player's item pickup range to 7 blocks.$(br2)$(bold)Cost:$() $(blood)50 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Magnetism Reagent",
+      "soulforge.output": "bloodmagic:component:12",
+      "array.heading": "Sigil of Magnetism",
+      "array.output": "bloodmagic:sigil_magnetism"
+    }
+  ]
+}

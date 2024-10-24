@@ -1,0 +1,23 @@
+{
+  "name": "Transposition Sigil",
+  "icon": "bloodmagic:sigil_transposition",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Transposition Sigil$() allows players to store and transport a single block.$(br2)Block information is saved during this process, allowing players to transport chests, furnaces, or other complex devices.$(br2)To use, [$(k:sneak)] + [$(k:use)] an empty $(item)Transposition Sigil$() on the desired block to store"
+    },
+    {
+      "type": "text",
+      "text": "it, then [$(k:use)] the sigil again at the new location you wish to place the stored block.$(br2)$(bold)Cost:$() $(blood)1,000 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Transposition Reagent",
+      "soulforge.output": "bloodmagic:component:18",
+      "array.heading": "Transposition Sigil",
+      "array.output": "bloodmagic:sigil_transposition",
+      "array.text": "$(italic)Feel the power of the Force, my young apprentice.$()"
+    }
+  ]
+}

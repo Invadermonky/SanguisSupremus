@@ -1,0 +1,23 @@
+{
+  "name": "Trick Shot",
+  "icon": "minecraft:bow",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Fires additional arrows when shooting a bow.$(br2)One additional arrow is fired per rank of Trick Shot.$(br2)$(bold)Trained By:$()$(br)Shooting Arrows$(br2)$(bold)Maximum Level:$() 5"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)50 Arrows Shot$(br)$(li)Cost:$(br)$(li2)20 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+1 Extra Arrow$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)200 Arrows Shot$(br)$(li)Cost:$(br)$(li2)50 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+2 Extra Arrows"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)700 Arrows Shot$(br)$(li)Cost:$(br)$(li2)90 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+3 Extra Arrows$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)1,500 Arrows Shot$(br)$(li)Cost:$(br)$(li2)160 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+4 Extra Arrows"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)3,000 Arrows Shot$(br)$(li)Cost:$(br)$(li2)290 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+5 Extra Arrows"
+    }
+  ]
+}

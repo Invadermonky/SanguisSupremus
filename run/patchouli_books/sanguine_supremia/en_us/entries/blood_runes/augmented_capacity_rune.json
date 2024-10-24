@@ -1,0 +1,16 @@
+{
+  "name": "Rune of Aug. Capacity",
+  "icon": "bloodmagic:blood_rune:7",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Rune of Augmented Capacity$() increase the capacity of the Blood Altar by a multiplicative +7.5% per rune.$(br2)This calculation is applied prior to additional capacity added by Capacity Runes."
+    },
+    {
+      "type": "crafting",
+      "title": "Rune of Aug. Capacity",
+      "recipe": "bloodmagic:blood_rune/blood_rune_augcapacity"
+    }
+  ]
+}

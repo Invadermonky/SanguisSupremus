@@ -1,0 +1,23 @@
+{
+  "name": "Battle Hungry",
+  "icon": "minecraft:rotten_flesh",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Gives hunger if you haven't attacked something recently.$(br2)Higher levels have a shorter cooldown window and make the hunger worse.$(br2)$(bold)Maximum Level:$() 5"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Cost:$(br)$(li2)-10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+0.02 Food Exhaustion$(br)$(li2)30 sec. delay$(br2)$(bold)Level 2:$()$(br)$(li)Cost:$(br)$(li2)-20 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+0.04 Food Exhaustion$(br)$(li2)30 sec. delay$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Cost:$(br)$(li2)-35 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+0.06 Food Exhaustion$(br)$(li2)30 sec. delay$(br2)$(bold)Level 4:$()$(br)$(li)Cost:$(br)$(li2)-50 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+0.08 Food Exhaustion$(br)$(li2)25 sec. delay$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Cost:$(br)$(li2)-75 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+0.10 Food Exhaustion$(br)$(li2)20 sec. delay"
+    }
+  ]
+}

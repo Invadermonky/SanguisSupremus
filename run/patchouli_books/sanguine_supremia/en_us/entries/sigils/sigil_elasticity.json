@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of Elasticity",
+  "icon": "bloodmagic:sigil_bounce",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Elasticity$() grants immunity to fall damage, instead bouncing the player as though they landed on a $(item)Slime Block$().$(br2)$(bold)Cost:$() $(blood)100 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Elasticity Reagent",
+      "soulforge.output": "bloodmagic:component:31",
+      "array.heading": "Sigil of Elasticity",
+      "array.output": "bloodmagic:sigil_bounce"
+    }
+  ]
+}

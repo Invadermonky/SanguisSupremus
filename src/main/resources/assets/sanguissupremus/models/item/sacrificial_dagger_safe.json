@@ -1,0 +1,15 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:sacrificial_dagger_safe"
+  },
+  "overrides": [
+    {
+      "__comment": "Incense Infused",
+      "predicate": {
+        "sanguissupremus:ceremonial": 1
+      },
+      "model": "sanguissupremus:item/tool/sacrificial_dagger_safe_ceremonial"
+    }
+  ]
+}

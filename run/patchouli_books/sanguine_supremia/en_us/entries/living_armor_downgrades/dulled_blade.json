@@ -1,0 +1,27 @@
+{
+  "name": "Dulled Blade",
+  "icon": "minecraft:stone_sword",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Reduces melee damage dealt.$(br2)Caps out at an 80% reduction.$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Cost:$(br)$(li2)-10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-10% Damage Dealt$(br2)$(bold)Level 2:$()$(br)$(li)Cost:$(br)$(li2)-17 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-20% Damage Dealt$(br2)$(bold)Level 3:$()$(br)$(li)Cost:$(br)$(li2)-28 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-25% Damage Dealt$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 4:$()$(br)$(li)Cost:$(br)$(li2)-42 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-30% Damage Dealt$(br2)$(bold)Level 5:$()$(br)$(li)Cost:$(br)$(li2)-60 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-35% Damage Dealt$(br2)$(bold)Level 6:$()$(br)$(li)Cost:$(br)$(li2)-80 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-40% Damage Dealt$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Cost:$(br)$(li2)-100 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-50% Damage Dealt$(br2)$(bold)Level 8:$()$(br)$(li)Cost:$(br)$(li2)-125 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-60% Damage Dealt$(br2)$(bold)Level 9:$()$(br)$(li)Cost:$(br)$(li2)-160 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-70% Damage Dealt$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 10:$()$(br)$(li)Cost:$(br)$(li2)-200 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-80% Damage Dealt"
+    }
+  ]
+}

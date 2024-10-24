@@ -1,0 +1,13 @@
+{
+  "name": "Call of the Zephyr",
+  "icon": "minecraft:hopper",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Call of the Zephyr",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:zephyr"
+    }
+  ]
+}

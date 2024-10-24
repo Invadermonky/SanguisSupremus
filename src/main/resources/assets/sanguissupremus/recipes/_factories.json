@@ -1,0 +1,6 @@
+{
+  "conditions": {
+    "item_exists": "com.invadermonky.sanguissupremus.util.factories.ConditionFactoryItemExists",
+    "mod_loaded": "com.invadermonky.sanguissupremus.util.factories.ConditionFactoryModLoaded"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Storm Trooper",
+  "icon": "minecraft:arrow",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Occasionally makes you wildly inaccurate when shooting bows.$(br2)$(bold)Maximum Level:$() 5"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Cost:$(br)$(li2)-10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)4% Wild Shot Chance$(br2)$(bold)Level 2:$()$(br)$(li)Cost:$(br)$(li2)-25 Upgrade Points$(br)$(li)Effect:$(br)$(li2)8% Wild Shot Chance$(br2)$(bold)Level 3:$()$(br)$(li)Cost:$(br)$(li2)-40 Upgrade Points$(br)$(li)Effect:$(br)$(li2)12% Wild Shot Chance"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 4:$()$(br)$(li)Cost:$(br)$(li2)-65 Upgrade Points$(br)$(li)Effect:$(br)$(li2)16% Wild Shot Chance$(br2)$(bold)Level 5:$()$(br)$(li)Cost:$(br)$(li2)-90 Upgrade Points$(br)$(li)Effect:$(br)$(li2)20% Wild Shot Chance"
+    }
+  ]
+}

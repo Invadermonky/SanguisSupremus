@@ -1,0 +1,19 @@
+{
+  "name": "Sigil of the Blood Lamp",
+  "icon": "bloodmagic:sigil_blood_light",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On [$(k:use)], the $(item)Sigil of the Blood Lamp$() launches a blood light in the direction you are facing. On contacting a surface, it will spawn a near-invisible light source.$(br2)$(bold)Cost:$() $(blood)10 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Blood Lamp Reagent",
+      "soulforge.output": "bloodmagic:component:11",
+      "array.heading": "Sigil of the Blood Lamp",
+      "array.output": "bloodmagic:sigil_blood_light",
+      "array.text": "$(italic)I see a light!$()"
+    }
+  ]
+}

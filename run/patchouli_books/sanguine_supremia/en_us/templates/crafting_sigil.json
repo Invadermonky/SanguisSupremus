@@ -1,0 +1,22 @@
+{
+  "include": [
+    {
+      "template": "crafting_soulforge",
+      "as": "soulforge",
+      "using": {
+        "output": "#soulforge.output"
+      },
+      "x": 0,
+      "y": 0
+    },
+    {
+      "template": "crafting_array",
+      "as": "array",
+      "using": {
+        "output": "#array.output"
+      },
+      "x": 0,
+      "y": 60
+    }
+  ]
+}

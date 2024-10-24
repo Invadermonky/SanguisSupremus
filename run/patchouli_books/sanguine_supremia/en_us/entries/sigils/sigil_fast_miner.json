@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of the Fast Miner",
+  "icon": "bloodmagic:sigil_fast_miner",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of the Fast Miner$() grants the holder the $(thing)Haste II$() effect, significantly increasing mining, digging and attack speed.$(br2)$(bold)Cost:$() $(blood)100 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Mining Reagent",
+      "soulforge.output": "bloodmagic:component:3",
+      "array.heading": "Sigil of the Fast Miner",
+      "array.output": "bloodmagic:sigil_fast_miner"
+    }
+  ]
+}

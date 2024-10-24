@@ -1,0 +1,27 @@
+{
+  "name": "Disoriented",
+  "icon": "minecraft:minecart",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Occasionally disorients the player, causing them to face in a random direction.$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Cost:$(br)$(li2)-10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)0.1% Disorient Chance$(br2)$(bold)Level 2:$()$(br)$(li)Cost:$(br)$(li2)-20 Upgrade Points$(br)$(li)Effect:$(br)$(li2)0.2% Disorient Chance$(br2)$(bold)Level 3:$()$(br)$(li)Cost:$(br)$(li2)-30 Upgrade Points$(br)$(li)Effect:$(br)$(li2)0.3% Disorient Chance$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 4:$()$(br)$(li)Cost:$(br)$(li2)-40 Upgrade Points$(br)$(li)Effect:$(br)$(li2)0.4% Disorient Chance$(br2)$(bold)Level 5:$()$(br)$(li)Cost:$(br)$(li2)-70 Upgrade Points$(br)$(li)Effect:$(br)$(li2)0.5% Disorient Chance$(br2)$(bold)Level 6:$()$(br)$(li)Cost:$(br)$(li2)-80 Upgrade Points$(br)$(li)Effect:$(br)$(li2)0.6% Disorient Chance$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Cost:$(br)$(li2)-100 Upgrade Points$(br)$(li)Effect:$(br)$(li2)0.8% Disorient Chance$(br2)$(bold)Level 8:$()$(br)$(li)Cost:$(br)$(li2)-140 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1.0% Disorient Chance$(br2)$(bold)Level 9:$()$(br)$(li)Cost:$(br)$(li2)-180 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1.2% Disorient Chance$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 10:$()$(br)$(li)Cost:$(br)$(li2)-220 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1.4% Disorient Chance"
+    }
+  ]
+}

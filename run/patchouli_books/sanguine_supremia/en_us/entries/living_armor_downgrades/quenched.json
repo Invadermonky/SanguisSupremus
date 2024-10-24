@@ -1,0 +1,11 @@
+{
+  "name": "Quenched",
+  "icon": "minecraft:glass_bottle",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Prevents you from drinking potions.$(br2)$(bold)Maximum Level:$() 1$(br2)$(bold)Cost:$()$(li)-100 Upgrade Points"
+    }
+  ]
+}

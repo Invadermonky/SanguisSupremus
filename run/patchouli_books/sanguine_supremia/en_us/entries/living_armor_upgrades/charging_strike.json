@@ -1,0 +1,23 @@
+{
+  "name": "Charging Strike",
+  "icon": "minecraft:iron_axe",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Increases damage dealt and knockback modifier for sprint attacks.$(br2)$(bold)Trained By:$()$(br)Dealing Damage while Sprinting$(br2)$(bold)Maximum Level:$() 5"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)200 Damage Dealt$(br)$(li)Cost:$(br)$(li2)3 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+0.5 Damage Dealt$(br)$(li2)+1 Kockback Modifier$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)800 Damage Dealt$(br)$(li)Cost:$(br)$(li2)7 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+0.75 Damage Dealt$(br)$(li2)+2 Knockback Modifier"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)1,300 Damage Dealt$(br)$(li)Cost:$(br)$(li2)15 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+1.0 Damage Dealt$(br)$(li2)+3 Kockback Modifier$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)2,500 Damage Dealt$(br)$(li)Cost:$(br)$(li2)25 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+1.25 Damage Dealt$(br)$(li2)+4 Kockback Modifier"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)3,800 Damage Dealt$(br)$(li)Cost:$(br)$(li2)40 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+1.5 Damage Dealt$(br)$(li2)+5 Kockback Modifier"
+    }
+  ]
+}

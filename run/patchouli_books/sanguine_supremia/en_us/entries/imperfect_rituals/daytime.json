@@ -1,0 +1,24 @@
+{
+  "name": "Daytime",
+  "icon": "minecraft:gold_block",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Transforms night into day.$(br2)$(li)Cost: $(blood)5000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:gold_block",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Resistance",
+  "icon": "minecraft:bedrock",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Grants 60 seconds of Resistance II.$(br2)$(li)Cost: $(blood)5000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:bedrock",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

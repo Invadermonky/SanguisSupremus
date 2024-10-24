@@ -1,0 +1,23 @@
+{
+  "name": "Gift of Ignis",
+  "icon": "minecraft:blaze_powder",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Provides Fire Resistance on a cooldown.$(br2)Higher levels last longer and have a shorter cooldown.$(br2)$(bold)Trained By:$()$(br)Being on Fire (does not require taking fire damage)$(br2)$(bold)Maximum Level:$() 5"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)1 min. on fire$(br)$(li)Cost:$(br)$(li2)2 Upgrade Points$(br)$(li)Effect:$(br)$(li2)5 min. cooldown$(br)$(li2)30 sec. duration$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)3 min. on fire$(br)$(li)Cost:$(br)$(li2)6 Upgrade Points$(br)$(li)Effect:$(br)$(li2)5 min. cooldown$(br)$(li2)30 sec. duration"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)10 min. on fire$(br)$(li)Cost:$(br)$(li2)14 Upgrade Points$(br)$(li)Effect:$(br)$(li2)4 min. cooldown$(br)$(li2)40 sec. duration$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)20 min. on fire$(br)$(li)Cost:$(br)$(li2)25 Upgrade Points$(br)$(li)Effect:$(br)$(li2)3 min. cooldown$(br)$(li2)50 sec. duration"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)25 min. on fire$(br)$(li)Cost:$(br)$(li2)40 Upgrade Points$(br)$(li)Effect:$(br)$(li2)2 min. cooldown$(br)$(li2)60 sec. duration"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Sigil of Holding",
+  "icon": "bloodmagic:sigil_holding",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Sigil of Holding$() is a unique sigil that can hold up to 5 other Sigils at a time, providing players with their passive effects.$(br2)Press [$(k:bloodmagic.keybind.open_holding)] while holding the $(item)Sigil of Holding$() to access its inventory.$(br2)To change the currently active sigil, you can [$(k:sneak)] and scroll up or down or use"
+    },
+    {
+      "type": "text",
+      "text": "[$(k:bloodmagic.keybind.cycle_holding_pos)] to move forward or [$(k:bloodmagic.keybind.cycle_holding_neg)] to move backward through the stored sigils."
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Holding Reagent",
+      "soulforge.output": "bloodmagic:component:1",
+      "array.heading": "Sigil of Holding",
+      "array.output": "bloodmagic:sigil_holding",
+      "array.text": "$(italic)$()"
+    }
+  ]
+}

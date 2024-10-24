@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer1": "sanguissupremus:items/tartaric_amulet_basic_gem"
+  },
+  "overrides": [
+    {
+      "__comment": "Demon will type color variations",
+      "predicate": {
+        "sanguissupremus:will_type": 1
+      },
+      "model": "sanguissupremus:item/amulet/tartaric_amulet_basic_gem_corrosive"
+    },
+    {
+      "predicate": {
+        "sanguissupremus:will_type": 2
+      },
+      "model": "sanguissupremus:item/amulet/tartaric_amulet_basic_gem_destructive"
+    },
+    {
+      "predicate": {
+        "sanguissupremus:will_type": 3
+      },
+      "model": "sanguissupremus:item/amulet/tartaric_amulet_basic_gem_vengeful"
+    },
+    {
+      "predicate": {
+        "sanguissupremus:will_type": 4
+      },
+      "model": "sanguissupremus:item/amulet/tartaric_amulet_basic_gem_steadfast"
+    }
+  ]
+}

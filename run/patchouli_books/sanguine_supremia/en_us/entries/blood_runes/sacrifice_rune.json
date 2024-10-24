@@ -1,0 +1,16 @@
+{
+  "name": "Rune of Sacrifice",
+  "icon": "bloodmagic:blood_rune:3",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Rune of Sacrifice$() increases the amount of $(blood)Life Essence$() transferred to the Blood Altar through practices that take blood from non-player entities.$(br2)Each $(item)Rune of Sacrifice$() grants a additive bonus of +10% LP per rune."
+    },
+    {
+      "type": "crafting",
+      "title": "Rune of Sacrifice",
+      "recipe": "bloodmagic:blood_rune/blood_rune_sacrifice"
+    }
+  ]
+}

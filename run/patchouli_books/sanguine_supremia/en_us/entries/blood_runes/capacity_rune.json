@@ -1,0 +1,16 @@
+{
+  "name": "Rune of Capacity",
+  "icon": "bloodmagic:blood_rune:6",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Rune of Capacity$() increases the $(blood)Life Essence$() capacity of the Blood Altar by an additive +20% ($(blood)2000 LP$()) per rune."
+    },
+    {
+      "type": "crafting",
+      "title": "Rune of Capacity",
+      "recipe": "bloodmagic:blood_rune/blood_rune_capacity"
+    }
+  ]
+}

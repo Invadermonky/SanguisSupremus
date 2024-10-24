@@ -1,0 +1,11 @@
+{
+  "name": "Step Assist",
+  "icon": "minecraft:oak_stairs",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Increases step height by 0.5 blocks.$(br2)$(bold)Trained By:$()$(br)Walking uphill with a step height greater than 1 block$(br2)$(bold)Maximum Level:$() 1$(br2)$(bold)Cost:$()$(li)20 Upgrade Points"
+    }
+  ]
+}

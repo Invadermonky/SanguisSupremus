@@ -1,0 +1,24 @@
+{
+  "name": "Nighttime",
+  "icon": "minecraft:lapis_block",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Transforms day into night.$(br2)$(li)Cost: $(blood)100LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:lapis_block",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

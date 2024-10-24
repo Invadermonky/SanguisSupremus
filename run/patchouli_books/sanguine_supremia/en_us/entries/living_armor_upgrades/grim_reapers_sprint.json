@@ -1,0 +1,31 @@
+{
+  "name": "Grim Reaper's Sprint",
+  "icon": "minecraft:totem_of_undying",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Prevents death on a long cooldown.$(br2)Higher levels grant additional bonuses when death is prevented.$(br2)$(bold)Trained By:$()$(br)Dying$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)6 Deaths$(br)$(li)Cost:$(br)$(li2)20 Upgrade Points$(br)$(li)Effect:$(br)$(li2)60 min. cooldown$(br)$(li2)20% hp$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)10 Deaths$(br)$(li)Cost:$(br)$(li2)50 Upgrade Points$(br)$(li)Effect:$(br)$(li2)50 min. cooldown$(br)$(li2)20% hp$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)15 Deaths$(br)$(li)Cost:$(br)$(li2)130 Upgrade Points$(br)$(li)Effect:$(br)$(li2)45 min. cooldown$(br)$(li2)30% hp$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)25 Deaths$(br)$(li)Cost:$(br)$(li2)270 Upgrade Points$(br)$(li)Effect:$(br)$(li2)40 min. cooldown$(br)$(li2)30% hp$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)50 Deaths$(br)$(li)Cost:$(br)$(li2)450 Upgrade Points$(br)$(li)Effect:$(br)$(li2)30 min. cooldown$(br)$(li2)40% hp$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)70 Deaths$(br)$(li)Cost:$(br)$(li2)580 Upgrade Points$(br)$(li)Effect:$(br)$(li2)25 min. cooldown$(br)$(li2)40% hp, STR I, Resist. I$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)90 Deaths$(br)$(li)Cost:$(br)$(li2)700 Upgrade Points$(br)$(li)Effect:$(br)$(li2)15 min. cooldown$(br)$(li2)50% hp, STR I, Resist. I$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)120 Deaths$(br)$(li)Cost:$(br)$(li2)800 Upgrade Points$(br)$(li)Effect:$(br)$(li2)10 min. cooldown$(br)$(li2)60% hp, STR II, Resist. II$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)150 Deaths$(br)$(li)Cost:$(br)$(li2)900 Upgrade Points$(br)$(li)Effect:$(br)$(li2)5 min. cooldown$(br)$(li2)70% hp, STR II, Resist. II$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)200 Deaths$(br)$(li)Cost:$(br)$(li2)1,000 Upgrade Points$(br)$(li)Effect:$(br)$(li2)2 min. cooldown$(br)$(li2)80% hp, STR III, Resist. III"
+    }
+  ]
+}

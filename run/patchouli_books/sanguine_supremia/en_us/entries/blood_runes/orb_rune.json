@@ -1,0 +1,16 @@
+{
+  "name": "Rune of the Orb",
+  "icon": "bloodmagic:blood_rune:8",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Rune of the Orb$() increases the capacity of the Blood Orb inside the Blood Altar. This increase translates to an increase of the bound player's Soul Network.$(br2)Each $(item)Rune of the Orb$() grants an additive bonus of +2% per rune."
+    },
+    {
+      "type": "crafting",
+      "title": "Rune of the Orb",
+      "recipe": "bloodmagic:blood_rune/blood_rune_orb"
+    }
+  ]
+}

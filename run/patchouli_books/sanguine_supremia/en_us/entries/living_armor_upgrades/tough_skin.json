@@ -1,0 +1,32 @@
+{
+  "name": "Tough Skin",
+  "icon": "minecraft:iron_chestplate",
+  "category": "patchouli:living_armor_upgrades",
+  "flag": "testing_mode",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Reduces physical damage, non-projectile damage taken up to a maximum of 83% reduction.$(br2)$(bold)Trained By:$()$(br)Taking Non-Projectile Physical Damage$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)30 Damage Taken$(br)$(li)Cost:$(br)$(li2)5 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-10% Damage Taken$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)50 Damage Taken$(br)$(li)Cost:$(br)$(li2)10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-30% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)80 Damage Taken$(br)$(li)Cost:$(br)$(li2)18 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-40% Damage Taken$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)140 Damage Taken$(br)$(li)Cost:$(br)$(li2)35 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-50% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)200 Damage Taken$(br)$(li)Cost:$(br)$(li2)65 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-60% Damage Taken$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)300 Damage Taken$(br)$(li)Cost:$(br)$(li2)100 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-70% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)400 Damage Taken$(br)$(li)Cost:$(br)$(li2)140 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-75% Damage Taken$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)500 Damage Taken$(br)$(li)Cost:$(br)$(li2)190 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-77% Damage Taken$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)650 Damage Taken$(br)$(li)Cost:$(br)$(li2)250 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-80% Damage Taken$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)800 Damage Taken$(br)$(li)Cost:$(br)$(li2)300 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-83% Damage Taken"
+    }
+  ]
+}

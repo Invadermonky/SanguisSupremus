@@ -1,0 +1,23 @@
+{
+  "name": "Teleposition Sigil",
+  "icon": "bloodmagic:sigil_teleposition",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On [$(k:use)], the $(item)Teleposition Sigil$() will transport the player to a linked Teleposer.$(br2)To link the $(item)Teleposition Sigil$() to a Teleposer, [$(k:sneak)] + [$(k:use)] the sigil on the Teleposer.$(br2)The $(item)Teleposition Sigil$() is capable of transporting the player between dimensions,"
+    },
+    {
+      "type": "text",
+      "text": "though at a higher $(blood)LP$() cost.$(br2)$(bold)Cost:$()$(li)$(blood)1,000 LP$()/use intra-dimension$(li)$(blood)10,000 LP$()/use inter-dimension"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Teleposition Reagent",
+      "soulforge.output": "bloodmagic:component:17",
+      "array.heading": "Teleposition Sigil",
+      "array.output": "bloodmagic:sigil_teleposition",
+      "array.text": "$(italic)I am very close to being moved by this.$()"
+    }
+  ]
+}

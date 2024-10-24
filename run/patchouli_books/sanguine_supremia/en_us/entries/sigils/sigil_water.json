@@ -1,0 +1,19 @@
+{
+  "name": "Water Sigil",
+  "icon": "bloodmagic:sigil_water",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On use, the $(item)Water Sigil$() will attempt to summon a water source block at the location you are targeting. You can also fill cauldrons and most fluid tanks directly by interacting with them while holding the sigil.$(br2)$(bold)Cost:$() $(blood)100 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Water Reagent",
+      "soulforge.output": "bloodmagic:component:0",
+      "array.heading": "Water Sigil",
+      "array.output": "bloodmagic:sigil_water",
+      "array.text": "$(italic)Infinite water, anyone?$()"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Sigil of Flowing Blood",
+  "icon": "sanguissupremus:sigil_flowing_blood",
+  "category": "patchouli:sigils",
+  "flag": "sanguissupremus:sigil_flowing_blood",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On [$(k:use)], the $(item)Sigil of Flowing Blood$() pulls $(blood)LP$() directly from a player soul network to spawn a block of $(blood)Life Essence$() into the world.$(br2)While the extraction process is far from efficient, it is much faster than collecting blood from an altar one bucket at a time.$(br2)$(bold)Cost:$() $(blood)2500 LP$()/use"
+    },
+    {
+      "type": "text",
+      "text": ""
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Flowing Blood Reagent",
+      "soulforge.output": "sanguissupremus:reagent_flowing_blood",
+      "array.heading": "Sigil of Flowing Blood",
+      "array.output": "sanguissupremus:sigil_flowing_blood",
+      "array.text": "$(italic)For all your gaudy decoration needs"
+    }
+  ]
+}

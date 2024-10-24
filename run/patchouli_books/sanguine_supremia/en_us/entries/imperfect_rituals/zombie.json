@@ -1,0 +1,24 @@
+{
+  "name": "Zombie",
+  "icon": "minecraft:coal_block",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Spawns an empowered zombie.$(br2)$(li)Cost: $(blood)5000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:coal_block",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

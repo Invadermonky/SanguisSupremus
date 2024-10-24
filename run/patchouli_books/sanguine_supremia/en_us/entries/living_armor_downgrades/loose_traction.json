@@ -1,0 +1,12 @@
+{
+  "name": "Loose Traction",
+  "icon": "minecraft:ice",
+  "category": "patchouli:living_armor_downgrades",
+  "flags": "testing_mode",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Causes players to slide on all blocks as though they are ice.$(br2)$(bold)Maximum Level:$() 1$(br2)$(bold)Cost:$()$(li)-50 Upgrade Points"
+    }
+  ]
+}

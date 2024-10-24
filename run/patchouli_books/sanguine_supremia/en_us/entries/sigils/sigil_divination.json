@@ -1,0 +1,27 @@
+{
+  "name": "Divination Sigil",
+  "icon": "bloodmagic:sigil_divination",
+  "category": "patchouli:sigils",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Divination Sigil$() is the first of many sigils that you will create in Blood Magic.$(br2)On [$(k:use)], the sigil will display the current amount of LP in your $(blood)Soul Network$().$(br2)Holding the sigil and looking at a Blood Altar will display the current altar tier and the current and maximum $(blood)Life Essence$() capacity."
+    },
+    {
+      "type": "crafting_array",
+      "heading": "Divination Sigil",
+      "output": "bloodmagic:sigil_divination",
+      "text": "$(italic)Peer into the soul"
+    },
+    {
+      "type": "image",
+      "images": [
+        "sanguissupremus:textures/gui/patchouli/images/entries/sigil/divination_sigil_info.png"
+      ],
+      "title": "Divination Sigil Display",
+      "border": true,
+      "text": "The $(item)Divination Sigil$() Blood Altar information HUD."
+    }
+  ]
+}

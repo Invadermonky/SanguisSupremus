@@ -1,0 +1,24 @@
+{
+  "name": "Snow",
+  "icon": "minecraft:snow",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Transforms adjacent water blocks into snow and spawns a layer of snow on flat surfaces.$(br2)$(li)Cost: $(blood)1000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:snow",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

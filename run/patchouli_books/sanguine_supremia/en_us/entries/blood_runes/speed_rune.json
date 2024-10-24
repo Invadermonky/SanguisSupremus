@@ -1,0 +1,16 @@
+{
+  "name": "Speed Rune",
+  "icon": "bloodmagic:blood_rune:1",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Speed Rune$() increases the speed of all Blood Altar crafting operations.$(br2)Each $(item)Rune of Speed$() grants an additive crafting speed bonus of +20% per rune.$(br2)This boost also increases the speed that crafting progress is lost when the Blood Altar is empty."
+    },
+    {
+      "type": "crafting",
+      "title": " Rune",
+      "recipe": "bloodmagic:blood_rune/blood_rune_speed"
+    }
+  ]
+}

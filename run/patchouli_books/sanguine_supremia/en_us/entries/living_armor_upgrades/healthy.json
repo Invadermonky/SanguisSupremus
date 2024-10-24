@@ -1,0 +1,31 @@
+{
+  "name": "Healthy",
+  "icon": "minecraft:golden_apple",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Increases health up to a maximum of 50 half-hearts of additional health.$(br2)$(bold)Trained By:$()$(br)Restoring Health$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(li)Requirement:$(br)$(li2)80 Health Restored$(li)Cost:$(br)$(li2)5 Upgrade Points$(li)Effect:$(br)$(li2)+4 Health$(br2)$(bold)Level 2:$()$(li)Requirement:$(br)$(li2)200 Health Restored$(li)Cost:$(br)$(li2)12 Upgrade Points$(li)Effect:$(br)$(li2)+8 Health"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(li)Requirement:$(br)$(li2)340 Health Restored$(li)Cost:$(br)$(li2)20 Upgrade Points$(li)Effect:$(br)$(li2)+12 Health$(br2)$(bold)Level 4:$()$(li)Requirement:$(br)$(li2)540 Health Restored$(li)Cost:$(br)$(li2)35 Upgrade Points$(li)Effect:$(br)$(li2)+16 Health"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(li)Requirement:$(br)$(li2)800 Health Restored$(li)Cost:$(br)$(li2)49 Upgrade Points$(li)Effect:$(br)$(li2)+20 Health$(br2)$(bold)Level 6:$()$(li)Requirement:$(br)$(li2)1,600 Health Restored$(li)Cost:$(br)$(li2)78 Upgrade Points$(li)Effect:$(br)$(li2)+26 Health"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(li)Requirement:$(br)$(li2)2,800 Health Restored$(li)Cost:$(br)$(li2)110 Upgrade Points$(li)Effect:$(br)$(li2)+32 Health$(br2)$(bold)Level 8:$()$(li)Requirement:$(br)$(li2)5,000 Health Restored$(li)Cost:$(br)$(li2)160 Upgrade Points$(li)Effect:$(br)$(li2)+38 Health"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(li)Requirement:$(br)$(li2)7,600 Health Restored$(li)Cost:$(br)$(li2)215 Upgrade Points$(li)Effect:$(br)$(li2)+44 Health$(br2)$(bold)Level 10:$()$(li)Requirement:$(br)$(li2)10,000 Health Restored$(li)Cost:$(br)$(li2)320 Upgrade Points$(li)Effect:$(br)$(li2)+50 Health"
+    }
+  ]
+}

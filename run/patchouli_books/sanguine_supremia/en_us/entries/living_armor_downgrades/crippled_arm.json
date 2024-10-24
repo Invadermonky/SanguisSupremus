@@ -1,0 +1,11 @@
+{
+  "name": "Crippled Arm",
+  "icon": "minecraft:shield",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Prevents using items held in offhand.$(br2)$(bold)Maximum Level:$() 1$(br2)$(bold)Cost:$()$(li)-150 Upgrade Points"
+    }
+  ]
+}

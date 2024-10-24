@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer1": "sanguissupremus:item/tartaric_amulet_standard_gem_vengeful"
+  }
+}

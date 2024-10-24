@@ -1,0 +1,61 @@
+
+# Misc
+itemGroup.sanguissupremus=Sanguis Supremus
+
+# Blocks
+
+
+# Chat
+
+
+# Items
+item.sanguissupremus:blood_orange.name=Blood Orange
+item.sanguissupremus:blood_orange_infused.name=Infused Blood Orange
+item.sanguissupremus:bloodvial_belt_small.name=Bloodvial Belt
+item.sanguissupremus:bloodvial_belt_medium.name=Augmented Bloodvial Belt
+item.sanguissupremus:bloodvial_belt_large.name=Bloodletter's Bloodvial Belt
+item.sanguissupremus:bloodwood_axe.name=Bloodwood Axe
+item.sanguissupremus:bloodwood_hoe.name=Bloodwood Hoe
+item.sanguissupremus:bloodwood_pickaxe.name=Bloodwood Pickaxe
+item.sanguissupremus:bloodwood_shovel.name=Bloodwood Shovel
+item.sanguissupremus:bloodwood_sword.name=Bloodwood Sword
+item.sanguissupremus:bound_shears.name=Bound Shears
+item.sanguissupremus:bound_striker.name=Bound Striker
+item.sanguissupremus:reagent_dirt.name=Dirty Reagent
+item.sanguissupremus:reagent_ender_access.name=Ender Access Reagent
+item.sanguissupremus:reagent_ender_avoidance.name=Ender Avoidance Reagent
+item.sanguissupremus:reagent_flowing_blood.name=Blood Reagent
+item.sanguissupremus:reagent_stone.name=Stone Reagent
+item.sanguissupremus:reagent_vampiric_strikes.name=Vampiric Reagent
+item.sanguissupremus:ring_sigil_basic.name=Basic Sigil Ring
+item.sanguissupremus:ring_sigil_pristine.name=Pristine Sigil Ring
+item.sanguissupremus:ring_sigil_standard.name=Standard Sigil Ring
+item.sanguissupremus:sacrificial_dagger_fanatical.name=Dagger of Fanatical Sacrifice
+item.sanguissupremus:sacrificial_dagger_safe.name=Dagger of Safe-Sacrifice
+item.sanguissupremus:sigil_dirt.name=Sigil of Earth
+item.sanguissupremus:sigil_ender_access.name=Sigil of Ender Access
+item.sanguissupremus:sigil_ender_avoidance.name=Ender Avoidance
+item.sanguissupremus:sigil_flowing_blood.name=Sigil of Flowing Blood
+item.sanguissupremus:sigil_stone.name=Sigil of Stone
+item.sanguissupremus:sigil_vampiric_strikes.name=Sigil of Vampiric Strikes
+item.sanguissupremus:tartaric_amulet_basic.name=Basic Tartaric Amulet
+item.sanguissupremus:tartaric_amulet_pristine.name=Pristine Tartaric Amulet
+item.sanguissupremus:tartaric_amulet_standard.name=Standard Tartaric Amulet
+
+# Rituals
+
+
+# Tooltips
+tooltip.bloodmagic.livingArmor.upgrade.arrowProtect=Pin Cushion
+tooltip.bloodmagic.sigil.sigil_dirt.desc=Much better than a dirty stick
+tooltip.bloodmagic.sigil.sigil_ender_access.desc=§oReach through the void
+tooltip.bloodmagic.sigil.sigil_flowing_blood.desc=For all your gaudy decoration needs
+tooltip.bloodmagic.sigil.sigil_stone.desc=One block at a time...
+tooltip.sanguissupremus:bloodvial_belt.desc=Collects Life Essence
+tooltip.sanguissupremus:bound_shears.desc=§oBlood from a stone
+tooltip.sanguissupremus:bound_striker.desc=§oWatch the world burn
+tooltip.sanguissupremus:sacrificial_dagger_fanatical.desc=Only the truly devoted...
+tooltip.sanguissupremus:sacrificial_dagger_safe.desc=Safe for all ages!
+tooltip.sanguissupremus:setting.desc=Will Gain Bonus: %d%%
+tooltip.sanguissupremus:setting.empty=Empty
+tooltip.sanguissupremus:ring_sigil.desc=LP Reduction: %d%%

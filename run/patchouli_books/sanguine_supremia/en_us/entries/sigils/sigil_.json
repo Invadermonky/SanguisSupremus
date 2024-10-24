@@ -1,0 +1,19 @@
+{
+  "name": "Sigil",
+  "icon": "bloodmagic:sigil_",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(br2)$(bold)Cost:$() $(blood) LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": " Reagent",
+      "soulforge.output": "bloodmagic:component:1",
+      "array.heading": "Sigil",
+      "array.output": "bloodmagic:sigil_",
+      "array.text": "$(italic)$()"
+    }
+  ]
+}

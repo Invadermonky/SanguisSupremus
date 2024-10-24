@@ -1,0 +1,31 @@
+{
+  "name": "Strong Legs",
+  "icon": "minecraft:iron_leggings",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Increases jump height and reduces fall damage up to a maximum of 18.5 blocks and 85% fall resistance.$(br2)Can be disabled by holding crouch and jumping.$(br2)$(bold)Trained By:$()$(br)Jumping$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)30 Jumps$(br)$(li)Cost:$(br)$(li2)3 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+10% Jump Modifier$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)200 Jumps$(br)$(li)Cost:$(br)$(li2)6 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+20% Jump Modifier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)400 Jumps$(br)$(li)Cost:$(br)$(li2)11 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+30% Jump Modifier$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)700 Jumps$(br)$(li)Cost:$(br)$(li2)23 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+40% Jump Modifier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)1,100 Jumps$(br)$(li)Cost:$(br)$(li2)37 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+50% Jump Modifier$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)1,500 Jumps$(br)$(li)Cost:$(br)$(li2)50 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+70% Jump Modifier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)2,000 Jumps$(br)$(li)Cost:$(br)$(li2)70 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+90% Jump Modifier$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)2,800 Jumps$(br)$(li)Cost:$(br)$(li2)100 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+110% Jump Modifier$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)3,600 Jumps$(br)$(li)Cost:$(br)$(li2)140 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+130% Jump Modifier$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)5,000 Jumps$(br)$(li)Cost:$(br)$(li2)200 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+150% Jump Modifier"
+    }
+  ]
+}

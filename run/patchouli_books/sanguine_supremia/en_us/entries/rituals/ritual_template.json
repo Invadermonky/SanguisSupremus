@@ -1,0 +1,20 @@
+{
+  "name": "",
+  "icon": "",
+  "category": "",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "",
+      "text": "",
+      "multiblock": {
+        "mapping": {
+
+        },
+        "pattern": [
+
+        ]
+      }
+    }
+  ]
+}

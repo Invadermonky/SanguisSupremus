@@ -1,0 +1,24 @@
+{
+  "name": "Plant Growth",
+  "icon": "minecraft:bone_block",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Applies bone meal randomly to plants in a 9x9x3 area centered on the ritual stone. The bone block will be consumed in the process.$(br2)$(li)Cost: $(blood)6000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:bone_block",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

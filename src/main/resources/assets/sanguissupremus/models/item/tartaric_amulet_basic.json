@@ -1,0 +1,15 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:items/tartaric_amulet_basic"
+  },
+  "overrides": [
+    {
+      "__comment": "Is a tartaric gem socketed",
+      "predicate": {
+        "sanguissupremus:socketed": 1
+      },
+      "model": "sanguissupremus:item/amulet/tartaric_amulet_basic_socketed"
+    }
+  ]
+}

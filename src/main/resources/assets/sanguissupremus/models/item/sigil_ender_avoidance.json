@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:items/sigil_ender_avoidance"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "sanguissupremus:enabled": 1
+      },
+      "model": "sanguissupremus:item/sigil/sigil_ender_avoidance_enabled"
+    }
+  ]
+}

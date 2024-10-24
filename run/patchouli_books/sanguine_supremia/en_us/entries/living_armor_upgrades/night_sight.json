@@ -1,0 +1,31 @@
+{
+  "name": "Night Sight",
+  "icon": "minecraft:golden_carrot",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Grants night vision and increased melee damage when in the dark.$(br2)$(bold)Trained By:$()$(br)Damaging Mobs in Low Light Areas while Night Vision is active$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)3 min. Night Vision$(br)$(li)Cost:$(br)$(li2)5 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)200 Damage Dealt$(br)$(li)Cost:$(br)$(li2)8 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+0.5 Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)800 Damage Dealt$(br)$(li)Cost:$(br)$(li2)15 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+1.0 Damage$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)1,300 Damage Dealt$(br)$(li)Cost:$(br)$(li2)20 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+1.5 Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)2,500 Damage Dealt$(br)$(li)Cost:$(br)$(li2)34 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+2.0 Damage$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)3,800 Damage Dealt$(br)$(li)Cost:$(br)$(li2)45 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+2.5 Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)5,000 Damage Dealt$(br)$(li)Cost:$(br)$(li2)70 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+3.0 Damage$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)7,000 Damage Dealt$(br)$(li)Cost:$(br)$(li2)100 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+4.0 Damage$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)9,200 Damage Dealt$(br)$(li)Cost:$(br)$(li2)150 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+5.0 Damage$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)11,500 Damage Dealt$(br)$(li)Cost:$(br)$(li2)200 Upgrade Points$(br)$(li)Effect:$(br)$(li2)Night Vision$(br)$(li2)+6.0 Damage"
+    }
+  ]
+}

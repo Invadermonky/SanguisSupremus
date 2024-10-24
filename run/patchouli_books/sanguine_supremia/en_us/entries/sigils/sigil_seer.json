@@ -1,0 +1,32 @@
+{
+  "name": "Seer's Sigil",
+  "icon": "bloodmagic:sigil_seer",
+  "category": "patchouli:sigils",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Seer's Sigil$() is a more advanced form of the Divination Sigil.$(br2)While retaining the ability to display the amount of $(blood)LP$() stored in the bound player's Soul Network, it also shows additional information when looking at a Blood Altar."
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Sight Reagent",
+      "soulforge.output": "bloodmagic:component:7",
+      "array.heading": "Seer's Sigil",
+      "array.output": "bloodmagic:sigil_seer",
+      "array.text": "$(italic)$()"
+    },
+    {
+      "type": "text",
+      "text": "From top to bottom:$(li)The current tier of the Blood Altar$(li)The current amount and maximum capacity of $(blood)Life Essence$() in the altar$(li)The current crafting progress$(li)The $(blood)LP$() consumption per tick the Altar will use when crafting$(li)The current $(blood)LP$() storage of any Charging Runes"
+    },
+    {
+      "type": "image",
+      "images": [
+        "sanguissupremus:textures/gui/patchouli/images/entries/sigil/seer_sigil_info.png"
+      ],
+      "border": true,
+      "text": "The $(item)Seer's Sigil$() Blood Altar information HUD."
+    }
+  ]
+}

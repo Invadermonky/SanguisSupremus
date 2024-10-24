@@ -1,0 +1,19 @@
+{
+  "name": "Sigil of Ender Severance",
+  "icon": "bloodmagic:sigil_ender_severance",
+  "category": "patchouli:sigils",
+  "flag": "sanguissupremus:sigil_ender_avoidance",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Ender Severance$() attempts to prevent mobs and entities around the player from teleporting.$(br2)While this effect does not influence portals, it will prevent Endermen from using their powers to warp away from the player.$(br2)$(bold)Cost:$() $(blood)200 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Severance Reagent",
+      "soulforge.output": "bloodmagic:component:16",
+      "array.heading": "Sigil of Ender Sever.",
+      "array.output": "bloodmagic:sigil_ender_severance"
+    }
+  ]
+}

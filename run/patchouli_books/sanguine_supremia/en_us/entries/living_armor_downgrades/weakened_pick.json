@@ -1,0 +1,27 @@
+{
+  "name": "Weakened Pick",
+  "icon": "minecraft:stone_pickaxe",
+  "category": "patchouli:living_armor_downgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Reduces mining and dig speed.$(br2)Effect caps out at an 80% reduction.$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Cost:$(br)$(li2)-10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-10% Dig Speed$(br2)$(bold)Level 2:$()$(br)$(li)Cost:$(br)$(li2)-17 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-20% Dig Speed$(br2)$(bold)Level 3:$()$(br)$(li)Cost:$(br)$(li2)-28 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-30% Dig Speed$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Cost:$(br)$(li2)-10 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-10% Dig Speed$(br2)$(bold)Level 2:$()$(br)$(li)Cost:$(br)$(li2)-17 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-20% Dig Speed$(br2)$(bold)Level 3:$()$(br)$(li)Cost:$(br)$(li2)-28 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-30% Dig Speed$(br2)$(bold)Level 4:$()$(br)$(li)Cost:$(br)$(li2)-42 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-40% Dig Speed$(br2)$(bold)Level 5:$()$(br)$(li)Cost:$(br)$(li2)-60 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-45% Dig Speed$(br2)$(bold)Level 6:$()$(br)$(li)Cost:$(br)$(li2)-80 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-50% Dig Speed$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Cost:$(br)$(li2)-100 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-60% Dig Speed$(br2)$(bold)Level 8:$()$(br)$(li)Cost:$(br)$(li2)-125 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-65% Dig Speed$(br2)$(bold)Level 9:$()$(br)$(li)Cost:$(br)$(li2)-160 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-70% Dig Speed$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 10:$()$(br)$(li)Cost:$(br)$(li2)-200 Upgrade Points$(br)$(li)Effect:$(br)$(li2)-80% Dig Speed"
+    }
+  ]
+}

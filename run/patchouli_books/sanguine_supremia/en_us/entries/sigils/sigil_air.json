@@ -1,0 +1,19 @@
+{
+  "name": "Air Sigil",
+  "icon": "bloodmagic:sigil_air",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On [$(k:use)], the $(item)Air Sigil$() will throw you in the direction you're facing, even vertically.$(br2)However, this does not provide any sort of Feather Falling effect, so be careful when landing!$(br2)$(bold)Cost:$() $(blood)50 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Air Reagent",
+      "soulforge.output": "bloodmagic:component:2",
+      "array.heading": "Air Sigil",
+      "array.output": "bloodmagic:sigil_air",
+      "array.text": "$(italic)I feel lighter already..."
+    }
+  ]
+}

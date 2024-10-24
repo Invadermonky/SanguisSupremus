@@ -1,0 +1,11 @@
+{
+  "name": "Elytra",
+  "icon": "minecraft:elytra",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Adds an $(item)Elytra$() to your living armor.$(br2)$(bold)Created By:$()$(br)Combining a $(item)Book$(), an undamaged $(item)Elytra$(), and 30 levels of experience at an $(item)Anvil$().$(br2)$(bold)Maximum Level:$() 1$(br2)$(bold)Cost:$()$(li)15 Upgrade Points"
+    }
+  ]
+}

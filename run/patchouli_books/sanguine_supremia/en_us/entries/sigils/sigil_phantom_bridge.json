@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of the Phan. Bridge",
+  "icon": "bloodmagic:sigil_phantom_bridge",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active and the player is on the ground, the $(item)Sigil of the Phantom Bridge$() solidifies the air beneath the user, allowing the player to walk on air.$(br2)Moving too quickly or attempting to move vertically can cause the bridge to fail, dropping the player to the ground.$(br2)$(bold)Cost:$() $(blood)100 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Phantom Bridge Reagent",
+      "soulforge.output": "bloodmagic:component:15",
+      "array.heading": "Sigil of the Phan. Bridge",
+      "array.output": "bloodmagic:sigil_phantom_bridge"
+    }
+  ]
+}

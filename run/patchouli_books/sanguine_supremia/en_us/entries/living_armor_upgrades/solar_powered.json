@@ -1,0 +1,31 @@
+{
+  "name": "Solar Powered",
+  "icon": "minecraft:daylight_detector",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Grants slow regeneration, fire resistance, and increased armor when in direct sunlight.$(br2)$(bold)Trained By:$()$(br)Regenerating Health in Direct Sunlight$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)70 Health Regenerated$(br)$(li)Cost:$(br)$(li2)5 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1 Health/10 sec$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)150 Health Regenerated$(br)$(li)Cost:$(br)$(li2)12 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1 Health/9 sec$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)300 Health Regenerated$(br)$(li)Cost:$(br)$(li2)20 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1 Health/8 sec$(br)$(li2)45 sec. Fire Resist$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)500 Health Regenerated$(br)$(li)Cost:$(br)$(li2)35 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1 Health/6 sec$(br)$(li2)60 sec. Fire Resist$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)700 Health Regenerated$(br)$(li)Cost:$(br)$(li2)49 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1 Health/5 sec$(br)$(li2)1.5 min. Fire Resist$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)1,400 Health Regenerated$(br)$(li)Cost:$(br)$(li2)78 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1 Health/4 sec$(br)$(li2)1.75 min. Fire Resist$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)2,400 Health Regenerated$(br)$(li)Cost:$(br)$(li2)110 Upgrade Points$(br)$(li)Effect:$(br)$(li2)1 Health/2 sec$(br)$(li2)2 min. Fire Resist$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)4,000 Health Regenerated$(br)$(li)Cost:$(br)$(li2)160 Upgrade Points$(br)$(li)Effect:$(br)$(br)$(li2)1 Health/sec$(br)$(li2)2.5 min. Fire Resist$(br2)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)7,000 Health Regenerated$(br)$(li)Cost:$(br)$(li2)215 Upgrade Points$(br)$(li)Effect:$(br)$(br)$(li2)2 Health/sec$(br)$(li2)3 min. Fire Resist$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)9,000 Health Regenerated$(br)$(li)Cost:$(br)$(li2)320 Upgrade Points$(br)$(li)Effect:$(br)$(li2)2 Health/sec$(br)$(li2)5 min. Fire Resist"
+    }
+  ]
+}

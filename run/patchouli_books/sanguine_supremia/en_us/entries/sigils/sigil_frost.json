@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of Winter's Breath",
+  "icon": "bloodmagic:sigil_frost",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Winter's Breath$() grants the player the $(thing)Frost Walker II$() effect.$(br2)While not jumping or falling, all water blocks in an area around the player will be transformed into temporary ice.$(br2)$(bold)Cost:$() $(blood)100 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Frost Reagent",
+      "soulforge.output": "bloodmagic:component:32",
+      "array.heading": "Sigil of Winter's Breath",
+      "array.output": "bloodmagic:sigil_frost"
+    }
+  ]
+}

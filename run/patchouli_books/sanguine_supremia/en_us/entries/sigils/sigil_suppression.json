@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of Suppression",
+  "icon": "bloodmagic:sigil_suppression",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Suppression$() temporarily obliviates all fluids in a 6-block radius of its holder.$(br2)A short time after moving away from the displaced fluid, it will return as though it had never left.$(br2)$(bold)Cost:$() $(blood)400 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Suppression Reagent",
+      "soulforge.output": "bloodmagic:component:9",
+      "array.heading": "Sigil of Suppression",
+      "array.output": "bloodmagic:sigil_suppression"
+    }
+  ]
+}

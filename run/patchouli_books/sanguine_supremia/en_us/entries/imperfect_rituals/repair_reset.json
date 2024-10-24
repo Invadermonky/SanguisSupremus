@@ -1,0 +1,24 @@
+{
+  "name": "Repair Reset",
+  "icon": "minecraft:anvil",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Resets the repair cost of the item held in main hand.$(br2)$(li)Cost: $(blood)3000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:anvil",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Void Sigil",
+  "icon": "bloodmagic:sigil_void",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Void Sigil$(), when used while looking at any fluid, will destroy the fluid block. This makes it an ideal tool for clearing small pockets of lava encountered while mining.$(br2)$(bold)Cost:$() $(blood)50 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Void Reagent",
+      "soulforge.output": "bloodmagic:component:4",
+      "array.heading": "Void Sigil",
+      "array.output": "bloodmagic:sigil_void",
+      "array.text": "$(italic)Better than a Swiffer®!$()"
+    }
+  ]
+}

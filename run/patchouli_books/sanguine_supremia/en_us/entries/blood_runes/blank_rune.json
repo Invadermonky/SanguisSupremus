@@ -1,0 +1,17 @@
+{
+  "name": "Blank Rune",
+  "icon": "bloodmagic:blood_rune:0",
+  "category": "patchouli:blood_runes",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Blank Rune$() is the most basic construction block of the Blood Altar. It has no bonus effect."
+    },
+    {
+      "type": "crafting",
+      "title": "Blank Rune",
+      "recipe": "bloodmagic:blood_rune/blood_rune_blank"
+    }
+  ]
+}

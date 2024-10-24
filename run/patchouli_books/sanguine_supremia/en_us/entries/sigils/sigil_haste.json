@@ -1,0 +1,18 @@
+{
+  "name": "Sigil of Haste",
+  "icon": "bloodmagic:sigil_haste",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Haste$() will grant the holder the $(thing)Boost$() potion effect, greatly increasing movement and sprint speed while also granting step-assist.$(br2)$(bold)Cost:$() $(blood)250 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Haste Reagent",
+      "soulforge.output": "bloodmagic:component:13",
+      "array.heading": "Sigil of Haste",
+      "array.output": "bloodmagic:sigil_haste"
+    }
+  ]
+}

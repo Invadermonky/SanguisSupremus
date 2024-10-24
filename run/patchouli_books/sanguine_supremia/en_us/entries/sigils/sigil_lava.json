@@ -1,0 +1,19 @@
+{
+  "name": "Lava Sigil",
+  "icon": "bloodmagic:sigil_lava",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Similar to the Water Sigil, on [$(k:use)], the $(item)Lava Sigil$() will create a lava source block at the targeted location.$(br2)$(bold)Cost:$() $(blood)1000 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Lava Reagent",
+      "soulforge.output": "bloodmagic:component:1",
+      "array.heading": "Lava Sigil",
+      "array.output": "bloodmagic:sigil_lava",
+      "array.text": "$(italic)HOT! DO NOT EAT$()"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Acceleration Rune",
+  "icon": "bloodmagic:blood_rune:9",
+  "category": "patchouli:blood_runes",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Acceleration Rune$() does nothing by itself, but instead increases the tick rate of other operations.$(br2)Normally, the operations of the Charging Rune and Displacement Rune occur once every 20 ticks. Each additional $(item)Acceleration Rune$() will reduce the delay by one tick per rune, down to a minimum of 1 operation per tick."
+    },
+    {
+      "type": "crafting",
+      "title": "Acceleration Rune",
+      "recipe": "bloodmagic:blood_rune/blood_rune_acceleration"
+    }
+  ]
+}

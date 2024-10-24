@@ -1,0 +1,11 @@
+{
+  "name": "Repairing",
+  "icon": "minecraft:anvil",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Repairs a random piece of worn armor every 100 ticks (5 seconds).$(br2)$(bold)Trained By:$()$(br)Living Chestplate Taking Durability Damage$(br2)$(bold)Maximum Level:$() 1$(br2)$(bold)Cost:$()$(li)15 Upgrade Points"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Ice",
+  "icon": "minecraft:ice",
+  "category": "patchouli:imperfect_rituals",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Transforms adjacent water blocks into ice.$(br2)$(li)Cost: $(blood)1000LP$()"
+    },
+    {
+      "type": "multiblock",
+      "multiblock": {
+        "mapping": {
+          "B": "minecraft:ice",
+          "0": "bloodmagic:ritual_controller[type=imperfect]"
+        },
+        "pattern": [
+          ["B"],
+          ["0"]
+        ]
+      }
+    }
+  ]
+}

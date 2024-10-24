@@ -1,0 +1,22 @@
+{
+  "name": "Sigil of the Green Grove",
+  "icon": "bloodmagic:sigil_green_grove",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Sigil of the Green Grove$() uses $(blood)LP$() from your Soul Network to grow plants.$(br2)Looking at a growable plant and pressing [$(k:use)] will apply the bone meal effect to the plant.$(br2)Activating the sigil cause it to consume $(blood)150 LP$() every 5 seconds and randomly apply the bone meal effect to plants"
+    },
+    {
+      "type": "text",
+      "text": "in a 7x7x5 volume centered on the player.$(br2)$(bold)Cost:$() $(blood)150 LP$()/use$(br)$(bold)Activation:$() $(blood)150 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Growth Reagent",
+      "soulforge.output": "bloodmagic:component:5",
+      "array.heading": "Sigil of the Green Grove",
+      "array.output": "bloodmagic:sigil_green_grove"
+    }
+  ]
+}

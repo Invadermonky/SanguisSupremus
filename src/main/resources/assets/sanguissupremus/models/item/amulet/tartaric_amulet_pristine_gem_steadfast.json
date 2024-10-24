@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer1": "sanguissupremus:item/tartaric_amulet_pristine_gem_steadfast"
+  }
+}

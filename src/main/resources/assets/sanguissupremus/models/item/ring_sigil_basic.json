@@ -1,0 +1,15 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:items/ring_sigil_basic"
+  },
+  "overrides": [
+    {
+      "__comment": "Ring has sigil",
+      "predicate": {
+        "sanguissupremus:socketed": 1
+      },
+      "model": "sanguissupremus:item/ring/ring_sigil_basic_socketed"
+    }
+  ]
+}

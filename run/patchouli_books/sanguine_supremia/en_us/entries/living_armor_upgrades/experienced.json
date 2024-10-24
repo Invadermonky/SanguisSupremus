@@ -1,0 +1,31 @@
+{
+  "name": "Experienced",
+  "icon": "minecraft:experience_bottle",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Increases experience drops from killing mobs, up to 150%.$(br2)$(bold)Trained By:$()$(br)Collecting XP$(br2)$(bold)Maximum Level:$() 10"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1:$()$(br)$(li)Requirement:$(br)$(li2)100 Xp Gained$(br)$(li)Cost:$(br)$(li2)7 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+15% Xp Gain$(br2)$(bold)Level 2:$()$(br)$(li)Requirement:$(br)$(li2)400 Xp Gained$(br)$(li)Cost:$(br)$(li2)13 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+30% Xp Gain"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3:$()$(br)$(li)Requirement:$(br)$(li2)1,000 Xp Gained$(br)$(li)Cost:$(br)$(li2)22 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+45% Xp Gain$(br2)$(bold)Level 4:$()$(br)$(li)Requirement:$(br)$(li2)1,600 Xp Gained$(br)$(li)Cost:$(br)$(li2)40 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+60% Xp Gain"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5:$()$(br)$(li)Requirement:$(br)$(li2)3,200 Xp Gained$(br)$(li)Cost:$(br)$(li2)65 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+75% Xp Gain$(br2)$(bold)Level 6:$()$(br)$(li)Requirement:$(br)$(li2)5,000 Xp Gained$(br)$(li)Cost:$(br)$(li2)90 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+90% Xp Gain"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 7:$()$(br)$(li)Requirement:$(br)$(li2)7,000 Xp Gained$(br)$(li)Cost:$(br)$(li2)130 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+105% Xp Gain$(br2)$(bold)Level 8:$()$(br)$(li)Requirement:$(br)$(li2)9,200 Xp Gained$(br)$(li)Cost:$(br)$(li2)180 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+120% Xp Gain"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 9:$()$(br)$(li)Requirement:$(br)$(li2)11,500 Xp Gained$(br)$(li)Cost:$(br)$(li2)250 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+135% Xp Gain$(br2)$(bold)Level 10:$()$(br)$(li)Requirement:$(br)$(li2)140,000 Xp Gained$(br)$(li)Cost:$(br)$(li2)350 Upgrade Points$(br)$(li)Effect:$(br)$(li2)+150% Xp Gain"
+    }
+  ]
+}

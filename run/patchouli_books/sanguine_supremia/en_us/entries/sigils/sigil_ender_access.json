@@ -1,0 +1,20 @@
+{
+  "name": "Sigil of Ender Access",
+  "icon": "sanguissupremus:sigil_ender_access",
+  "category": "patchouli:sigils",
+  "flag": "sanguissupremus:sigil_ender_access",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Sigil of Ender Access$() allows players to remotely access the bound player's $(item)Ender Chest$() inventory.$(br2)$(bold)Cost:$() $(blood)500 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Ender Chest Reagent",
+      "soulforge.output": "sanguissupremus:reagent_ender_access",
+      "array.heading": "Sigil of Ender Access",
+      "array.output": "sanguissupremus:sigil_ender_access",
+      "array.text": "$(italic)Reach through the void$()"
+    }
+  ]
+}

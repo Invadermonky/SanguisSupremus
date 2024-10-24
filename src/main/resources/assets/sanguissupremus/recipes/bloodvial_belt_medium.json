@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "sanguissupremus:bloodvial_belt_medium"
+  },
+  "pattern": [
+    "LLL",
+    "S S",
+    "GBG"
+  ],
+  "key": {
+    "L": {
+      "type": "forge:ore_dict",
+      "ore": "leather"
+    },
+    "S": {
+      "item": "bloodmagic:slate",
+      "data": 2
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    },
+    "B": {
+      "item": "sanguissupremus:bloodvial_belt_small"
+    }
+  }
+}

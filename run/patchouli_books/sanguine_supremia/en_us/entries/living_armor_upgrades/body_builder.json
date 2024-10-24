@@ -1,0 +1,23 @@
+{
+  "name": "Body Builder",
+  "icon": "minecraft:cooked_beef",
+  "category": "patchouli:living_armor_upgrades",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(bold)Effect:$()$(br)Grants Knockback Resistance and bonus Health. Caps at 100% Knockback Resistance and 10 half-hearts of health.$(br2)$(bold)Trained By:$()$(br)Eating Food$(br2)$(bold)Maximum Level:$() 5"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 1$()$(li)Requirement:$()$(br)$(li2)100 Food Points Restored$(li)Cost:$(br)$(li2)3 Upgrade Points$(li)Effect:$(br)$(li2)+20% Knockback Resist$(br2)$(bold)Level 2$()$(li)Requirement:$()$(br)$(li2)200 Food Points Restored$(li)Cost:$(br)$(li2)7 Upgrade Points$(li)Effect:$(br)$(li2)+40% Knockback Resist"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 3$()$(li)Requirement:$()$(br)$(li2)300 Food Points Restored$(li)Cost:$(br)$(li2)13 Upgrade Points$(li)Effect:$(br)$(li2)+60% Knockback Resist$(br2)$(bold)Level 4$()$(li)Requirement:$()$(br)$(li2)500 Food Points Restored$(li)Cost:$(br)$(li2)26 Upgrade Points$(li)Effect:$(br)$(li2)+80% Knockback Resist$(br)$(li2)+4 Health"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)Level 5$()$(li)Requirement:$()$(br)$(li2)1000 Food Points Restored$(li)Cost:$(br)$(li2)42 Upgrade Points$(li)Effect:$(br)$(li2)+100% Knockback Resist$(br)$(li2)+10 Health"
+    }
+  ]
+}
