@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import java.util.function.Consumer;
 
 
-public class RitualPeacefulSouls extends AbstractRitualBMP {
+public class RitualPeacefulSouls extends AbstractRitualSS {
     public static final String SPAWN_RANGE = "peacefulSpawnRange";
 
     public RitualPeacefulSouls() {

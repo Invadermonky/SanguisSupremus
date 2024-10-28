@@ -9,6 +9,7 @@ import baubles.api.BaublesApi;
 import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.items.IBloodwoodTool;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
+import com.invadermonky.sanguissupremus.effects.PotionAquaticAffinity;
 import com.invadermonky.sanguissupremus.effects.PotionEnderAvoidance;
 import com.invadermonky.sanguissupremus.effects.PotionVampiricStrikes;
 import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemBloodvialBelt;
@@ -23,6 +24,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -63,6 +65,11 @@ public class CommonEventHandler {
                 }
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onBreakSpeed(PlayerEvent.BreakSpeed event) {
+        PotionAquaticAffinity.onBreakSpeed(event);
     }
 
     @SubscribeEvent

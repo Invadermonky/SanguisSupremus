@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 
 import java.util.function.Consumer;
 
-public class RitualHerbivorousAltar extends AbstractRitualBMP {
+public class RitualHerbivorousAltar extends AbstractRitualSS {
     public static final String LEECH_RANGE = "eatRange";
 
     public RitualHerbivorousAltar() {

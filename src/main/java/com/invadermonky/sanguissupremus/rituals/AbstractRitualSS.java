@@ -16,13 +16,14 @@ import javax.annotation.Nullable;
 
 import static WayofTime.bloodmagic.ritual.types.RitualWellOfSuffering.ALTAR_RANGE;
 
-public abstract class AbstractRitualBMP extends Ritual {
+public abstract class AbstractRitualSS extends Ritual {
     public static final String CHEST_RANGE = "chest";
 
     public BlockPos altarOffsetPos = new BlockPos(0,0,0);
     private final int refreshTime;
     private final int refreshCost;
-    public AbstractRitualBMP(String name, int crystalLevel, int activationCost, int refreshCost, int refreshTime) {
+
+    public AbstractRitualSS(String name, int crystalLevel, int activationCost, int refreshCost, int refreshTime) {
         super(name, crystalLevel, activationCost, StringHelper.getTranslationKey(name, "ritual"));
         this.refreshCost = refreshCost;
         this.refreshTime = refreshTime;

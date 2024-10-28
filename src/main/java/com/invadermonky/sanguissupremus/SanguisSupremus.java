@@ -35,7 +35,7 @@ public class SanguisSupremus {
     public static final String ProxyServerClass = "com.invadermonky." + MOD_ID + ".proxy.CommonProxy";
 
     @Mod.Instance(MOD_ID)
-    public SanguisSupremus instance;
+    public static SanguisSupremus instance;
 
     @SidedProxy(clientSide = ProxyClientClass, serverSide = ProxyServerClass)
     public static CommonProxy proxy;
@@ -67,7 +67,7 @@ public class SanguisSupremus {
     public static final CreativeTabs TAB_BLOOD_MAGIC_PLUS = new CreativeTabs(SanguisSupremus.MOD_ID) {
         @Override
         public ItemStack createIcon() {
-            //TODO: Change icon
+            //TODO: Change icon and move somewhere else
             return ItemStack.EMPTY;
         }
     };

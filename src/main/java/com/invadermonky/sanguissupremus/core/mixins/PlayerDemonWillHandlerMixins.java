@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(PlayerDemonWillHandler.class)
+@Mixin(value = PlayerDemonWillHandler.class, remap = false)
 public class PlayerDemonWillHandlerMixins {
     //TODO: Change these to invoke before return and remove the search through main inventory instead of overwriting the entire method.
     //TODO: Find why the gems sometimes don't register the correct max amount.
@@ -23,7 +23,7 @@ public class PlayerDemonWillHandlerMixins {
      * @author Invadermonky
      * @reason Adding support for worn armor and baubles that can act as demon will storage.
      */
-    @Inject(method = "getTotalDemonWill", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "getTotalDemonWill", at = @At("HEAD"), cancellable = true)
     private static void getTotalDemonWillMixin(EnumDemonWillType type, EntityPlayer player, CallbackInfoReturnable<Double> cir) {
         double souls = 0.0;
         for(ItemStack stack : player.inventory.mainInventory) {
@@ -49,7 +49,7 @@ public class PlayerDemonWillHandlerMixins {
      * @author Invadermonky
      * @reason Adding support for worn armor and baubles that can act as demon will storage.
      */
-    @Inject(method = "isDemonWillFull", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "isDemonWillFull", at = @At("HEAD"), cancellable = true)
     private static void isDemonWillFullMixin(EnumDemonWillType type, EntityPlayer player, CallbackInfoReturnable<Boolean> cir) {
         boolean hasGem = false;
 
@@ -92,7 +92,7 @@ public class PlayerDemonWillHandlerMixins {
      * @author Invadermonky
      * @reason Adding support for worn armor and baubles that extend IDemonWillGem.
      */
-    @Inject(method = "consumeDemonWill", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "consumeDemonWill", at = @At("HEAD"), cancellable = true)
     private static void consumeDemonWillMixin(EnumDemonWillType type, EntityPlayer player, double amount, CallbackInfoReturnable<Double> cir) {
         double consumed = 0;
 
@@ -136,7 +136,7 @@ public class PlayerDemonWillHandlerMixins {
      * @reason Adding support for worn armor and baubles that can act as demon will storage.
      */
     @Inject(method = "addDemonWill(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;",
-            at = @At("HEAD"), remap = false, cancellable = true)
+            at = @At("HEAD"), cancellable = true)
     private static void addDemonWillMixin(EntityPlayer player, ItemStack willStack, CallbackInfoReturnable<ItemStack> cir) {
         if(willStack.isEmpty()) {
             cir.setReturnValue(ItemStack.EMPTY);
@@ -182,7 +182,7 @@ public class PlayerDemonWillHandlerMixins {
      * @reason Adding support for worn armor and baubles that can act as demon will storage.
      */
     @Inject(method = "addDemonWill(LWayofTime/bloodmagic/soul/EnumDemonWillType;Lnet/minecraft/entity/player/EntityPlayer;D)D",
-            at = @At("HEAD"), remap = false, cancellable = true)
+            at = @At("HEAD"), cancellable = true)
     private static void addDemonWillMixin(EnumDemonWillType type, EntityPlayer player, double amount, CallbackInfoReturnable<Double> cir) {
         double remaining = amount;
         for(ItemStack stack : player.inventory.mainInventory) {
@@ -218,7 +218,7 @@ public class PlayerDemonWillHandlerMixins {
      * @reason Adding support for worn armor and baubles that can act as demon will storage.
      */
     @Inject(method = "addDemonWill(LWayofTime/bloodmagic/soul/EnumDemonWillType;Lnet/minecraft/entity/player/EntityPlayer;DLnet/minecraft/item/ItemStack;)D",
-            at = @At("HEAD"), remap = false, cancellable = true)
+            at = @At("HEAD"), cancellable = true)
     private static void addDemonWillMixin(EnumDemonWillType type, EntityPlayer player, double amount, ItemStack ignored, CallbackInfoReturnable<Double> cir) {
         double remaining = amount;
         for(ItemStack stack : player.inventory.mainInventory) {

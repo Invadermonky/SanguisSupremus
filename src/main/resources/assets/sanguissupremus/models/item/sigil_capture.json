@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:items/sigil_capture"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "sanguissupremus:entity": 1
+      },
+      "model": "sanguissupremus:item/sigil/sigil_capture_filled"
+    }
+  ]
+}

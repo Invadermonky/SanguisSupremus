@@ -1,14 +1,14 @@
 package com.invadermonky.sanguissupremus.effects;
 
+import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
 import com.invadermonky.sanguissupremus.items.sigils.ItemSigilEnderAvoidance;
 import com.invadermonky.sanguissupremus.registry.ModEffectsSS;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.potion.Potion;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 
-public class PotionEnderAvoidance extends Potion {
+public class PotionEnderAvoidance extends AbstractPotionSS {
     public PotionEnderAvoidance() {
         super(false, 0x0);
     }
@@ -24,6 +24,11 @@ public class PotionEnderAvoidance extends Potion {
     @Override
     public boolean isReady(int duration, int amplifier) {
         return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return ConfigHandlerSS.sigils.sigil_of_ender_avoidance;
     }
 
     public static void onProjectileHit(ProjectileImpactEvent event) {

@@ -22,3 +22,5 @@ eclipse
 run/*
 design_docs/cut_content/
 !run/patchouli_books
+/design_docs/living_downgrade_template.md
+/design_docs/living_upgrade_template.md

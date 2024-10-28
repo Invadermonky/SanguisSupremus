@@ -16,9 +16,10 @@ import java.util.Arrays;
 
 /**
  * This class is where all the config checking is handled. Most of the configuration arrays are parsed and converted into
- * HashSets. This class also includes helper methods intended for ease of use elsewhere
+ * HashSets. This class also includes helper methods intended for ease of use elsewhere.
  */
 public class ModTags {
+    public static final THashSet<String> CAPTURE_BLACKLIST = new THashSet<>();
     public static final THashMap<ResourceLocation, Tuple<Integer, Boolean>> CULLING_BOSS_ENTRIES = new THashMap<>();
     public static final THashSet<String> DULLED_MIND_BLACKLIST = new THashSet<>();
     public static final THashSet<String> LIGHT_BLOCKS = new THashSet<>();
@@ -72,12 +73,22 @@ public class ModTags {
      */
     public static void syncConfig() {
         parseCullingBossesWhitelist();
-        DULLED_MIND_BLACKLIST.addAll(Arrays.asList(ConfigHandlerSS.rituals.dulled_mind.blacklist));
-        LIGHT_BLOCKS.addAll(Arrays.asList(ConfigHandlerSS.rituals.lighting_rituals.lightSources));
-        SIGIL_RING_BLACKLIST.addAll(Arrays.asList(ConfigHandlerSS.items.sigil_rings.sigilBlacklist));
+        clearAndAdd(CAPTURE_BLACKLIST, ConfigHandlerSS.sigils.capture_sigils.capture_blacklist);
+        clearAndAdd(DULLED_MIND_BLACKLIST, ConfigHandlerSS.rituals.dulled_mind.blacklist);
+        clearAndAdd(LIGHT_BLOCKS, ConfigHandlerSS.rituals.lighting_rituals.lightSources);
+        clearAndAdd(SIGIL_RING_BLACKLIST, ConfigHandlerSS.items.sigil_rings.sigilBlacklist);
+    }
+
+    private static <T> void clearAndAdd(THashSet<T> set, T[] array) {
+        if(set == null) {
+            set = new THashSet<>();
+        }
+        set.clear();
+        set.addAll(Arrays.asList(array));
     }
 
     private static void parseCullingBossesWhitelist() {
+        CULLING_BOSS_ENTRIES.clear();
         for(String str : ConfigHandlerSS.rituals.well_of_slaughter.killBossesWhitelist) {
             String[] split = str.split(";");
             try {

@@ -10,9 +10,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
 public interface IDemonWillGemContainer extends IDemonWillGem, IMultiWillTool {
-    //TODO: Add a percentage bonus to Demon Will gain when a tartaric gem is stored in the necklace.
-    //  Maybe require the necklace to also be worn?
-
     /**
      * The will gain bonus for having a tartaric gem stored in this item. Will gain will be applied when will is inserted
      * into the contained Tartaric Gem.

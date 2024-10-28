@@ -19,7 +19,7 @@ import java.util.Iterator;
 import java.util.function.Consumer;
 
 @RitualRegister(LibNames.RITUAL_FADING_LIGHT)
-public class RitualFadingLight extends AbstractRitualBMP {
+public class RitualFadingLight extends AbstractRitualSS {
     public static final String DARKEN_RANGE = "darkenRange";
 
     private Iterator<BlockPos> blockIterator;

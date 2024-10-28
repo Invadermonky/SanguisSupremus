@@ -64,7 +64,15 @@ public class RitualDulledMind extends Ritual {
     @Override
     public void gatherComponents(Consumer<RitualComponent> components) {
         //TODO: Actual rune structure.
-        this.addRune(components, 1, 0, 1, EnumRuneType.BLANK);
+        this.addParallelRunes(components, 2, -1, EnumRuneType.EARTH);
+        this.addCornerRunes(components, 1, 0, EnumRuneType.DUSK);
+        this.addParallelRunes(components, 1, 0, EnumRuneType.DUSK);
+        this.addOffsetRunes(components, 2, 3, 0, EnumRuneType.WATER);
+        this.addCornerRunes(components, 2, 0, EnumRuneType.AIR);
+        this.addCornerRunes(components, 2, 1, EnumRuneType.AIR);
+        this.addCornerRunes(components, 2, 2, EnumRuneType.AIR);
+        this.addParallelRunes(components, 1, 4, EnumRuneType.BLANK);
+        this.addParallelRunes(components, 2, 3, EnumRuneType.BLANK);
     }
 
     @Override

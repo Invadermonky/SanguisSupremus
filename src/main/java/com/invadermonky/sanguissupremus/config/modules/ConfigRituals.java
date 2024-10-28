@@ -4,6 +4,7 @@ import net.minecraftforge.common.config.Config;
 
 public class ConfigRituals {
     public DulledMindRitualConfig dulled_mind = new DulledMindRitualConfig();
+    public ImprisonedSoulsConfig imprisoned_souls = new ImprisonedSoulsConfig();
     @Config.Comment("Ritual of Chasing Shadows and Ritual of Fading Light settings.")
     public LightingRitualConfig lighting_rituals = new LightingRitualConfig();
     public NaturesLeechRitualConfig natures_leech = new NaturesLeechRitualConfig();
@@ -44,6 +45,16 @@ public class ConfigRituals {
         public int refreshCost = 25;
         @Config.Comment("The cooldown (in ticks) between each activation of the ritual.")
         public int refreshTime = 60;
+    }
+
+    public static class ImprisonedSoulsConfig {
+        @Config.RangeDouble(min = 0, max = 20.0)
+        @Config.Comment("A cost multiplier for the spawned entity. This value will be multiplied by the entity's max health and sacrificial value.")
+        public double costMultiplier = 1.5;
+        @Config.Comment("The initial activation cost of the ritual.")
+        public int activationCost = 50000;
+        @Config.Comment("The cooldown (in ticks) between each activation of the ritual.")
+        public int refreshTime = 200;
     }
 
     public static class LightingRitualConfig {

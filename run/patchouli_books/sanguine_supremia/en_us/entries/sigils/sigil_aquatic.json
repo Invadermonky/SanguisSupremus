@@ -1,0 +1,19 @@
+{
+  "name": "Sigil of Aqua. Aff.",
+  "icon": "sanguissupremus:sigil_aquatic",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Aquatic Affinity$() will grant you increased swim speed, water breathing, night vision, and increased mining speed while underwater.$(br2)$(bold)Cost:$() $(blood)100 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Aquatic Reagent",
+      "soulforge.output": "sanguissupremus:reagent_aquatic",
+      "array.heading": "Sigil of Aqua. Aff.",
+      "array.output": "sanguissupremus:sigil_aquatic",
+      "array.text": "$(italic)$()"
+    }
+  ]
+}

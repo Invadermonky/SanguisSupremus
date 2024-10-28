@@ -92,7 +92,7 @@ public class ItemSigilRing extends AbstractModBauble implements ISigilContainer,
         if(this.getHasSigil(stack)) {
             tooltip.add(this.getContainedSigil(stack).getDisplayName());
         } else {
-            tooltip.add(I18n.format(StringHelper.getTranslationKey(SettingType.TL_KEY, "tooltip", "empty")));
+            tooltip.add(I18n.format(StringHelper.getTranslationKey("empty", "tooltip")));
         }
         tooltip.add(I18n.format(StringHelper.getTranslationKey(LibNames.RING_SIGIL_BASE, "tooltip", "desc"), (int) (this.SETTING.getCostReduction() * 100)));
     }

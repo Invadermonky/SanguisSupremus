@@ -15,6 +15,7 @@ import com.invadermonky.sanguissupremus.crafting.recipes.RecipeTartaricGemAttach
 import com.invadermonky.sanguissupremus.crafting.recipes.RecipeTartaricGemRemove;
 import com.invadermonky.sanguissupremus.items.enums.SettingType;
 import com.invadermonky.sanguissupremus.util.StringHelper;
+import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -133,11 +134,11 @@ public class ItemTartaricAmulet extends AbstractModBauble implements IDemonWillG
             tooltip.add(TextHelper.localize("tooltip.bloodmagic.will", this.getWill(type, stack)));
             tooltip.add(TextHelper.localizeEffect("tooltip.bloodmagic.currentType." + this.getCurrentType(stack).getName().toLowerCase()));
         } else {
-            tooltip.add(I18n.format(StringHelper.getTranslationKey(SettingType.TL_KEY, "tooltip", "empty")));
+            tooltip.add(I18n.format(StringHelper.getTranslationKey("empty", "tooltip")));
         }
         float bonus = this.getWillBonusMultiplier(stack);
         if(bonus > 0) {
-            tooltip.add(I18n.format(StringHelper.getTranslationKey(SettingType.TL_KEY, "tooltip", "desc"), (int) (bonus * 100)));
+            tooltip.add(I18n.format(StringHelper.getTranslationKey(LibNames.TARTARIC_AMULET_BASE, "tooltip", "desc"), (int) (bonus * 100)));
         }
     }
 

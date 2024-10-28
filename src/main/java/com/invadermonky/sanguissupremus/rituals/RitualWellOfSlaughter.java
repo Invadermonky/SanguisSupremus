@@ -26,7 +26,7 @@ import static WayofTime.bloodmagic.ritual.types.RitualWellOfSuffering.DAMAGE_RAN
 import static WayofTime.bloodmagic.ritual.types.RitualWellOfSuffering.SACRIFICE_AMOUNT;
 
 @RitualRegister(LibNames.RITUAL_SLAUGHTER)
-public class RitualWellOfSlaughter extends AbstractRitualBMP {
+public class RitualWellOfSlaughter extends AbstractRitualSS {
     public RitualWellOfSlaughter() {
         super(LibNames.RITUAL_SLAUGHTER, 1, ConfigHandlerSS.rituals.well_of_slaughter.activationCost, ConfigHandlerSS.rituals.well_of_slaughter.refreshCost, ConfigHandlerSS.rituals.well_of_slaughter.refreshTime);
         this.setDefaultAltarRange();

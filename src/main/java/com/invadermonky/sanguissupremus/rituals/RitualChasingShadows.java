@@ -22,7 +22,7 @@ import java.util.Iterator;
 import java.util.function.Consumer;
 
 @RitualRegister(LibNames.RITUAL_CHASING_SHADOWS)
-public class RitualChasingShadows extends AbstractRitualBMP {
+public class RitualChasingShadows extends AbstractRitualSS {
     public static final String LIGHT_RANGE = "lightRange";
 
     private Iterator<BlockPos> blockIterator;

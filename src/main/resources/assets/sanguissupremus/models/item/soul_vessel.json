@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:items/soul_vessel"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "sanguissupremus:entity": 1
+      },
+      "model": "sanguissupremus:item/misc/soul_vessel_filled"
+    }
+  ]
+}

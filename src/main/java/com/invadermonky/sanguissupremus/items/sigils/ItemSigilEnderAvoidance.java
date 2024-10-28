@@ -15,6 +15,7 @@ import com.invadermonky.sanguissupremus.registry.ModEffectsSS;
 import com.invadermonky.sanguissupremus.registry.ModItemsSS;
 import com.invadermonky.sanguissupremus.util.RaytraceHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
+import com.invadermonky.sanguissupremus.util.libs.LibTags;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
@@ -41,7 +42,7 @@ public class ItemSigilEnderAvoidance extends ItemSigilToggleableBase implements 
 
     public ItemSigilEnderAvoidance() {
         super(LibNames.SIGIL_ENDER_AVOIDANCE, 200);
-        this.addPropertyOverride(LibNames.SIGIL_ENABLED, (stack, worldIn, entityIn) -> this.getActivated(stack) ? 1 : 0);
+        this.addPropertyOverride(LibTags.SIGIL_ENABLED, (stack, worldIn, entityIn) -> this.getActivated(stack) ? 1 : 0);
     }
 
     public int getCooldown() {

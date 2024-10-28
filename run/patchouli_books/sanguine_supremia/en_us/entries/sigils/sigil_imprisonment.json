@@ -1,0 +1,29 @@
+{
+  "name": "Sigil of Eternal Impr.",
+  "icon": "sanguissupremus:sigil_imprisonment",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Sigil of Eternal Imprisonment$() is an upgraded form of the Sigil of the Captured Soul.$(br2)Rather than storing creature souls within the sigil itself, the $(item)Sigil of Eternal Imprisonment$() imprisons entities within $(item)Soul Vessels$().$(br2)A $(item)Soul Vessel$() is a fragile container capable of holding"
+    },
+    {
+      "type": "text",
+      "text": "the soul of a single entity. Once a creature has been captured within a $(item)Soul Vessel$(), the vessel becomes bound, imprisoning the soul within.$(br2)The captured entity can be released by throwing the vessel at the ground, shattering the $(item)Soul Vessel$().$(br2)$(bold)Cost:$() $(blood)500 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Imprisonment Reagent",
+      "soulforge.output": "sanguissupremus:reagent_imprisonment",
+      "array.heading": "Sigil of Eternal Impr.",
+      "array.output": "sanguissupremus:sigil_imprisonment",
+      "array.text": "$(italic)$()"
+    },
+    {
+      "type": "crafting_alchemy_table",
+      "heading": "Soul Vessel",
+      "output": "sanguissupremus:soul_vessel",
+      "text": ""
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "name": "Sigil",
-  "icon": "bloodmagic:sigil_",
+  "icon": "sanguissupremus:sigil_",
   "category": "patchouli:sigils",
   "pages": [
     {
@@ -10,9 +10,9 @@
     {
       "type": "crafting_sigil",
       "soulforge.heading": " Reagent",
-      "soulforge.output": "bloodmagic:component:1",
+      "soulforge.output": "sanguissupremus:reagent_",
       "array.heading": "Sigil",
-      "array.output": "bloodmagic:sigil_",
+      "array.output": "sanguissupremus:sigil_",
       "array.text": "$(italic)$()"
     }
   ]

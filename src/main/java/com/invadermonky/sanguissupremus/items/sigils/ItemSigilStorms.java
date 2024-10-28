@@ -1,10 +1,13 @@
 package com.invadermonky.sanguissupremus.items.sigils;
 
+import WayofTime.bloodmagic.api.impl.BloodMagicAPI;
 import WayofTime.bloodmagic.iface.ISigil;
+import WayofTime.bloodmagic.item.ItemSlate;
 import WayofTime.bloodmagic.item.sigil.ItemSigilBase;
 import WayofTime.bloodmagic.util.helper.PlayerHelper;
 import com.invadermonky.sanguissupremus.api.IAddition;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
+import com.invadermonky.sanguissupremus.registry.ModItemsSS;
 import com.invadermonky.sanguissupremus.util.RaytraceHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -13,6 +16,7 @@ import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ActionResult;
@@ -110,7 +114,19 @@ public class ItemSigilStorms extends ItemSigilBase implements IAddition {
 
     @Override
     public void registerRecipe(IForgeRegistry<IRecipe> registry) {
-        //TODO
+        BloodMagicAPI.INSTANCE.getRecipeRegistrar().addTartaricForge(
+                new ItemStack(ModItemsSS.REAGENT_STORMS),
+                800,
+                120,
+                Blocks.IRON_BLOCK, Blocks.GOLD_BLOCK, Items.FISHING_ROD, Items.GHAST_TEAR
+        );
+
+        BloodMagicAPI.INSTANCE.getRecipeRegistrar().addAlchemyArray(
+                new ItemStack(ModItemsSS.REAGENT_STORMS),
+                ItemSlate.SlateType.DEMONIC.getStack(),
+                new ItemStack(this),
+                null
+        );
     }
 
     @Override

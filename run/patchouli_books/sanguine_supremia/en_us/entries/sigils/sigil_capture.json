@@ -1,0 +1,19 @@
+{
+  "name": "Sigil of the Capt. Soul",
+  "icon": "sanguissupremus:sigil_capture",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On [$(k:use)], the $(item)Sigil of the Captured Soul$() attempts to capture a targeted entity within the sigil. Once the sigil has captured a soul, no further entities can be stored.$(br2)To release the captured soul, [$(k:use)] the $(item)Sigil of the Captured Soul$() while targeting a block.$(br2)$(bold)Cost:$() $(blood)500 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Capture Reagent",
+      "soulforge.output": "sanguissupremus:reagent_capture",
+      "array.heading": "Sigil of the Capt. Soul",
+      "array.output": "sanguissupremus:sigil_capture",
+      "array.text": "$(italic)$()"
+    }
+  ]
+}
