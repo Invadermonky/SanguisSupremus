@@ -36,6 +36,7 @@ import java.util.List;
 
 public class ItemSacrificialDaggerSafe extends Item implements IAddition {
     public ItemSacrificialDaggerSafe() {
+        this.setMaxStackSize(1);
         this.addPropertyOverride(new ResourceLocation(SanguisSupremus.MOD_ID, "ceremonial"), (stack, world, entity) -> world != null && entity instanceof EntityPlayer &&
                 ((ItemSacrificialDaggerSafe) stack.getItem()).isPlayerPreparedForSacrifice(world, (EntityPlayer) entity) ? 1 : 0);
     }
@@ -158,6 +159,6 @@ public class ItemSacrificialDaggerSafe extends Item implements IAddition {
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.sacrifical_daggers._enableSafeDagger;
+        return ConfigHandlerSS.items.sacrifical_daggers.enableSafeDagger;
     }
 }

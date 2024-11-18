@@ -1,6 +1,7 @@
 package com.invadermonky.sanguissupremus;
 
 import com.invadermonky.sanguissupremus.proxy.CommonProxy;
+import com.invadermonky.sanguissupremus.registry.ModItemsSS;
 import com.invadermonky.sanguissupremus.util.LogHelper;
 import com.invadermonky.sanguissupremus.util.libs.ModIds;
 import com.invadermonky.sanguissupremus.util.tags.ModTags;
@@ -67,8 +68,10 @@ public class SanguisSupremus {
     public static final CreativeTabs TAB_BLOOD_MAGIC_PLUS = new CreativeTabs(SanguisSupremus.MOD_ID) {
         @Override
         public ItemStack createIcon() {
-            //TODO: Change icon and move somewhere else
-            return ItemStack.EMPTY;
+            if(ModItemsSS.SICKLE_NATURES_REAP.isEnabled())
+                return new ItemStack(ModItemsSS.SICKLE_NATURES_REAP);
+
+            return new ItemStack(ModItemsSS.FALLBACK_ICON);
         }
     };
 }

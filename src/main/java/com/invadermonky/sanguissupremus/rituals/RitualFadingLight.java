@@ -34,9 +34,7 @@ public class RitualFadingLight extends AbstractRitualSS {
     @Override
     public void performRitual(IMasterRitualStone masterRitualStone) {
         World world = masterRitualStone.getWorldObj();
-        int currentEssence = masterRitualStone.getOwnerNetwork().getCurrentEssence();
-        if(currentEssence < this.getRefreshCost()) {
-            masterRitualStone.getOwnerNetwork().causeNausea();
+        if(this.hasInsufficientLP(masterRitualStone)) {
             return;
         }
 

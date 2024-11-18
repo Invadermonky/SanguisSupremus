@@ -3,6 +3,7 @@ package com.invadermonky.sanguissupremus.util.libs;
 import WayofTime.bloodmagic.BloodMagic;
 import baubles.common.Baubles;
 import com.invadermonky.sanguissupremus.util.ModHelper;
+import jeresources.reference.Reference;
 import vazkii.patchouli.common.base.Patchouli;
 
 import javax.annotation.Nullable;
@@ -10,6 +11,7 @@ import javax.annotation.Nullable;
 public enum ModIds {
     baubles(ConstIds.baubles),
     bloodmagic(ConstIds.blood_magic),
+    jer(ConstIds.jer),
     patchouli(ConstIds.patchouli),
     ;
 
@@ -41,6 +43,7 @@ public enum ModIds {
     public static class ConstIds {
         public static final String baubles = Baubles.MODID;
         public static final String blood_magic = BloodMagic.MODID;
+        public static final String jer = Reference.ID;
         public static final String patchouli = Patchouli.MOD_ID;
     }
 }

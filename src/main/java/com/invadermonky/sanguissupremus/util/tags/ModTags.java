@@ -23,6 +23,7 @@ public class ModTags {
     public static final THashMap<ResourceLocation, Tuple<Integer, Boolean>> CULLING_BOSS_ENTRIES = new THashMap<>();
     public static final THashSet<String> DULLED_MIND_BLACKLIST = new THashSet<>();
     public static final THashSet<String> LIGHT_BLOCKS = new THashSet<>();
+    public static final THashSet<String> NATURES_REAP_BLACKLIST = new THashSet<>();
     public static final THashSet<String> SIGIL_RING_BLACKLIST = new THashSet<>();
 
 
@@ -76,6 +77,7 @@ public class ModTags {
         clearAndAdd(CAPTURE_BLACKLIST, ConfigHandlerSS.sigils.capture_sigils.capture_blacklist);
         clearAndAdd(DULLED_MIND_BLACKLIST, ConfigHandlerSS.rituals.dulled_mind.blacklist);
         clearAndAdd(LIGHT_BLOCKS, ConfigHandlerSS.rituals.lighting_rituals.lightSources);
+        clearAndAdd(NATURES_REAP_BLACKLIST, ConfigHandlerSS.rituals.herbivorous_altar.reapBlacklist);
         clearAndAdd(SIGIL_RING_BLACKLIST, ConfigHandlerSS.items.sigil_rings.sigilBlacklist);
     }
 

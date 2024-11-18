@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "sanguissupremus:sacrificial_dagger_fanatical"
+  },
+  "pattern": [
+    "GGG",
+    "IDG",
+    "AIG"
+  ],
+  "key": {
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotBloodInfusedGold"
+    },
+    "D": {
+      "item": "bloodmagic:dagger_of_sacrifice"
+    },
+    "A": {
+      "item": "bloodmagic:sacrificial_dagger",
+      "data": 0
+    }
+  }
+}

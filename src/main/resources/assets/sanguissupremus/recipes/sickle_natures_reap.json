@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "sanguissupremus:sickle_natures_reap"
+  },
+  "pattern": [
+    " GG",
+    " SG",
+    "DG "
+  ],
+  "key": {
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "treeSapling"
+    },
+    "D": {
+      "item": "bloodmagic:sacrificial_dagger",
+      "data": 0
+    }
+  }
+}

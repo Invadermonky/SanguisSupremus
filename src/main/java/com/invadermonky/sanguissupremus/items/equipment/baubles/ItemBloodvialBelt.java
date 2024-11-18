@@ -14,7 +14,6 @@ import WayofTime.bloodmagic.util.helper.TextHelper;
 import baubles.api.BaubleType;
 import baubles.api.BaublesApi;
 import com.invadermonky.sanguissupremus.api.IAddition;
-import com.invadermonky.sanguissupremus.api.items.AbstractModBauble;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
 import com.invadermonky.sanguissupremus.items.enums.BeltType;
 import com.invadermonky.sanguissupremus.util.StringHelper;

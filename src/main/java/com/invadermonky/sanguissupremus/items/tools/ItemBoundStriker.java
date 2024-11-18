@@ -240,6 +240,6 @@ public class ItemBoundStriker extends ItemFlintAndSteel implements IBindable, IA
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.bound_tools._enableBoundStriker;
+        return ConfigHandlerSS.items.bound_tools.enableBoundStriker;
     }
 }

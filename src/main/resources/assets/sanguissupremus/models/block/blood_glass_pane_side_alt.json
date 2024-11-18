@@ -1,0 +1,7 @@
+{
+  "parent": "block/pane_side_alt",
+  "textures": {
+    "edge": "sanguissupremus:blocks/blood_glass_pane_top",
+    "pane": "sanguissupremus:blocks/blood_glass"
+  }
+}

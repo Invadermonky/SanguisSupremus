@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "sanguissupremus:blocks/ender_chest_accessor_bottom",
+    "top": "sanguissupremus:blocks/ender_chest_accessor_top",
+    "side": "sanguissupremus:blocks/ender_chest_accessor_side"
+  }
+}

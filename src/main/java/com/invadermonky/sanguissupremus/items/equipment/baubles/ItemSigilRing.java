@@ -7,12 +7,11 @@ import WayofTime.bloodmagic.util.helper.NetworkHelper;
 import baubles.api.BaubleType;
 import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.IAddition;
-import com.invadermonky.sanguissupremus.api.items.AbstractModBauble;
 import com.invadermonky.sanguissupremus.api.items.ISigilContainer;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
-import com.invadermonky.sanguissupremus.crafting.recipes.RecipeSigilAttach;
-import com.invadermonky.sanguissupremus.crafting.recipes.RecipeSigilRemove;
 import com.invadermonky.sanguissupremus.items.enums.SettingType;
+import com.invadermonky.sanguissupremus.recipes.crafting.RecipeSigilAttach;
+import com.invadermonky.sanguissupremus.recipes.crafting.RecipeSigilRemove;
 import com.invadermonky.sanguissupremus.util.StringHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -115,6 +114,6 @@ public class ItemSigilRing extends AbstractModBauble implements ISigilContainer,
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.sigil_rings._enable;
+        return ConfigHandlerSS.items.sigil_rings.enable;
     }
 }

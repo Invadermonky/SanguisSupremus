@@ -90,6 +90,6 @@ public class ItemSacrificialDaggerFanatical extends ItemSacrificialDaggerSafe {
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.sacrifical_daggers._enableFanaticalDagger;
+        return ConfigHandlerSS.items.sacrifical_daggers.enableFanaticalDagger;
     }
 }

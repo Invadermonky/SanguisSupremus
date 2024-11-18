@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "sanguissupremus:infused_ingot_gold",
+    "count": 9
+  },
+  "pattern": [
+    "B"
+  ],
+  "key": {
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "blockBloodInfusedGold"
+    }
+  }
+}

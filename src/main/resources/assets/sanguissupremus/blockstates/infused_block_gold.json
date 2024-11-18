@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sanguissupremus:infused_block_gold"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

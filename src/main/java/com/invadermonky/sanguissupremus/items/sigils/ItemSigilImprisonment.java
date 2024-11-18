@@ -81,7 +81,6 @@ public class ItemSigilImprisonment extends ItemSigilBase implements IAddition {
 
     @Override
     public void registerRecipe(IForgeRegistry<IRecipe> registry) {
-        //TODO
         BloodMagicAPI.INSTANCE.getRecipeRegistrar().addTartaricForge(
                 new ItemStack(ModItemsSS.REAGENT_IMPRISONMENT),
                 800.0,

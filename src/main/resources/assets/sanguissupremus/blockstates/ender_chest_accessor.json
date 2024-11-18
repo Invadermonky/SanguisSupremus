@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sanguissupremus:ender_chest_accessor"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

@@ -31,23 +31,38 @@
 
 ## Sanguis Supremus
 
-| Name                    | Description                                                                             | Status |
-|-------------------------|-----------------------------------------------------------------------------------------|:------:|
-| Altar Spikes            | Placed above an altar, will damage entities above the altar and drain their blood       |        |
-| Blood Glass (+pane)     | Red colored glass                                                                       |        |
-| Blood Infused Glowstone | Glowstone variant made from blood infused glowstone dust (decorative)                   |        |
-| Bloodwood Leaves        | Grown from a Bloodwood Sapling, drops Blood Oranges                                     |        |
-| Bloodwood Planks        | Made from Bloodwood                                                                     |        |
-| Bloodwood Sapling       | Grows a Bloodwood Tree, obtained by killing entities near a sapling until it transforms |        |
-| Bloodwood Log           | Grown from a Bloodwood Sapling                                                          |        |
-| Decorative Slate        | A decorative block with the appearance of blank slate                                   |        |
-| Blood Capacitor         | RF storage capacitor                                                                    |        |
-| Slate Block             | Storage blocks for slates                                                               |        |
-|                         |                                                                                         |        |
-|                         |                                                                                         |        |
-|                         |                                                                                         |        |
-|                         |                                                                                         |        |
-|                         |                                                                                         |        |
+| Name                    | Description                                                                                               |
+|-------------------------|-----------------------------------------------------------------------------------------------------------|
+| Altar Hopper            | Reworked Altare Aenigmatica, 5 inputs slots and an Orb slot. Functions like a hopper with orb extraction. |
+| Altar Spikes            | Placed above an altar, will damage entities above and drain their blood into the altar                    |
+| Blood Capacitor         | Large RF storage block                                                                                    |
+| Blood Glass (+pane)     | Red colored glass                                                                                         |
+| Blood Infused Glowstone | Glowstone variant made from blood infused glowstone dust (decorative)                                     |
+| Bloodwood Leaves        | Grown from a Bloodwood Sapling, drops Blood Oranges                                                       |
+| Bloodwood Planks        | Made from Bloodwood                                                                                       |
+| Bloodwood Sapling       | Grows a Bloodwood Tree, obtained by killing entities near a sapling until it transforms                   |
+| Bloodwood Log           | Grown from a Bloodwood Sapling                                                                            |
+| Decorative Slate        | A decorative block with the appearance of blank slate                                                     |
+| Blood Capacitor         | RF storage capacitor                                                                                      |
+| Slate Block             | Storage blocks for slates                                                                                 |
+|                         |                                                                                                           |
+|                         |                                                                                                           |
+|                         |                                                                                                           |
+|                         |                                                                                                           |
+|                         |                                                                                                           |
+
+
+### Bloodwood Blocks
+| Name                                | Description                                                                           |
+|-------------------------------------|---------------------------------------------------------------------------------------|
+| Bloodwood Chest                     | A wooden chest that can only be opened by the bound player                            |
+| Bloodwood Door                      | A wooden door that can only be opened by the bound player                             |
+| Bloodwood Fence Gate                | A wooden fence gate that can only be opened by the bound player                       |
+| Bloodwood Pressure Plate            | A wooden pressure plate that only activates for the bound player                      |
+| Bloodwood Pressure Plate (Inverted) | A wooden pressure plate that only activates for players that are not the bound player |
+| Bloodwood Trapdoor                  | A wooden trapdoor that can only be opened by the bound player                         |
+| Bloodwood Trapped Chest             | A wooden trapped chest that only activates on non-bound players                       |
+
 
 ### Decorative Slate Variants
 

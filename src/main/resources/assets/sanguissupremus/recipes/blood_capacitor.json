@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "sanguissupremus:blood_capacitor"
+  },
+  "pattern": [
+    "BDB",
+    "GRG",
+    "BOB"
+  ],
+  "key": {
+    "B": {
+      "type": "forge:ore_dict",
+      "ore": "blockBloodInfusedGold"
+    },
+    "D": {
+      "type": "forge:ore_dict",
+      "ore": "gemBloodInfusedDiamond"
+    },
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "blockGlassBlood"
+    },
+    "R": {
+      "type": "forge:ore_dict",
+      "ore": "blockRedstone"
+    },
+    "O": {
+      "type": "bloodmagic:orb",
+      "orb": "bloodmagic:master"
+    }
+  }
+}

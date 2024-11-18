@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "bloodmagic:slate",
+    "data": 3,
+    "count": 9
+  },
+  "pattern": [
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "sanguissupremus:storage_slate_demonic"
+    }
+  }
+}

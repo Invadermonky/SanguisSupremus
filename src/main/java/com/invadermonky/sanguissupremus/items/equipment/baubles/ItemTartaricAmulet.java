@@ -8,12 +8,11 @@ import WayofTime.bloodmagic.util.helper.TextHelper;
 import baubles.api.BaubleType;
 import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.IAddition;
-import com.invadermonky.sanguissupremus.api.items.AbstractModBauble;
 import com.invadermonky.sanguissupremus.api.items.IDemonWillGemContainer;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
-import com.invadermonky.sanguissupremus.crafting.recipes.RecipeTartaricGemAttach;
-import com.invadermonky.sanguissupremus.crafting.recipes.RecipeTartaricGemRemove;
 import com.invadermonky.sanguissupremus.items.enums.SettingType;
+import com.invadermonky.sanguissupremus.recipes.crafting.RecipeTartaricGemAttach;
+import com.invadermonky.sanguissupremus.recipes.crafting.RecipeTartaricGemRemove;
 import com.invadermonky.sanguissupremus.util.StringHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -160,6 +159,6 @@ public class ItemTartaricAmulet extends AbstractModBauble implements IDemonWillG
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.tartaric_amulets._enable;
+        return ConfigHandlerSS.items.tartaric_amulets.enable;
     }
 }

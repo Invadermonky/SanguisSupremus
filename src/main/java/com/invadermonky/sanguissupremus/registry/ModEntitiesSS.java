@@ -17,8 +17,8 @@ public class ModEntitiesSS {
 
     public static void registerEntities() {
         if(ModItemsSS.SOUL_VESSEL.isEnabled()) {
-            EntityRegistry.registerModEntity(new ResourceLocation(SanguisSupremus.MOD_ID, LibNames.SOUL_BOTTLE), EntitySoulBottle.class,
-                    LibNames.SOUL_BOTTLE, ENTITY_START_ID++, SanguisSupremus.instance, 50, 1, true);
+            EntityRegistry.registerModEntity(new ResourceLocation(SanguisSupremus.MOD_ID, LibNames.SOUL_VESSEL), EntitySoulBottle.class,
+                    LibNames.SOUL_VESSEL, ENTITY_START_ID++, SanguisSupremus.instance, 50, 1, true);
         }
     }
 

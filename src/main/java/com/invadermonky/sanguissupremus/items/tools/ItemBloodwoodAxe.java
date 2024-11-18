@@ -3,7 +3,7 @@ package com.invadermonky.sanguissupremus.items.tools;
 import com.invadermonky.sanguissupremus.api.IAddition;
 import com.invadermonky.sanguissupremus.api.items.IBloodwoodTool;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
-import com.invadermonky.sanguissupremus.items.materials.MaterialsBMP;
+import com.invadermonky.sanguissupremus.registry.ModMaterialsSS;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ import net.minecraftforge.client.model.ModelLoader;
 
 public class ItemBloodwoodAxe extends ItemAxe implements IBloodwoodTool, IAddition {
     public ItemBloodwoodAxe() {
-        super(MaterialsBMP.MATERIAL_BLOODWOOD, 8.0F, -3.2F);
+        super(ModMaterialsSS.MATERIAL_BLOODWOOD, 8.0F, -3.2F);
     }
 
     @Override
@@ -42,6 +42,6 @@ public class ItemBloodwoodAxe extends ItemAxe implements IBloodwoodTool, IAdditi
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.bloodwood._enable;
+        return ConfigHandlerSS.items.bloodwood.enable;
     }
 }

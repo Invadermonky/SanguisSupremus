@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sanguissupremus:storage_slate_imbued"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

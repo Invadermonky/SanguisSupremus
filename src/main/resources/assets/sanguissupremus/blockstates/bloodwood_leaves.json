@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sanguissupremus:bloodwood_leaves"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

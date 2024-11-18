@@ -16,7 +16,7 @@ public class PotionEnderAvoidance extends AbstractPotionSS {
     @Override
     public void performEffect(EntityLivingBase entity, int amplifier) {
         if(!entity.world.isRemote && entity.isPotionActive(this) && entity.isWet()) {
-            entity.attackEntityFrom(DamageSource.DROWN, 1.0F);
+            entity.attackEntityFrom(DamageSource.DROWN, 2.0F);
             ItemSigilEnderAvoidance.teleportRandomly(entity.world, entity);
         }
     }

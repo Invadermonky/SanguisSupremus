@@ -25,9 +25,6 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class ItemSigilAquatic extends ItemSigilToggleableBase implements IAddition {
-    private static final double SPEED_MULT = 1.2;
-    private static final double MAX_SPEED = 1.3;
-
     public ItemSigilAquatic() {
         super(LibNames.SIGIL_AQUATIC, 100);
         this.addPropertyOverride(LibTags.SIGIL_ENABLED, (stack, worldIn, entityIn) -> this.getActivated(stack) ? 1 : 0);

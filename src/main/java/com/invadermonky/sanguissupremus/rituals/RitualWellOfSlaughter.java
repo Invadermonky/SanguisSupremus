@@ -3,6 +3,7 @@ package com.invadermonky.sanguissupremus.rituals;
 import WayofTime.bloodmagic.api.impl.BloodMagicAPI;
 import WayofTime.bloodmagic.demonAura.WorldDemonWillHandler;
 import WayofTime.bloodmagic.ritual.*;
+import WayofTime.bloodmagic.soul.DemonWillHolder;
 import WayofTime.bloodmagic.soul.EnumDemonWillType;
 import WayofTime.bloodmagic.tile.TileAltar;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
@@ -10,9 +11,9 @@ import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import com.invadermonky.sanguissupremus.util.tags.ModTags;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.boss.EntityWither;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Tuple;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -20,6 +21,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 import static WayofTime.bloodmagic.ritual.types.RitualWellOfSuffering.DAMAGE_RANGE;
@@ -27,6 +29,19 @@ import static WayofTime.bloodmagic.ritual.types.RitualWellOfSuffering.SACRIFICE_
 
 @RitualRegister(LibNames.RITUAL_SLAUGHTER)
 public class RitualWellOfSlaughter extends AbstractRitualSS {
+    public static double corrosiveWillDrain = ConfigHandlerSS.rituals.well_of_slaughter.killItemsDrainAmount;
+    public static double destructiveWillDrain = ConfigHandlerSS.rituals.well_of_slaughter.killBossesDrainAmount;
+    public static double rawWillDrain = ConfigHandlerSS.rituals.well_of_slaughter.buffedMobsDrainAmount;
+
+    public static int itemSacrificialValue = ConfigHandlerSS.rituals.well_of_slaughter.killItemSacrificialValue;
+
+    private double rawDrain;
+    private double corrosiveDrain;
+    private int maxEffects;
+    private int totalEffects;
+    private int totalSacrificeGain;
+
+
     public RitualWellOfSlaughter() {
         super(LibNames.RITUAL_SLAUGHTER, 1, ConfigHandlerSS.rituals.well_of_slaughter.activationCost, ConfigHandlerSS.rituals.well_of_slaughter.refreshCost, ConfigHandlerSS.rituals.well_of_slaughter.refreshTime);
         this.setDefaultAltarRange();
@@ -36,39 +51,68 @@ public class RitualWellOfSlaughter extends AbstractRitualSS {
 
     @Override
     public void performRitual(IMasterRitualStone masterRitualStone) {
-        //TODO:
-        // Will of any kind will kill buffed mobs
-        // Corrosive Will will destroy dropped items for additional LP gain
-        // Destructive Will will kill bosses
-
         World world = masterRitualStone.getWorldObj();
+        if(!world.isRemote) {
+            if(this.hasInsufficientLP(masterRitualStone)) {
+                return;
+            }
+
+            //TODO: Patchouli
+            // Raw Will will kill buffed mobs - drained per buffed mob killed
+            // Corrosive Will will destroy dropped items for additional LP gain - consumes a small amount of will per item destroyed
+            // Destructive Will will kill bosses - consumes a large amount of will per boss destroyed
+
+            BlockPos mrsPos = masterRitualStone.getBlockPos();
+            List<EnumDemonWillType> willConfig = masterRitualStone.getActiveWillConfig();
+            DemonWillHolder holder = WorldDemonWillHandler.getWillHolder(world, mrsPos);
+            double rawWill = this.getWillRespectingConfig(world, mrsPos, EnumDemonWillType.DEFAULT, willConfig);
+            double corrosiveWill = this.getWillRespectingConfig(world, mrsPos, EnumDemonWillType.CORROSIVE, willConfig);
+            double destructiveWill = this.getWillRespectingConfig(world, mrsPos, EnumDemonWillType.DESTRUCTIVE, willConfig);
+
+            this.rawDrain = 0.0;
+            this.corrosiveDrain = 0.0;
+
+            this.maxEffects = masterRitualStone.getOwnerNetwork().getCurrentEssence() / this.getRefreshCost();
+            this.totalEffects = 0;
+            this.totalSacrificeGain = 0;
+
+            TileAltar altar = this.findAltar(masterRitualStone);
+            if(altar == null)
+                return;
+
+            AxisAlignedBB damageRange = masterRitualStone.getBlockRange(DAMAGE_RANGE).getAABB(mrsPos);
+
+            //Kill Living Entities
+            this.totalEffects += this.killLivingEntities(masterRitualStone, world, damageRange, rawWill, destructiveWill);
+
+            //Kill TNT
+            this.totalEffects += this.killTNT(world, damageRange);
+
+            //Kill Items
+            int itemsKilled = this.killItemEntities(world, damageRange, corrosiveWill);
+            if(itemSacrificialValue > 0 && itemsKilled > 0) {
+                this.corrosiveDrain += itemsKilled * corrosiveWillDrain;
+                this.totalSacrificeGain += (itemsKilled * itemSacrificialValue);
+            }
+
+            if(this.rawDrain > 0) {
+                WorldDemonWillHandler.drainWill(world, mrsPos, EnumDemonWillType.DEFAULT, this.rawDrain, true);
+            }
+            if(this.corrosiveDrain > 0) {
+                WorldDemonWillHandler.drainWill(world, mrsPos, EnumDemonWillType.CORROSIVE, this.corrosiveDrain, true);
+            }
+
+            altar.sacrificialDaggerCall(this.totalSacrificeGain, true);
+            masterRitualStone.getOwnerNetwork().syphon(masterRitualStone.ticket(this.totalEffects * this.getRefreshCost()));
+        }
+    }
+
+    private int killLivingEntities(IMasterRitualStone masterRitualStone, World world, AxisAlignedBB range, double rawWill, double destructiveWill) {
+        int entitiesKilled = 0;
         int currentEssence = masterRitualStone.getOwnerNetwork().getCurrentEssence();
-        if(currentEssence < this.getRefreshCost()) {
-            masterRitualStone.getOwnerNetwork().causeNausea();
-            return;
-        }
-
-        BlockPos pos = masterRitualStone.getBlockPos();
-        int maxEffects = currentEssence / this.getRefreshCost();
-        int totalEffects = 0;
-        TileEntity tile = this.findAltar(masterRitualStone);
-
-        if(!(tile instanceof TileAltar)) {
-            return;
-        }
-
-        TileAltar altar = (TileAltar) tile;
-        AreaDescriptor damageRange = masterRitualStone.getBlockRange(DAMAGE_RANGE);
-        AxisAlignedBB range = damageRange.getAABB(pos);
-
-        totalEffects += killTNT(world, range, totalEffects, maxEffects);
-
-        double destructiveWill = WorldDemonWillHandler.getCurrentWill(world, masterRitualStone.getBlockPos(), EnumDemonWillType.DESTRUCTIVE);
-        double drainAmount = ConfigHandlerSS.rituals.well_of_slaughter.buffedMobsWillDrain;
 
         for(EntityLivingBase entity : world.getEntitiesWithinAABB(EntityLivingBase.class, range)) {
-            maxEffects = currentEssence / this.getRefreshCost();
-            if(totalEffects >= maxEffects)
+            if(this.totalEffects + entitiesKilled >= this.maxEffects)
                 break;
 
             EntityEntry entityEntry = EntityRegistry.getEntry(entity.getClass());
@@ -76,61 +120,71 @@ public class RitualWellOfSlaughter extends AbstractRitualSS {
                 int lifeEssenceRatio = BloodMagicAPI.INSTANCE.getValueManager().getSacrificial().getOrDefault(entityEntry.getRegistryName(), SACRIFICE_AMOUNT);
                 if(entity.isEntityAlive() && !(entity instanceof EntityPlayer)) {
                     if(entity.isChild())
-                        lifeEssenceRatio = (int) ((float) lifeEssenceRatio * 0.5f);
+                        lifeEssenceRatio = lifeEssenceRatio / 2;
 
                     int sacrificeAmount = (int) (entity.getHealth() * (float) lifeEssenceRatio);
 
-                    if(!entity.isNonBoss() && ConfigHandlerSS.rituals.well_of_slaughter.killBosses) {
-                        if(destructiveWill >= 99.0 && ModTags.CULLING_BOSS_ENTRIES.containsKey(entityEntry.getRegistryName())) {
-                            Tuple<Integer,Boolean> bossEntry = ModTags.CULLING_BOSS_ENTRIES.get(entityEntry.getRegistryName());
-                            if(currentEssence >= bossEntry.getFirst()) {
-                                if(bossEntry.getSecond()) {
-                                    entity.setEntityInvulnerable(false);
-                                    if(entity instanceof EntityWither) {
-                                        ((EntityWither) entity).setInvulTime(0);
-                                    }
+                    if(!entity.isNonBoss() && ConfigHandlerSS.rituals.well_of_slaughter.killBosses && destructiveWill >= 99.0 && ModTags.CULLING_BOSS_ENTRIES.containsKey(entityEntry.getRegistryName())) {
+                        Tuple<Integer,Boolean> bossEntry = ModTags.CULLING_BOSS_ENTRIES.get(entityEntry.getRegistryName());
+                        if(currentEssence >= bossEntry.getFirst()) {
+                            if(bossEntry.getSecond()) {
+                                entity.setEntityInvulnerable(false);
+                                if(entity instanceof EntityWither) {
+                                    ((EntityWither) entity).setInvulTime(0);
                                 }
-                                entity.attackEntityFrom(RitualManager.RITUAL_DAMAGE, Integer.MAX_VALUE);
-                                altar.sacrificialDaggerCall(sacrificeAmount, true);
-                                WorldDemonWillHandler.drainWill(world, masterRitualStone.getBlockPos(), EnumDemonWillType.DESTRUCTIVE, ConfigHandlerSS.rituals.well_of_slaughter.killBossesDrainAmount, true);
-                                masterRitualStone.getOwnerNetwork().syphon(masterRitualStone.ticket(bossEntry.getFirst()));
-                                destructiveWill -= ConfigHandlerSS.rituals.well_of_slaughter.killBossesDrainAmount;
-                                currentEssence -= bossEntry.getFirst();
                             }
+                            entity.attackEntityFrom(RitualManager.RITUAL_DAMAGE, Integer.MAX_VALUE);
+                            this.totalSacrificeGain += sacrificeAmount;
+                            WorldDemonWillHandler.drainWill(world, masterRitualStone.getBlockPos(), EnumDemonWillType.DESTRUCTIVE, destructiveWillDrain, true);
+                            masterRitualStone.getOwnerNetwork().syphon(masterRitualStone.ticket(bossEntry.getFirst()));
+                            currentEssence -= bossEntry.getFirst();
+                            this.maxEffects = currentEssence / this.getRefreshCost();
                         }
                     } else if(lifeEssenceRatio > 0) {
                         if(!entity.getActivePotionEffects().isEmpty() && ConfigHandlerSS.rituals.well_of_slaughter.buffedMobsRequireWill) {
-                            if(destructiveWill > 0 && destructiveWill >= drainAmount) {
+                            if(rawWill > 0 && rawWill >= this.rawDrain) {
                                 entity.attackEntityFrom(RitualManager.RITUAL_DAMAGE, Integer.MAX_VALUE);
-                                altar.sacrificialDaggerCall(sacrificeAmount, true);
-                                WorldDemonWillHandler.drainWill(world, masterRitualStone.getBlockPos(), EnumDemonWillType.DESTRUCTIVE, drainAmount, true);
-                                destructiveWill -= drainAmount;
-                                totalEffects++;
+                                this.totalSacrificeGain += sacrificeAmount;
+                                this.rawDrain += rawWillDrain;
+                                entitiesKilled++;
                             }
                         } else {
                             entity.attackEntityFrom(RitualManager.RITUAL_DAMAGE, Integer.MAX_VALUE);
-                            altar.sacrificialDaggerCall(sacrificeAmount, true);
-                            totalEffects++;
+                            this.totalSacrificeGain += sacrificeAmount;
+                            entitiesKilled++;
                         }
                     }
                 }
             }
         }
-        masterRitualStone.getOwnerNetwork().syphon(masterRitualStone.ticket(this.getRefreshCost() * totalEffects));
+
+        return entitiesKilled;
     }
 
-    private int killTNT(World world, AxisAlignedBB range, int totalEffects, int maxEffects) {
+    private int killItemEntities(World world, AxisAlignedBB range, double corrosiveWill) {
+        int countKilled = 0;
+        if(corrosiveWill > 0) {
+            for (EntityItem entityItem : world.getEntitiesWithinAABB(EntityItem.class, range)) {
+                countKilled += entityItem.getItem().getCount();
+                entityItem.setDead();
+            }
+        }
+        return countKilled;
+    }
+
+    private int killTNT(World world, AxisAlignedBB range) {
+        int tntKilled = 0;
         if(ConfigHandlerSS.rituals.well_of_slaughter.killTNT) {
             for(EntityTNTPrimed tnt : world.getEntitiesWithinAABB(EntityTNTPrimed.class, range)) {
-                if(totalEffects >= maxEffects)
+                if(this.totalEffects + tntKilled >= this.maxEffects)
                     break;
 
                 tnt.setFuse(1000);
                 tnt.setDead();
-                totalEffects++;
+                tntKilled++;
             }
         }
-        return totalEffects;
+        return tntKilled;
     }
 
     @Override

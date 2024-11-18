@@ -127,5 +127,4 @@ public class CommonEventHandler {
     public static void onSelfSacrifice(SacrificeKnifeUsedEvent event) {
         ItemBloodvialBelt.onSelfSacrifice(event);
     }
-
 }

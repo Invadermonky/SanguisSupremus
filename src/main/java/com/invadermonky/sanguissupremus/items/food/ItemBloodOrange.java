@@ -105,6 +105,6 @@ public class ItemBloodOrange extends ItemFood implements IAddition {
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.bloodwood._enable;
+        return ConfigHandlerSS.items.bloodwood.enable;
     }
 }

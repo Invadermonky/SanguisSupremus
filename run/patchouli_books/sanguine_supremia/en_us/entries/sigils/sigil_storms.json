@@ -1,0 +1,23 @@
+{
+  "name": "Sigil of Storms",
+  "icon": "sanguissupremus:sigil_storms",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "On $(k:use), the $(item)Sigil of Storms$() draws on the power of nature to summon a lightning bolt in the direction you are looking.$(br2)If an entity is struck, the lightning will propagate through nearby creatures, splitting the damage equally.$(br2)The number and damage of the lightning bolts increases"
+    },
+    {
+      "type": "text",
+      "text": "depending on the weather, increasing if it is raining or thundering.$(br2)Should the lightning bolt strike a water source block, it will spawn a fish.$(br2)$(bold)Cost:$() $(blood)500 LP$()/use"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Storming Reagent",
+      "soulforge.output": "sanguissupremus:reagent_storms",
+      "array.heading": "Sigil of Storms",
+      "array.output": "sanguissupremus:sigil_storms",
+      "array.text": "$(italic)One step closer to being a Sith Lord$()"
+    }
+  ]
+}

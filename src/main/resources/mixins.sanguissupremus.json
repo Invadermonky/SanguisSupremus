@@ -1,14 +1,16 @@
 {
 	"package": "com.invadermonky.sanguissupremus.core.mixins" ,
 	"required": true,
-	"refmap": "mixins.${mod_id}.refmap.json",
+	"refmap": "sanguissupremus.refmap.json",
 	"target": "@env(DEFAULT)",
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-      "ItemCuttingFluidMixins" ,
-      "PlayerDemonWillHandlerMixins" ,
-      "TileMasterRitualStoneMixin"
+		"MixinFoodStats",
+		"MixinItemCuttingFluid",
+		"MixinPlayerDemonWillHandler",
+		"MixinRitual",
+		"MixinTileMasterRitualStone"
 	],
 	"server": [],
 	"client": []

@@ -19,26 +19,36 @@ import static WayofTime.bloodmagic.ritual.types.RitualWellOfSuffering.ALTAR_RANG
 public abstract class AbstractRitualSS extends Ritual {
     public static final String CHEST_RANGE = "chest";
 
-    public BlockPos altarOffsetPos = new BlockPos(0,0,0);
-    private final int refreshTime;
-    private final int refreshCost;
+    protected BlockPos altarOffsetPos = new BlockPos(0,0,0);
+    protected int defaultRefreshTime;
+    protected int refreshTime;
+    protected int refreshCost;
 
     public AbstractRitualSS(String name, int crystalLevel, int activationCost, int refreshCost, int refreshTime) {
         super(name, crystalLevel, activationCost, StringHelper.getTranslationKey(name, "ritual"));
         this.refreshCost = refreshCost;
         this.refreshTime = refreshTime;
+        this.defaultRefreshTime = refreshTime;
     }
 
     protected void setDefaultChestRange() {
-        this.addBlockRange(CHEST_RANGE, new AreaDescriptor.Rectangle(new BlockPos(0,1,0), 1));
-        this.setMaximumVolumeAndDistanceOfRange(CHEST_RANGE, 1, 3, 3);
+        this.setChestRange(CHEST_RANGE, 0, 1, 0);
+    }
+
+    protected void setChestRange(String rangeName, int xOffset, int yOffset, int zOffset) {
+        this.addBlockRange(rangeName, new AreaDescriptor.Rectangle(new BlockPos(xOffset, yOffset, zOffset), 1));
+        this.setMaximumVolumeAndDistanceOfRange(rangeName, 1, 3, 3);
     }
 
     @Nullable
     public IItemHandler getChestItemHandler(IMasterRitualStone masterRitualStone) {
+        return this.getChestItemHandler(masterRitualStone, CHEST_RANGE);
+    }
+
+    public IItemHandler getChestItemHandler(IMasterRitualStone masterRitualStone, String rangeName) {
         World world = masterRitualStone.getWorldObj();
         BlockPos mrsPos = masterRitualStone.getBlockPos();
-        AreaDescriptor chestRange = masterRitualStone.getBlockRange(CHEST_RANGE);
+        AreaDescriptor chestRange = masterRitualStone.getBlockRange(rangeName);
         TileEntity tile = world.getTileEntity(chestRange.getContainedPositions(mrsPos).get(0));
         if(tile != null && tile.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.DOWN)) {
             return tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.DOWN);
@@ -51,7 +61,8 @@ public abstract class AbstractRitualSS extends Ritual {
         this.setMaximumVolumeAndDistanceOfRange(ALTAR_RANGE, 0, 10, 15);
     }
 
-    public TileEntity findAltar(IMasterRitualStone masterRitualStone) {
+    @Nullable
+    public TileAltar findAltar(IMasterRitualStone masterRitualStone) {
         World world = masterRitualStone.getWorldObj();
         BlockPos mrsPos = masterRitualStone.getBlockPos();
         BlockPos altarPos = mrsPos.add(this.altarOffsetPos);
@@ -64,11 +75,24 @@ public abstract class AbstractRitualSS extends Ritual {
                 if(checkTile instanceof TileAltar) {
                     this.altarOffsetPos = checkPos.subtract(mrsPos);
                     altarRange.resetCache();
-                    break;
+                    return (TileAltar) checkTile;
                 }
             }
         }
-        return tile;
+        return tile instanceof TileAltar ? (TileAltar) tile : null;
+    }
+
+    /**
+     * Checks the owner's soul network to see if there is enough LP to run the ritual. Causes nausea if there is insufficient
+     * LP.
+     * @return true if there is not enough LP to run the ritual
+     */
+    public boolean hasInsufficientLP(IMasterRitualStone masterRitualStone) {
+        if(masterRitualStone.getOwnerNetwork().getCurrentEssence() < this.getRefreshCost()) {
+            masterRitualStone.getOwnerNetwork().causeNausea();
+            return true;
+        }
+        return false;
     }
 
     @Override

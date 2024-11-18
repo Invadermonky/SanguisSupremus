@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "sanguissupremus:blood_glass",
+    "count": 8
+  },
+  "pattern": [
+    "GGG",
+    "GOG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    },
+    "O": {
+      "type": "bloodmagic:orb",
+      "orb": "bloodmagic:weak"
+    }
+  }
+}

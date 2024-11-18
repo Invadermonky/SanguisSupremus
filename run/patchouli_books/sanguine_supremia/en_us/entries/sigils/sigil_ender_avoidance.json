@@ -1,0 +1,27 @@
+{
+  "name": "Sigil of Ender Avoid.",
+  "icon": "sanguissupremus:sigil_ender_avoidance",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The $(item)Sigil of Ender Avoidance$() grants players many of the abilities inherent to Endermen.$(br2)On $(k:use), the $(item)Sigil of Ender Avoidance$() teleports the player in the direction they are facing, attempting to place them on top of the targeted block.$(br2)This has the interested effect of allowing players to teleport"
+    },
+    {
+      "type": "text",
+      "text": "on top of distant ledges or through one block thick ceilings.$(br2)Additionally, if you aim directly down, the sigil will attempt to teleport you through the floor to an empty space beneath. Floors that are too thick will block the teleport attempt.$(br2)While active, the $(item)Sigil of Ender Avoidance$() grants players the projectile avoidance that is second"
+    },
+    {
+      "type": "text",
+      "text": "nature to Endermen. When a projectile strikes the player while while the sigil is active, the impact will be negated and the player will teleport randomly to a nearby location.$(br2)This immunity to projectiles also inherits the Endermen's affinity for liquids, damaging the player and teleporting them randomly if they are exposed to water or rain.$(br2)$(bold)Cost:$() $(blood)400 LP$()/use$(br)$(bold)Activation:$() $(blood)200 LP$()/5 sec"
+    },
+    {
+      "type": "crafting_sigil",
+      "soulforge.heading": "Ender Avoid. Reagent",
+      "soulforge.output": "sanguissupremus:reagent_ender_avoidance",
+      "array.heading": "Sigil of Ender Avoid.",
+      "array.output": "sanguissupremus:sigil_ender_avoidance",
+      "array.text": "$(italic)$()"
+    }
+  ]
+}

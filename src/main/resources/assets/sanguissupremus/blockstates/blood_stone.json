@@ -1,0 +1,32 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sanguissupremus:blank_rune_tile"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}],
+    "variant": {
+      "blank_rune_tile": { "model": "sanguissupremus:blank_rune_tile"},
+      "blank_rune_bricks": { "model": "sanguissupremus:blank_rune_bricks"},
+      "blank_rune_small_bricks": { "model": "sanguissupremus:blank_rune_small_bricks"},
+      "speed_rune": { "model": "sanguissupremus:speed_rune"},
+      "efficiency_rune": { "model": "sanguissupremus:efficiency_rune"},
+      "sacrifice_rune": { "model": "sanguissupremus:sacrifice_rune"},
+      "self_sacrifice_rune": { "model": "sanguissupremus:self_sacrifice_rune"},
+      "displacement_rune": { "model": "sanguissupremus:displacement_rune"},
+      "capacity_rune": { "model": "sanguissupremus:capacity_rune"},
+      "augmented_capacity_rune": { "model": "sanguissupremus:augmented_capacity_rune"},
+      "orb_rune": { "model": "sanguissupremus:orb_rune"},
+      "acceleration_rune": { "model": "sanguissupremus:acceleration_rune"},
+      "charging_rune": { "model": "sanguissupremus:charging_rune"},
+      "blank_ritual_stone": { "model": "sanguissupremus:blank_ritual_stone"},
+      "water_ritual_stone": { "model": "sanguissupremus:water_ritual_stone"},
+      "fire_ritual_stone": { "model": "sanguissupremus:fire_ritual_stone"},
+      "earth_ritual_stone": { "model": "sanguissupremus:earth_ritual_stone"},
+      "air_ritual_stone": { "model": "sanguissupremus:air_ritual_stone"},
+      "dusk_ritual_stone": { "model": "sanguissupremus:dusk_ritual_stone"},
+      "dawn_ritual_stone": { "model": "sanguissupremus:dawn_ritual_stone"}
+    }
+  }
+}

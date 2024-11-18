@@ -69,6 +69,7 @@ public class PatchouliMultiblocks {
                     'D', RegistrarBloodMagicBlocks.RITUAL_STONE.getDefaultState().withProperty(((BlockEnum<EnumRuneType>) RegistrarBloodMagicBlocks.RITUAL_STONE).getProperty(), EnumRuneType.DUSK),
                     'd', RegistrarBloodMagicBlocks.RITUAL_STONE.getDefaultState().withProperty(((BlockEnum<EnumRuneType>) RegistrarBloodMagicBlocks.RITUAL_STONE).getProperty(), EnumRuneType.DAWN),
                     'C', Blocks.CHEST
+                    //TODO: Blood Glass block
             );
 
             patchouliAPI.registerMultiblock(new ResourceLocation(SanguisSupremus.MOD_ID, ritualId), multiblock);

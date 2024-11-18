@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "sanguissupremus:sacrificial_dagger_safe"
+  },
+  "pattern": [
+    "WWG",
+    " OW",
+    "I W"
+  ],
+  "key": {
+    "W": {
+      "type": "forge:ore_dict",
+      "ore": "wool"
+    },
+    "G": {
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    },
+    "O": {
+      "type": "forge:ore_dict",
+      "ore": "ingotGold"
+    },
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    }
+  }
+}

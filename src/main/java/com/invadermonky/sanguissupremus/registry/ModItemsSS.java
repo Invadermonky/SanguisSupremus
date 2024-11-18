@@ -1,19 +1,19 @@
 package com.invadermonky.sanguissupremus.registry;
 
+import com.google.common.collect.ImmutableList;
 import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.IAddition;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
 import com.invadermonky.sanguissupremus.items.ItemAddition;
-import com.invadermonky.sanguissupremus.items.ItemSoulBottle;
 import com.invadermonky.sanguissupremus.items.enums.BeltType;
 import com.invadermonky.sanguissupremus.items.enums.SettingType;
 import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemBloodvialBelt;
 import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemSigilRing;
 import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemTartaricAmulet;
 import com.invadermonky.sanguissupremus.items.food.ItemBloodOrange;
+import com.invadermonky.sanguissupremus.items.misc.ItemSoulVessel;
 import com.invadermonky.sanguissupremus.items.sigils.*;
 import com.invadermonky.sanguissupremus.items.tools.*;
-import com.invadermonky.sanguissupremus.util.LogHelper;
 import com.invadermonky.sanguissupremus.util.StringHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.creativetab.CreativeTabs;
@@ -44,6 +44,16 @@ public class ModItemsSS {
     public static final ItemBloodwoodSword BLOODWOOD_SWORD;
     public static final ItemBoundShears BOUND_SHEARS;
     public static final ItemBoundStriker BOUND_STRIKER;
+    public static final ItemAddition BLOOD_DIAMOND_BLOOD;
+    public static final ItemAddition BLOOD_DIAMOND_INERT;
+    public static final ItemAddition BLOOD_DIAMOND_INFUSED;
+    public static final ItemAddition BLOOD_DIAMOND_RESPLENDENT;
+    public static final ItemAddition INERT_GLOWSTONE_DUST;
+    public static final ItemAddition INERT_INGOT_GOLD;
+    public static final ItemAddition INERT_STRING;
+    public static final ItemAddition INFUSED_GLOWSTONE_DUST;
+    public static final ItemAddition INFUSED_INGOT_GOLD;
+    public static final ItemAddition INFUSED_STRING;
     public static final ItemAddition REAGENT_AQUATIC;
     public static final ItemAddition REAGENT_CAPTURE;
     public static final ItemAddition REAGENT_DIRT;
@@ -59,6 +69,10 @@ public class ModItemsSS {
     public static final ItemSigilRing RING_SIGIL_PRISTINE;
     public static final ItemSacrificialDaggerFanatical SACRIFICIAL_DAGGER_FANATICAL;
     public static final ItemSacrificialDaggerSafe SACRIFICIAL_DAGGER_SAFE;
+    public static final ItemAddition SETTING_BASIC;
+    public static final ItemAddition SETTING_PRISTINE;
+    public static final ItemAddition SETTING_STANDARD;
+    public static final ItemSickleNaturesReap SICKLE_NATURES_REAP;
     public static final ItemSigilAquatic SIGIL_AQUATIC;
     public static final ItemSigilCapture SIGIL_CAPTURE;
     public static final ItemSigilDirt SIGIL_DIRT;
@@ -69,14 +83,20 @@ public class ModItemsSS {
     public static final ItemSigilStone SIGIL_STONE;
     public static final ItemSigilStorms SIGIL_STORMS;
     public static final ItemSigilVampiricStrikes SIGIL_VAMPIRIC_STRIKES;
-    public static final ItemSoulBottle SOUL_VESSEL;
+    public static final ItemSoulVessel SOUL_VESSEL;
     public static final ItemTartaricAmulet TARTARIC_AMULET_BASIC;
     public static final ItemTartaricAmulet TARTARIC_AMULET_STANDARD;
     public static final ItemTartaricAmulet TARTARIC_AMULET_PRISTINE;
 
+    public static final ItemAddition FALLBACK_ICON;
+
     public static final Item.ToolMaterial MATERIAL_BLOODWOOD;
 
-    public static final List<Item> MOD_ITEMS = new ArrayList<>();
+    private static final List<Item> MOD_ITEMS = new ArrayList<>();
+
+    public static ImmutableList<Item> getModItems() {
+        return ImmutableList.copyOf(MOD_ITEMS);
+    }
 
     public static <T extends Item & IAddition> void addItemToRegister(T item, String itemId) {
         addItemToRegister(item, SanguisSupremus.MOD_ID, itemId);
@@ -97,18 +117,17 @@ public class ModItemsSS {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
-        MOD_ITEMS.forEach(registry::register);
+        getModItems().forEach(registry::register);
     }
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void registerItemModels(ModelRegistryEvent event) {
-        MOD_ITEMS.forEach(item -> {
+        getModItems().forEach(item -> {
             if(item instanceof IAddition) {
                 ((IAddition) item).registerModel(event);
             }
         });
-        LogHelper.debug("Registered item models.");
     }
 
     static {
@@ -118,6 +137,9 @@ public class ModItemsSS {
 
         addItemToRegister(SACRIFICIAL_DAGGER_SAFE = new ItemSacrificialDaggerSafe(), LibNames.SACRIFICIAL_DAGGER_SAFE);
         addItemToRegister(SACRIFICIAL_DAGGER_FANATICAL = new ItemSacrificialDaggerFanatical(), LibNames.SACRIFICIAL_DAGGER_FANATICAL);
+        addItemToRegister(SICKLE_NATURES_REAP = new ItemSickleNaturesReap(), LibNames.SICKLE_NATURES_REAP);
+        FALLBACK_ICON = !SICKLE_NATURES_REAP.isEnabled() ? new ItemAddition(1) : null;
+        addItemToRegister(FALLBACK_ICON, LibNames.FALLBACK_ICON);
 
         //Armor
 
@@ -170,6 +192,20 @@ public class ModItemsSS {
         addItemToRegister(BLOOD_ORANGE_INFUSED = new ItemBloodOrange(true), LibNames.BLOOD_ORANGE_INFUSED);
 
         //Miscellaneous
-        addItemToRegister(SOUL_VESSEL = new ItemSoulBottle(), LibNames.SOUL_BOTTLE);
+        addItemToRegister(SOUL_VESSEL = new ItemSoulVessel(), LibNames.SOUL_VESSEL);
+        addItemToRegister(INERT_STRING = new ItemAddition(), LibNames.INERT_STRING);
+        addItemToRegister(INFUSED_STRING = new ItemAddition(), LibNames.INFUSED_STRING);
+        addItemToRegister(INERT_GLOWSTONE_DUST = new ItemAddition(), LibNames.INERT_GLOWSTONE_DUST);
+        addItemToRegister(INFUSED_GLOWSTONE_DUST = new ItemAddition(), LibNames.INFUSED_GLOWSTONE_DUST);
+        addItemToRegister(INERT_INGOT_GOLD = new ItemAddition(), LibNames.INERT_INGOT_GOLD);
+        addItemToRegister(INFUSED_INGOT_GOLD = new ItemAddition(), LibNames.INFUSED_INGOT_GOLD);
+        //TODO: Set Blood Diamond rarity
+        addItemToRegister(BLOOD_DIAMOND_BLOOD = new ItemAddition(1), LibNames.BLOOD_DIAMOND);
+        addItemToRegister(BLOOD_DIAMOND_INERT = new ItemAddition(1), LibNames.BLOOD_DIAMOND_INERT);
+        addItemToRegister(BLOOD_DIAMOND_INFUSED = new ItemAddition(1), LibNames.BLOOD_DIAMOND_INFUSED);
+        addItemToRegister(BLOOD_DIAMOND_RESPLENDENT = new ItemAddition(1), LibNames.BLOOD_DIAMOND_RESPLENDENT);
+        addItemToRegister(SETTING_BASIC = new ItemAddition(1).setRarity(SettingType.BASIC.getRarity()), LibNames.SETTING_BASIC);
+        addItemToRegister(SETTING_STANDARD = new ItemAddition(1).setRarity(SettingType.STANDARD.getRarity()), LibNames.SETTING_STANDARD);
+        addItemToRegister(SETTING_PRISTINE = new ItemAddition(1).setRarity(SettingType.PRISTINE.getRarity()), LibNames.SETTING_PRISTINE);
     }
 }

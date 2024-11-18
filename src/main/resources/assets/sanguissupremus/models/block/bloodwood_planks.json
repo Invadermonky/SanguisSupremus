@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sanguissupremus:blocks/bloodwood_planks"
+  }
+}

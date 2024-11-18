@@ -1,0 +1,6 @@
+{
+  "parent": "block/pane_noside",
+  "textures": {
+    "pane": "sanguissupremus:blocks/blood_glass"
+  }
+}

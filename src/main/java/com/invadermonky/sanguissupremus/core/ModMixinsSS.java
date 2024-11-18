@@ -10,7 +10,7 @@ import java.util.List;
 public class ModMixinsSS implements ILateMixinLoader {
     //TODO:
     //  Fix living armor not tracking physical damage (arrow & other)
-    //  Fix liquid routing node wonky-ness
+    //  Fix liquid routing node wonkyness
     //  Rewrite Gate of the Fold to not be a buggy piece of ****
     //
 

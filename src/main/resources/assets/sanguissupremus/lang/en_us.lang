@@ -1,12 +1,36 @@
 
 # Misc
 itemGroup.sanguissupremus=Sanguis Supremus
+item.sanguissupremus:icon.name=Icon
 
 # Blocks
-
+tile.sanguissupremus:blood_capacitor.name=Blood Capacitor
+tile.sanguissupremus:blood_glass.name=Blood Stained Glass
+tile.sanguissupremus:blood_glass_pane.name=Blood Stained Glass Pane
+tile.sanguissupremus:blood_glowstone.name=Blood Infused Glowstone
+tile.sanguissupremus:bloodwood_door.name=Bloodwood Door
+tile.sanguissupremus:bloodwood_fence.name=Bloodwood Fence
+tile.sanguissupremus:bloodwood_fence_gate.name=Bloodwood Fence Gate
+tile.sanguissupremus:bloodwood_leaves.name=Bloodwood Leaves
+tile.sanguissupremus:bloodwood_log.name=Bloodwood
+tile.sanguissupremus:bloodwood_planks.name=Bloodwood Planks
+tile.sanguissupremus:bloodwood_sapling.name=Bloodwood Sapling
+tile.sanguissupremus:bloodwood_slab.name=Bloodwood Slab
+tile.sanguissupremus:bloodwood_stairs.name=Bloodwood Stairs
+tile.sanguissupremus:bloodwood_trapdoor.name=Bloodwood Trapdoor
+tile.sanguissupremus:ender_chest_accessor.name=Ender Chest Accessor
+tile.sanguissupremus:infused_block_gold.name=Blood Infused Gold Block
+tile.sanguissupremus:storage_slate_blank.name=Blank Slate Block
+tile.sanguissupremus:storage_slate_reinforced.name=Reinforced Slate Block
+tile.sanguissupremus:storage_slate_imbued.name=Imbued Slate Block
+tile.sanguissupremus:storage_slate_demonic.name=Demonic Slate Block
+tile.sanguissupremus:storage_slate_ethereal.name=Ethereal Slate Block
 
 # Chat
+chat.sanguissupremus:blood_capacitor.info=Energy: %s
 
+# GUI
+jer.sanguissupremus:reforming_void=Reforming Void Ritual
 
 # Items
 item.sanguissupremus:blood_orange.name=Blood Orange
@@ -21,6 +45,16 @@ item.sanguissupremus:bloodwood_shovel.name=Bloodwood Shovel
 item.sanguissupremus:bloodwood_sword.name=Bloodwood Sword
 item.sanguissupremus:bound_shears.name=Bound Shears
 item.sanguissupremus:bound_striker.name=Bound Striker
+item.sanguissupremus:blood_diamond.name=Blood Diamond
+item.sanguissupremus:blood_diamond_inert.name=Inert Blood Diamond
+item.sanguissupremus:blood_diamond_infused.name=Infused Blood Diamond
+item.sanguissupremus:blood_diamond_resplendent.name=Resplendent Blood Diamond
+item.sanguissupremus:inert_ingot_gold.name=Inert Gold Ingot
+item.sanguissupremus:inert_glowstone_dust.name=Inert Glowstone Dust
+item.sanguissupremus:inert_string.name=Inert String
+item.sanguissupremus:infused_ingot_gold.name=Blood Infused Gold Ingot
+item.sanguissupremus:infused_glowstone_dust.name=Blood Infused Glowstone Dust
+item.sanguissupremus:infused_string.name=Blood Infused String
 item.sanguissupremus:reagent_aquatic.name=Aquatic Reagent
 item.sanguissupremus:reagent_capture.name=Capture Reagent
 item.sanguissupremus:reagent_dirt.name=Dirty Reagent
@@ -34,8 +68,12 @@ item.sanguissupremus:reagent_vampiric_strikes.name=Vampiric Reagent
 item.sanguissupremus:ring_sigil_basic.name=Basic Sigil Ring
 item.sanguissupremus:ring_sigil_pristine.name=Pristine Sigil Ring
 item.sanguissupremus:ring_sigil_standard.name=Standard Sigil Ring
-item.sanguissupremus:sacrificial_dagger_fanatical.name=Dagger of Fanatical Sacrifice
+item.sanguissupremus:sacrificial_dagger_fanatical.name=Fanatical Sacrificial Dagger
 item.sanguissupremus:sacrificial_dagger_safe.name=Dagger of Safe-Sacrifice
+item.sanguissupremus:setting_basic.name=Basic Setting
+item.sanguissupremus:setting_pristine.name=Pristine Setting
+item.sanguissupremus:setting_standard.name=Standard Setting
+item.sanguissupremus:sickle_natures_reap.name=Sickle of Nature's Reap
 item.sanguissupremus:sigil_aquatic.name=Sigil of Aquatic Affinity
 item.sanguissupremus:sigil_capture.name=Sigil of the Captured Soul
 item.sanguissupremus:sigil_dirt.name=Sigil of Earth
@@ -43,7 +81,7 @@ item.sanguissupremus:sigil_ender_access.name=Sigil of Ender Access
 item.sanguissupremus:sigil_ender_avoidance.name=Ender Avoidance
 item.sanguissupremus:sigil_flowing_blood.name=Sigil of Flowing Blood
 item.sanguissupremus:sigil_imprisonment.name=Sigil of Eternal Imprisonment
-item.sanguissupremus:sigil_stone.name=Sigil of Stonee
+item.sanguissupremus:sigil_stone.name=Sigil of Stone
 item.sanguissupremus:sigil_storms.name=Sigil of Storms
 item.sanguissupremus:sigil_vampiric_strikes.name=Sigil of Vampiric Strikes
 item.sanguissupremus:soul_vessel.name=Soul Vessel
@@ -60,6 +98,7 @@ tooltip.bloodmagic.sigil.sigil_dirt.desc=Much better than a dirty stick
 tooltip.bloodmagic.sigil.sigil_ender_access.desc=§oReach through the void
 tooltip.bloodmagic.sigil.sigil_flowing_blood.desc=For all your gaudy decoration needs
 tooltip.bloodmagic.sigil.sigil_stone.desc=One block at a time...
+tooltip.bloodmagic.sigil.sigil_storms.desc=One step closer to being a Sith Lord
 tooltip.sanguissupremus:bloodvial_belt.desc=Collects Life Essence
 tooltip.sanguissupremus:bound_shears.desc=§oBlood from a stone
 tooltip.sanguissupremus:bound_striker.desc=§oWatch the world burn
@@ -67,5 +106,6 @@ tooltip.sanguissupremus:empty=Empty
 tooltip.sanguissupremus:ring_sigil.desc=LP Reduction: %d%%
 tooltip.sanguissupremus:sacrificial_dagger_fanatical.desc=Only the truly devoted...
 tooltip.sanguissupremus:sacrificial_dagger_safe.desc=Safe for all ages!
+tooltip.sanguissupremus:sickle_natures_reap.desc=The sap runs red...
 tooltip.sanguissupremus:sigil_capture.desc=Captured: %s
 tooltip.sanguissupremus:tartaric_amulet.desc=Will Gain Bonus: %d%%

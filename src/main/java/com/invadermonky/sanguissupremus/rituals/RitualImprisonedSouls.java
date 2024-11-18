@@ -6,11 +6,11 @@ import WayofTime.bloodmagic.ritual.*;
 import WayofTime.bloodmagic.soul.DemonWillHolder;
 import WayofTime.bloodmagic.soul.EnumDemonWillType;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
+import com.invadermonky.sanguissupremus.util.EntityHelper;
 import com.invadermonky.sanguissupremus.util.ItemHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -32,17 +32,16 @@ public class RitualImprisonedSouls extends AbstractRitualSS {
     public static double steadfastWillDrain = 0.005;
     public static double vengefulWillDrain = 0.005;
 
-    private int refreshTime = ConfigHandlerSS.rituals.imprisoned_souls.refreshTime;
-
     public List<ImprisonedSpawn> entitySpawns = new ArrayList<>();
-    private int minSpawn = 2;
-    private int maxSpawn = 6;
-    private final int maxSpawnCount = 32;
-    private Random rand;
+    public int minSpawn = 2;
+    public int maxSpawn = 6;
+    public final int maxSpawnCount = 32;
+    public Random rand;
 
     public RitualImprisonedSouls() {
         super(LibNames.RITUAL_IMPRISONED_SOULS, 2, ConfigHandlerSS.rituals.imprisoned_souls.activationCost, 0, ConfigHandlerSS.rituals.imprisoned_souls.refreshTime);
         this.setDefaultChestRange();
+        this.setMaximumVolumeAndDistanceOfRange(CHEST_RANGE, 1, 8, 8);
         this.addBlockRange(SPAWN_RANGE, new AreaDescriptor.Rectangle(new BlockPos(-4, -1, -4), new BlockPos(4, 4, 4)));
         this.setMaximumVolumeAndDistanceOfRange(SPAWN_RANGE, 0, 256, 256);
         this.rand = new Random();
@@ -117,15 +116,13 @@ public class RitualImprisonedSouls extends AbstractRitualSS {
                         }
 
                         BlockPos spawnPos = spawnPositions.get(world.rand.nextInt(spawnPositions.size()));
-                        spawnPos.add(0.5, 0, 0.5);
                         entity.setLocationAndAngles(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ(), world.rand.nextFloat() * 360.0F, 0.0F);
                         entity.setUniqueId(UUID.randomUUID());
 
                         int tries = 20;
-                        while(tries > 0 && !this.canEntitySpawn(world, entity)) {
+                        while(tries > 0 && !EntityHelper.canEntitySpawn(world, entity)) {
                             spawnPos = spawnPositions.get(world.rand.nextInt(spawnPositions.size()));
-                            spawnPos.add(0.5, 0, 0.5);
-                            entity.setLocationAndAngles(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ(), world.rand.nextFloat() * 360.0F, 0.0F);
+                            entity.setLocationAndAngles(spawnPos.getX() + 0.5, spawnPos.getY(), spawnPos.getZ() + 0.5, world.rand.nextFloat() * 360.0F, 0.0F);
                             --tries;
                         }
                         living.onInitialSpawn(world.getDifficultyForLocation(spawnPos), null);
@@ -156,7 +153,7 @@ public class RitualImprisonedSouls extends AbstractRitualSS {
     }
 
     public int getRefreshTimeForRawWill(double rawWill) {
-        return rawWill > 0.0 ? this.getRefreshTime() / 2 : this.getRefreshTime();
+        return rawWill > 0.0 ? this.defaultRefreshTime / 2 : this.defaultRefreshTime;
     }
 
     public int getSpawnCount(double destructiveWill) {
@@ -179,10 +176,6 @@ public class RitualImprisonedSouls extends AbstractRitualSS {
             }
         }
         this.entitySpawns.removeIf(spawn -> spawn.entity == null || !EntityLivingBase.class.isAssignableFrom(spawn.entity.getEntityClass()) || spawn.baseCost <= 0);
-    }
-
-    public boolean canEntitySpawn(World world, EntityLivingBase entity) {
-        return world.checkNoEntityCollision(entity.getEntityBoundingBox()) && world.getCollisionBoxes(entity, entity.getEntityBoundingBox()).isEmpty() && (!world.containsAnyLiquid(entity.getEntityBoundingBox()) || entity.isCreatureType(EnumCreatureType.WATER_CREATURE, false));
     }
 
     @Override

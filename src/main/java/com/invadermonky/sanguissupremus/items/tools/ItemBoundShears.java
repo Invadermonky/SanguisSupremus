@@ -8,12 +8,14 @@ import WayofTime.bloodmagic.core.registry.AlchemyArrayRecipeRegistry;
 import WayofTime.bloodmagic.iface.IActivatable;
 import WayofTime.bloodmagic.iface.IBindable;
 import WayofTime.bloodmagic.item.types.ComponentTypes;
+import WayofTime.bloodmagic.util.DamageSourceBloodMagic;
 import WayofTime.bloodmagic.util.Utils;
 import WayofTime.bloodmagic.util.helper.NetworkHelper;
 import WayofTime.bloodmagic.util.helper.TextHelper;
 import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.IAddition;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
+import com.invadermonky.sanguissupremus.recipes.bloodshearing.BloodShearingRegistry;
 import com.invadermonky.sanguissupremus.registry.ModItemsSS;
 import com.invadermonky.sanguissupremus.util.StringHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
@@ -27,16 +29,16 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.Item;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemShears;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.util.*;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -50,7 +52,7 @@ import java.util.List;
 
 public class ItemBoundShears extends ItemShears implements IBindable, IActivatable, IAddition {
     public static int useCost = 50;
-    public static int bloodShearedMultiplier = 4;
+    public static double bloodShearedMultiplier = 4.0;
 
     public ItemBoundShears() {
         this.addPropertyOverride(new ResourceLocation(SanguisSupremus.MOD_ID, "enabled"), (stack, worldIn, entityIn) ->
@@ -80,33 +82,35 @@ public class ItemBoundShears extends ItemShears implements IBindable, IActivatab
     @Override
     public boolean itemInteractionForEntity(ItemStack itemstack, EntityPlayer player, EntityLivingBase entity, EnumHand hand) {
         World world = entity.world;
-        if(world.isRemote) {
+        if(world.isRemote || !this.getActivated(itemstack)) {
             return false;
-        } else if(entity instanceof IShearable) {
-            IShearable shearable = (IShearable) entity;
-            BlockPos pos = new BlockPos(entity.posX, entity.posY, entity.posZ);
-            boolean bloodSheared = false;
-            //TODO: Add bloody shear crafttweaker method for this.
-            if(!shearable.isShearable(itemstack, entity.world, pos)) {
-                entity.attackEntityFrom(DamageSource.GENERIC, 2.0f);
-                bloodSheared = true;
-            }
-
-            List<ItemStack> drops = shearable.onSheared(itemstack, entity.world, pos, EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, itemstack));
+        } else if(entity instanceof IShearable && ((IShearable) entity).isShearable(itemstack, world, entity.getPosition())) {
+            List<ItemStack> drops = ((IShearable) entity).onSheared(itemstack, entity.world, entity.getPosition(), EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, itemstack));
             for(ItemStack drop : drops) {
-                //TODO: Add bloody shear conversion for this.
-                if(bloodSheared && drop.getItem() == Item.getItemFromBlock(Blocks.WOOL)) {
-                    drop = new ItemStack(Blocks.WOOL, drop.getCount(), EnumDyeColor.RED.getMetadata());
-                }
-                EntityItem entityItem = entity.entityDropItem(drop, 1.0f);
-                entityItem.motionX += (world.rand.nextFloat() - world.rand.nextFloat()) * 0.1f;
-                entityItem.motionY += world.rand.nextFloat() * 0.05f;
-                entityItem.motionZ += (world.rand.nextFloat() - world.rand.nextFloat()) * 0.1f;
+                this.dropShearedItem(world, entity, drop);
             }
-            NetworkHelper.getSoulNetwork(player).syphonAndDamage(player, SoulTicket.item(itemstack, bloodSheared ? useCost : useCost * bloodShearedMultiplier));
+            NetworkHelper.getSoulNetwork(player).syphonAndDamage(player, SoulTicket.item(itemstack, useCost));
             return true;
+        } else {
+            ItemStack drop = BloodShearingRegistry.getItemDrop(entity.getClass());
+            if(!drop.isEmpty()) {
+                this.dropShearedItem(world, entity, drop);
+                entity.playSound(SoundEvents.ENTITY_SHEEP_SHEAR, 1.0f, 1.0f);
+                entity.attackEntityFrom(DamageSourceBloodMagic.INSTANCE, ConfigHandlerSS.items.bound_tools.bloodShearingDamage);
+                NetworkHelper.getSoulNetwork(player).syphonAndDamage(player, SoulTicket.item(itemstack, (int) (useCost * ConfigHandlerSS.items.bound_tools.bloodShearingMultiplier)));
+                return true;
+            }
         }
         return false;
+    }
+
+    public void dropShearedItem(World world, EntityLivingBase entity, ItemStack stack) {
+        if(!entity.world.isRemote && !stack.isEmpty()) {
+            EntityItem entityItem = entity.entityDropItem(stack, 1.0f);
+            entityItem.motionX += (world.rand.nextFloat() - world.rand.nextFloat()) * 0.1f;
+            entityItem.motionY += world.rand.nextFloat() * 0.05f;
+            entityItem.motionZ += (world.rand.nextFloat() - world.rand.nextFloat()) * 0.1f;
+        }
     }
 
     @Override
@@ -118,7 +122,7 @@ public class ItemBoundShears extends ItemShears implements IBindable, IActivatab
 
     @Override
     public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
-        return slotChanged;
+        return oldStack.getItem() != newStack.getItem() || slotChanged;
     }
 
     @Override
@@ -177,6 +181,6 @@ public class ItemBoundShears extends ItemShears implements IBindable, IActivatab
 
     @Override
     public boolean isEnabled() {
-        return ConfigHandlerSS.items.bound_tools._enableBoundShears;
+        return ConfigHandlerSS.items.bound_tools.enableBoundShears;
     }
 }

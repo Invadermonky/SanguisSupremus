@@ -3,17 +3,27 @@ package com.invadermonky.sanguissupremus.config.modules;
 import net.minecraftforge.common.config.Config;
 
 public class ConfigItems {
+    public BloodCapacitorConfig blood_capacitor = new BloodCapacitorConfig();
     public BloodwoodConfig bloodwood = new BloodwoodConfig();
     public BloodvialBeltConfig bloodvial_belt = new BloodvialBeltConfig();
     public BoundToolConfig bound_tools = new BoundToolConfig();
     public SacrificialDaggersConfig sacrifical_daggers = new SacrificialDaggersConfig();
+    public SickleNaturesReapConfig sickle_of_natures_reap = new SickleNaturesReapConfig();
     public SigilRingConfig sigil_rings = new SigilRingConfig();
     public TartaricAmuletConfig tartaric_amulets = new TartaricAmuletConfig();
+
+    public static class BloodCapacitorConfig {
+        @Config.Comment("Enables the Blood Capacitor, a high capacity RF storage block.")
+        public boolean enable = true;
+
+        @Config.Comment("The RF capacity of the Blood Capacitor.")
+        public int energy_capacity = 10000000;
+    }
 
     public static class BloodwoodConfig {
         @Config.RequiresMcRestart
         @Config.Comment("Enables Bloodwood features including saplings, trees, tools.")
-        public boolean _enable = true;
+        public boolean enable = true;
     }
 
     public static class BloodvialBeltConfig {
@@ -47,21 +57,27 @@ public class ConfigItems {
     public static class BoundToolConfig {
         @Config.RequiresMcRestart
         @Config.Comment("Enable Bound Shears, an unbreakable set of shears with a bonus effect.")
-        public boolean _enableBoundShears = true;
+        public boolean enableBoundShears = true;
+
+        @Config.Comment("The additional LP cost whenever an entity is Blood Sheared.")
+        public double bloodShearingMultiplier = 4.0;
+
+        @Config.Comment("The amount of damage caused whenever an entity is Blood Sheared.")
+        public float bloodShearingDamage = 2.0f;
 
         @Config.RequiresMcRestart
         @Config.Comment("Enable Bound Striker, an unbreakable set of flint and steel with a bonus effect.")
-        public boolean _enableBoundStriker = true;
+        public boolean enableBoundStriker = true;
     }
 
     public static class SacrificialDaggersConfig {
         @Config.RequiresMcRestart
         @Config.Comment("Enables the Dagger of Safe-Sacrifice, a non-lethal self-sacrificial dagger.")
-        public boolean _enableSafeDagger = true;
+        public boolean enableSafeDagger = true;
 
         @Config.RequiresMcRestart
         @Config.Comment("Enables the Dagger of Fanatical Sacrificie, a highly dangerous variant of the sacrificial dagger.")
-        public boolean _enableFanaticalDagger = true;
+        public boolean enableFanaticalDagger = true;
 
         @Config.Comment("A multiplier for how much blood is generated each time a sacrifice is performed using the dagger of\n" +
                 "safe-sacrifice. This value is multiplied by the sacrificialDaggerConversion found in bloodmagic.cfg.")
@@ -78,10 +94,20 @@ public class ConfigItems {
 
     }
 
+    public static class SickleNaturesReapConfig {
+        @Config.RequiresMcRestart
+        @Config.Comment("Enable the Sickle of Nature's Reap, a tool used to generated Essence in a nearby altar by sacrificing fully grown crops.")
+        public boolean enable = true;
+
+        @Config.RangeInt(min = 2, max = 80)
+        @Config.Comment("The range from the sacrificed crop to search for a nearby altar to deposit the Life Essence.")
+        public int altarSearchRange = 10;
+    }
+
     public static class SigilRingConfig {
         @Config.RequiresMcRestart
         @Config.Comment("Enable Sigil Rings, ring baubles that can hold activatable sigils and run them at a reduced cost.")
-        public boolean _enable = true;
+        public boolean enable = true;
 
         @Config.RequiresMcRestart
         @Config.RangeDouble(min = 0.0, max = 1.0)
@@ -106,7 +132,7 @@ public class ConfigItems {
     public static class TartaricAmuletConfig {
         @Config.RequiresMcRestart
         @Config.Comment("Enable Tartaric Amulets, neck baubles that can hold Tartaric Gems and will increase will gain when worn.")
-        public boolean _enable = true;
+        public boolean enable = true;
 
         @Config.RequiresMcRestart
         @Config.RangeDouble(min = 0.0, max = 10.0)

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "sanguissupremus:blocks/bloodwood_log_top",
+    "side": "sanguissupremus:blocks/bloodwood_log"
+  }
+}
