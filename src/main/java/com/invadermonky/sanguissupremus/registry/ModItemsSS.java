@@ -17,6 +17,7 @@ import com.invadermonky.sanguissupremus.items.tools.*;
 import com.invadermonky.sanguissupremus.util.StringHelper;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.util.EnumHelper;
@@ -199,11 +200,10 @@ public class ModItemsSS {
         addItemToRegister(INFUSED_GLOWSTONE_DUST = new ItemAddition(), LibNames.INFUSED_GLOWSTONE_DUST);
         addItemToRegister(INERT_INGOT_GOLD = new ItemAddition(), LibNames.INERT_INGOT_GOLD);
         addItemToRegister(INFUSED_INGOT_GOLD = new ItemAddition(), LibNames.INFUSED_INGOT_GOLD);
-        //TODO: Set Blood Diamond rarity
         addItemToRegister(BLOOD_DIAMOND_BLOOD = new ItemAddition(1), LibNames.BLOOD_DIAMOND);
         addItemToRegister(BLOOD_DIAMOND_INERT = new ItemAddition(1), LibNames.BLOOD_DIAMOND_INERT);
-        addItemToRegister(BLOOD_DIAMOND_INFUSED = new ItemAddition(1), LibNames.BLOOD_DIAMOND_INFUSED);
-        addItemToRegister(BLOOD_DIAMOND_RESPLENDENT = new ItemAddition(1), LibNames.BLOOD_DIAMOND_RESPLENDENT);
+        addItemToRegister(BLOOD_DIAMOND_INFUSED = new ItemAddition(1).setRarity(EnumRarity.RARE), LibNames.BLOOD_DIAMOND_INFUSED);
+        addItemToRegister(BLOOD_DIAMOND_RESPLENDENT = new ItemAddition(1).setRarity(EnumRarity.EPIC), LibNames.BLOOD_DIAMOND_RESPLENDENT);
         addItemToRegister(SETTING_BASIC = new ItemAddition(1).setRarity(SettingType.BASIC.getRarity()), LibNames.SETTING_BASIC);
         addItemToRegister(SETTING_STANDARD = new ItemAddition(1).setRarity(SettingType.STANDARD.getRarity()), LibNames.SETTING_STANDARD);
         addItemToRegister(SETTING_PRISTINE = new ItemAddition(1).setRarity(SettingType.PRISTINE.getRarity()), LibNames.SETTING_PRISTINE);

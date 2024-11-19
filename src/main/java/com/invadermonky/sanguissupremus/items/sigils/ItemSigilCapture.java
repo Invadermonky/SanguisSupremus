@@ -89,14 +89,14 @@ public class ItemSigilCapture extends ItemSigilBase implements IAddition {
     @Override
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag) {
         super.addInformation(stack, world, tooltip, flag);
+        String empty = I18n.format(StringHelper.getTranslationKey("empty", "tooltip"));
         Binding binding = this.getBinding(stack);
         if(ItemHelper.stackHasStoredEntity(stack)) {
             Entity entity = ItemHelper.getEntityInStack(world, stack, false);
-            if(entity != null) {
-                tooltip.add("  " + I18n.format(StringHelper.getTranslationKey(LibNames.SIGIL_CAPTURE, "tooltip", "desc"), entity.getDisplayName().getFormattedText()));
-            }
+            String name = entity != null ? entity.getDisplayName().getFormattedText() : empty;
+            tooltip.add("  " + I18n.format(StringHelper.getTranslationKey(LibNames.SIGIL_CAPTURE, "tooltip", "desc"), name));
         } else if(binding != null){
-            tooltip.add("  " + I18n.format(StringHelper.getTranslationKey(LibNames.SIGIL_CAPTURE, "tooltip", "desc"), ""));
+            tooltip.add("  " + I18n.format(StringHelper.getTranslationKey(LibNames.SIGIL_CAPTURE, "tooltip", "desc"), empty));
         }
     }
 

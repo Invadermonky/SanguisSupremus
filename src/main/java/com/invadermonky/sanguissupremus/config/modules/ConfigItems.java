@@ -3,6 +3,9 @@ package com.invadermonky.sanguissupremus.config.modules;
 import net.minecraftforge.common.config.Config;
 
 public class ConfigItems {
+    @Config.RequiresMcRestart
+    @Config.Comment("Enables the Altar Hopper, a useful block for automating altar recipes.")
+    public boolean altar_hopper = true;
     public BloodCapacitorConfig blood_capacitor = new BloodCapacitorConfig();
     public BloodwoodConfig bloodwood = new BloodwoodConfig();
     public BloodvialBeltConfig bloodvial_belt = new BloodvialBeltConfig();

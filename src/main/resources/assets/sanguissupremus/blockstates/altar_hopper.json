@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=down": { "model": "sanguissupremus:altar_hopper_down" },
+    "facing=north": { "model": "sanguissupremus:altar_hopper_side" },
+    "facing=south": { "model": "sanguissupremus:altar_hopper_side", "y": 180 },
+    "facing=west": { "model": "sanguissupremus:altar_hopper_side", "y": 270 },
+    "facing=east": { "model": "sanguissupremus:altar_hopper_side", "y": 90 }
+  }
+}

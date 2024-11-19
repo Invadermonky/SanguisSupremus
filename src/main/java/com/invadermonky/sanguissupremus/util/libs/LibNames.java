@@ -2,6 +2,7 @@ package com.invadermonky.sanguissupremus.util.libs;
 
 public class LibNames {
     //Blocks
+    public static final String ALTAR_HOPPER = "altar_hopper";
     public static final String BLOOD_CAPACITOR = "blood_capacitor";
     public static final String BLOOD_GLASS = "blood_glass";
     public static final String BLOOD_GLASS_PANE = "blood_glass_pane";

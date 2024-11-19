@@ -4,6 +4,7 @@ itemGroup.sanguissupremus=Sanguis Supremus
 item.sanguissupremus:icon.name=Icon
 
 # Blocks
+tile.sanguissupremus:altar_hopper.name=Altar Hopper
 tile.sanguissupremus:blood_capacitor.name=Blood Capacitor
 tile.sanguissupremus:blood_glass.name=Blood Stained Glass
 tile.sanguissupremus:blood_glass_pane.name=Blood Stained Glass Pane
@@ -30,6 +31,7 @@ tile.sanguissupremus:storage_slate_ethereal.name=Ethereal Slate Block
 chat.sanguissupremus:blood_capacitor.info=Energy: %s
 
 # GUI
+gui.sanguissupremus:altar_hopper.name=Altar Hopper
 jer.sanguissupremus:reforming_void=Reforming Void Ritual
 
 # Items
@@ -107,5 +109,5 @@ tooltip.sanguissupremus:ring_sigil.desc=LP Reduction: %d%%
 tooltip.sanguissupremus:sacrificial_dagger_fanatical.desc=Only the truly devoted...
 tooltip.sanguissupremus:sacrificial_dagger_safe.desc=Safe for all ages!
 tooltip.sanguissupremus:sickle_natures_reap.desc=The sap runs red...
-tooltip.sanguissupremus:sigil_capture.desc=Captured: %s
+tooltip.sanguissupremus:sigil_capture.desc=Captured: §f%s
 tooltip.sanguissupremus:tartaric_amulet.desc=Will Gain Bonus: %d%%

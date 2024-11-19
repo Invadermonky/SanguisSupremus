@@ -5,7 +5,7 @@ A list of planned features and their current status. To see details on the speci
 | Name                                | Programming | Patchouli | Textures | Recipes |
 |-------------------------------------|:-----------:|:---------:|:--------:|:-------:|
 | Altar Spikes                        |             |           |          |         |
-| Altar Hopper                        |             |           |          |         |
+| Altar Hopper                        |    DONE     |           |          |  DONE   |
 | Blood Capacitor                     |    DONE     |           |          |  DONE   |
 | Blood Glass                         |    DONE     |           |          |  DONE   |
 | Blood Glass Pane                    |    DONE     |           |          |  DONE   |
@@ -77,13 +77,13 @@ A list of planned features and their current status. To see details on the speci
 | Ritual of Chasing Shadows       |    DONE     |     N/A      |           |       N/A       |   DONE    |
 | Ritual of the Dulled Mind       |    DONE     |     N/A      |           |       N/A       |   DONE    |
 | Ritual of Ender Access          |    DONE     |     N/A      |           |       N/A       |   DONE    |
-| Ritual of Eldritch Will         |             |     N/A      |           |                 |           |
+| Ritual of Eldritch Will         |             |     N/A      |           |       N/A       |           |
 | Ritual of Fading Light          |    DONE     |     N/A      |           |       N/A       |   DONE    |
 | Ritual of the Herbivorous Altar |    DONE     |     N/A      |           |       N/A       |           |
 | Ritual of Imprisoned Souls      |    DONE     |     N/A      |           |       N/A       |   DONE    |
 | Ritual of Peaceful Souls        |    DONE     |              |           |                 |   DONE    |
 | Ritual of Reforming Void        |    DONE     |     N/A      |           |                 |   DONE    |
-| Ritual of Unmaking              |             |     N/A      |           |       N/A       |           |
+| Ritual of the Shattered Table   |             |     N/A      |           |       N/A       |           |
 | Well of Slaughter               |    DONE     |     N/A      |           |       N/A       |   DONE    |
 
 

@@ -4,6 +4,7 @@ import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.IAddition;
 import com.invadermonky.sanguissupremus.api.blocks.IBlockAddition;
 import com.invadermonky.sanguissupremus.blocks.*;
+import com.invadermonky.sanguissupremus.blocks.tiles.TileAltarHopper;
 import com.invadermonky.sanguissupremus.blocks.tiles.TileBloodCapacitor;
 import com.invadermonky.sanguissupremus.blocks.tiles.TileEnderChestAccessor;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
@@ -29,6 +30,7 @@ import java.util.Map;
 
 @Mod.EventBusSubscriber(modid = SanguisSupremus.MOD_ID)
 public class ModBlocksSS {
+    public static final BlockAltarHopper ALTAR_HOPPER;
     public static final BlockBloodCapacitor BLOOD_CAPACITOR;
     public static final BlockBloodGlass BLOOD_GLASS;
     public static final BlockBloodGlassPane BLOOD_GLASS_PANE;
@@ -114,7 +116,7 @@ public class ModBlocksSS {
 
     static {
         //TODO: Adjust registry order.
-        addBlockToRegister(INFUSED_BLOCK_GOLD = new BlockAddition(Material.IRON).setMaterialIron(), LibNames.INFUSED_BLOCK_GOLD);
+        addBlockToRegister(ALTAR_HOPPER = new BlockAltarHopper(), LibNames.ALTAR_HOPPER, TileAltarHopper.class);
         addBlockToRegister(BLOOD_CAPACITOR = new BlockBloodCapacitor(), LibNames.BLOOD_CAPACITOR, TileBloodCapacitor.class);
         addBlockToRegister(BLOOD_GLASS = new BlockBloodGlass(), LibNames.BLOOD_GLASS);
         addBlockToRegister(BLOOD_GLASS_PANE = new BlockBloodGlassPane(), LibNames.BLOOD_GLASS_PANE);
@@ -124,6 +126,7 @@ public class ModBlocksSS {
         addBlockToRegister(BLOODWOOD_PLANKS = new BlockAddition(Material.WOOD, ConfigHandlerSS.items.bloodwood.enable).setMaterialWood(), LibNames.BLOODWOOD_PLANKS);
         addBlockToRegister(BLOODWOOD_SAPLING = new BlockBloodwoodSapling(), LibNames.BLOODWOOD_SAPLING);
         addBlockToRegister(ENDER_CHEST_ACCESSOR = new BlockEnderChestAccessor(), LibNames.ENDER_CHEST_ACCESSOR, TileEnderChestAccessor.class);
+        addBlockToRegister(INFUSED_BLOCK_GOLD = new BlockAddition(Material.IRON).setMaterialIron(), LibNames.INFUSED_BLOCK_GOLD);
         addBlockToRegister(STORAGE_SLATE_BLANK = new BlockSlateStorage(), LibNames.STORAGE_SLATE_BLANK);
         addBlockToRegister(STORAGE_SLATE_REINFORCED = new BlockSlateStorage(), LibNames.STORAGE_SLATE_REINFORCED);
         addBlockToRegister(STORAGE_SLATE_IMBUED = new BlockSlateStorage(), LibNames.STORAGE_SLATE_IMBUED);
