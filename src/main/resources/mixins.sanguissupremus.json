@@ -10,6 +10,7 @@
 		"MixinItemCuttingFluid",
 		"MixinPlayerDemonWillHandler",
 		"MixinRitual",
+		"MixinRitualMagnetic",
 		"MixinTileMasterRitualStone"
 	],
 	"server": [],
