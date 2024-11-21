@@ -1,0 +1,17 @@
+{
+  "name": "Assembly of the High Altar",
+  "icon": "bloodmagic:altar",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "High Altar",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:altar_builder"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "altar_builder"
+    }
+  ]
+}

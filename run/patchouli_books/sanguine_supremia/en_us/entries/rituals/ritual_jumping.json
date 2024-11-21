@@ -1,0 +1,24 @@
+{
+  "name": "Ritual of the High Jump",
+  "icon": "minecraft:purple_shulker_box",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "High Jump",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:jumping"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "jumping"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "jumping",
+      "page_type": "ritual_range",
+      "heading": "Range",
+      "range_name": "jumpRange"
+    }
+  ]
+}

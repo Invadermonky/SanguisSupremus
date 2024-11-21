@@ -1,0 +1,17 @@
+{
+  "name": "Sound of the Cleansing Soul",
+  "icon": "bloodmagic:upgrade_tome",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Cleansing Soul",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:upgrade_remove"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "upgrade_remove"
+    }
+  ]
+}

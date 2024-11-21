@@ -1,0 +1,54 @@
+{
+  "name": "Ritual of Grounding",
+  "icon": "minecraft:anvil",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of Grounding",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:grounding"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "grounding"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "grounding",
+      "page_type": "will_config",
+      "will_type": "raw"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "grounding",
+      "page_type": "will_config",
+      "will_type": "corrosive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "grounding",
+      "page_type": "will_config",
+      "will_type": "destructive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "grounding",
+      "page_type": "will_config",
+      "will_type": "steadfast"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "grounding",
+      "page_type": "will_config",
+      "will_type": "vengeful"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "grounding",
+      "page_type": "ritual_range",
+      "heading": "Grounding",
+      "range_name": "groundingRange"
+    }
+  ]
+}

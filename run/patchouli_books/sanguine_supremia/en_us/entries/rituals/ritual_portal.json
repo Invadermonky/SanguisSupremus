@@ -1,0 +1,17 @@
+{
+  "name": "Gate of the Fold",
+  "icon": "minecraft:ender_pearl",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Gate of the Fold",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:portal"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "portal"
+    }
+  ]
+}

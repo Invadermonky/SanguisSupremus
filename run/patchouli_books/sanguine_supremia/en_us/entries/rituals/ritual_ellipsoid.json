@@ -1,0 +1,35 @@
+{
+  "name": "Focus of the Ellipsoid",
+  "icon": "minecraft:bucket",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Focus of the Ellipsoid",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:ellipsoid"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "ellipsoid"
+    },
+    {
+      "type": "text",
+      "text": "This ritual is purely aesthetic in nature, designed for the budding, yet lazy, builder that resides in all of us. It's particularly good at building complicated shapes, such as the mighty gold dome above your Evil Lair. ...You do have one of those, right?"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "ellipsoid",
+      "page_type": "ritual_range",
+      "heading": "Spheroid",
+      "range_name": "spheroidRange"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "ellipsoid",
+      "page_type": "ritual_range",
+      "heading": "Chest",
+      "range_name": "chest"
+    }
+  ]
+}

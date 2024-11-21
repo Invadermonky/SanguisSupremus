@@ -1,0 +1,17 @@
+{
+  "name": "Le Vulcanos Frigius",
+  "icon": "minecraft:cobblestone",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Le Vulcanos Frigius",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:cobblestone"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "cobblestone"
+    }
+  ]
+}

@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-//TODO: Change name.
 @RitualRegister(LibNames.RITUAL_REFORMING_VOID)
 public class RitualReformingVoid extends AbstractRitualSS {
     public static final String INPUT_CHEST = "input";
@@ -49,9 +48,6 @@ public class RitualReformingVoid extends AbstractRitualSS {
             if(this.hasInsufficientLP(masterRitualStone)) {
                 return;
             }
-
-            //TODO: Patchouli - Raw will causes ritual to consume 16 items at a time.
-            //TODO: Multiblock will need chests added for Patchouli registry.
 
             BlockPos mrsPos = masterRitualStone.getBlockPos();
             List<EnumDemonWillType> willConfig = masterRitualStone.getActiveWillConfig();

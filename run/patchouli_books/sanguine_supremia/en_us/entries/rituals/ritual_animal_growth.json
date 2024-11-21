@@ -1,0 +1,55 @@
+{
+  "name": "Ritual of the Shepherd",
+  "icon": "minecraft:wool:0",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of the Shepherd",
+      "text": "Use a Ritual Diviner [Dusk] for easier construction.",
+      "multiblock_id": "sanguissupremus:animal_growth"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "animal_growth"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "animal_growth",
+      "page_type": "will_config",
+      "will_type": "raw"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "animal_growth",
+      "page_type": "will_config",
+      "will_type": "destructive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "animal_growth",
+      "page_type": "will_config",
+      "will_type": "steadfast"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "animal_growth",
+      "page_type": "will_config",
+      "will_type": "vengeful"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "animal_growth",
+      "page_type": "ritual_range",
+      "heading": "Growth",
+      "range_name": "growing"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "animal_growth",
+      "page_type": "ritual_range",
+      "heading": "Chest",
+      "range_name": "chest"
+    }
+  ]
+}

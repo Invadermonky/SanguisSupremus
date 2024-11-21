@@ -1,0 +1,24 @@
+{
+  "name": "Ward of Sacrosanctity",
+  "icon": "minecraft:golden_apple",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ward of Sacrosanctity",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:ward_of_sacrosanctity"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "ward_of_sacrosanctity"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "ward_of_sacrosanctity",
+      "page_type": "ritual_range",
+      "heading": "Spawn Ward",
+      "range_name": "spawnWard"
+    }
+  ]
+}

@@ -57,11 +57,6 @@ public class RitualWellOfSlaughter extends AbstractRitualSS {
                 return;
             }
 
-            //TODO: Patchouli
-            // Raw Will will kill buffed mobs - drained per buffed mob killed
-            // Corrosive Will will destroy dropped items for additional LP gain - consumes a small amount of will per item destroyed
-            // Destructive Will will kill bosses - consumes a large amount of will per boss destroyed
-
             BlockPos mrsPos = masterRitualStone.getBlockPos();
             List<EnumDemonWillType> willConfig = masterRitualStone.getActiveWillConfig();
             DemonWillHolder holder = WorldDemonWillHandler.getWillHolder(world, mrsPos);

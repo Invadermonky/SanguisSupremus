@@ -1,0 +1,36 @@
+{
+  "name": "Feast of the Herbivor. Altar",
+  "icon": "minecraft:potato",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Herbivorous Altar",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:herbivorous_altar"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "herbivorous_altar"
+    },
+    {
+      "type": "text",
+      "flag": "sanguissupremus:herbivorous_altar_saplings",
+      "text": "When a sampling attempts to grow near an active Feast of the Herbivorous Altar ritual, the tree growth will be prevented and the sapling will be destroyed.$(br2)Each time this occurs, a small amount of LP will be transferred into the linked altar."
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "herbivorous_altar",
+      "page_type": "ritual_range",
+      "heading": "Reap",
+      "range_name": "reapRange"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "herbivorous_altar",
+      "page_type": "ritual_range",
+      "heading": "Altar",
+      "range_name": "altar"
+    }
+  ]
+}

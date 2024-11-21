@@ -1,0 +1,24 @@
+{
+  "name": "Ritual of Peaceful Souls",
+  "icon": "minecraft:egg",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Peaceful Souls",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:peaceful_souls"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "peaceful_souls"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "peaceful_souls",
+      "page_type": "ritual_range",
+      "heading": "Spawn",
+      "range_name": "spawnRange"
+    }
+  ]
+}

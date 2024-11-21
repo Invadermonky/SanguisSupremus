@@ -1,0 +1,82 @@
+{
+  "name": "Serenade of the Nether",
+  "icon": "minecraft:lava_bucket",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Serenade of the Nether",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:lava"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "lava"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "will_config",
+      "will_type": "raw"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "will_config",
+      "will_type": "corrosive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "will_config",
+      "will_type": "destructive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "will_config",
+      "will_type": "steadfast"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "will_config",
+      "will_type": "vengeful"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "ritual_range",
+      "heading": "Lava",
+      "range_name": "lavaRange"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "ritual_range",
+      "heading": "Raw",
+      "range_name": "lavaTank"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "ritual_range",
+      "heading": "Corrosive",
+      "range_name": "fireDamage"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "ritual_range",
+      "heading": "Steadfast",
+      "range_name": "fireResist"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "lava",
+      "page_type": "ritual_range",
+      "heading": "Vengeful",
+      "range_name": "fireFuse"
+    }
+  ]
+}

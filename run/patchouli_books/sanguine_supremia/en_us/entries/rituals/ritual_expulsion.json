@@ -1,0 +1,24 @@
+{
+  "name": "Aura of Expulsion",
+  "icon": "minecraft:piston",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Aura of Expulsion",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:expulsion"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "expulsion"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "expulsion",
+      "page_type": "ritual_range",
+      "heading": "Expulsion",
+      "range_name": "expulsionRange"
+    }
+  ]
+}

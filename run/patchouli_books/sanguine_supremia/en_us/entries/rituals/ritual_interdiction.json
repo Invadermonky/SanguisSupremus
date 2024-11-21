@@ -1,0 +1,24 @@
+{
+  "name": "Ritual of Interdiction",
+  "icon": "minecraft:piston",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of Interdiction",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:interdiction"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "interdiction"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "interdiction",
+      "page_type": "ritual_range",
+      "heading": "Interdiction",
+      "range_name": "interdictionRange"
+    }
+  ]
+}

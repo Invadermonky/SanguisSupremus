@@ -16,12 +16,14 @@ public class ItemHelper {
     public static boolean storeEntityInStack(ItemStack stack, Entity entity) {
         EntityEntry entry = EntityRegistry.getEntry(entity.getClass());
         if(entry != null) {
+            String displayName = entity.getDisplayName().getFormattedText();
             String entityName = entry.getRegistryName().toString();
             NBTTagCompound entityData = new NBTTagCompound();
             entity.writeToNBT(entityData);
             if (!stack.hasTagCompound()) {
                 stack.setTagCompound(new NBTTagCompound());
             }
+            stack.getTagCompound().setString(LibTags.TAG_DISPLAY_NAME, displayName);
             stack.getTagCompound().setString(LibTags.TAG_ENTITY, entityName);
             stack.getTagCompound().setTag(LibTags.TAG_ENTITY_DATA, entityData);
             return true;
@@ -29,9 +31,13 @@ public class ItemHelper {
         return false;
     }
 
+    public static String getEntityDisplayNameFromStack(ItemStack stack) {
+        return stack.hasTagCompound() ? stack.getTagCompound().getString(LibTags.TAG_DISPLAY_NAME) : "";
+    }
+
     @Nullable
     public static EntityEntry getEntityEntryFromStack(ItemStack stack) {
-        String entityName = stack.getTagCompound().getString(LibTags.TAG_ENTITY);
+        String entityName = stack.hasTagCompound() ? stack.getTagCompound().getString(LibTags.TAG_ENTITY) : "";
         return ForgeRegistries.ENTITIES.getValue(new ResourceLocation(entityName));
     }
 
@@ -44,6 +50,7 @@ public class ItemHelper {
                 Entity entity = entry.newInstance(world);
                 entity.readFromNBT(entityData);
                 if(removeEntity) {
+                    stack.getTagCompound().removeTag(LibTags.TAG_DISPLAY_NAME);
                     stack.getTagCompound().removeTag(LibTags.TAG_ENTITY);
                     stack.getTagCompound().removeTag(LibTags.TAG_ENTITY_DATA);
                 }

@@ -1,0 +1,31 @@
+{
+  "name": "Gathering of the Forsaken Souls",
+  "icon": "bloodmagic:demon_crystallizer",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Forsaken Souls",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:forsaken_soul"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "forsaken_soul"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "forsaken_soul",
+      "page_type": "ritual_range",
+      "heading": "Crystal",
+      "range_name": "crystal"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "forsaken_soul",
+      "page_type": "ritual_range",
+      "heading": "Damage",
+      "range_name": "damage"
+    }
+  ]
+}

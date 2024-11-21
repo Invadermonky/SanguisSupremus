@@ -1,0 +1,17 @@
+{
+  "name": "Ritual of Ender Access",
+  "icon": "minecraft:ender_chest",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ender Access",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:ender_access"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "ender_access"
+    }
+  ]
+}

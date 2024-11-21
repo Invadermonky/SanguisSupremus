@@ -1,0 +1,28 @@
+{
+  "name": "Mark of the Falling Tower",
+  "icon": "minecraft:fire_charge",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Falling Tower",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:meteor"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "meteor"
+    },
+    {
+      "type": "text",
+      "text": "Using the vast powers at your disposal, the obvious next step is to summon a meteor from outer space to crash upon the world.$(br2)By dropping an appropriate offering on top of the MRS, the ritual will consume the item (plus a large amount of LP) and summon a meteor at the build height of the map. Once the meteor hits a solid block, it will detonate and leave behind its resource rich shell."
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "meteor",
+      "page_type": "ritual_range",
+      "heading": "Item",
+      "range_name": "itemRange"
+    }
+  ]
+}

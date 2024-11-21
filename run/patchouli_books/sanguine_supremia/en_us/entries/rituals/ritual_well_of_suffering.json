@@ -1,0 +1,31 @@
+{
+  "name": "Well of Suffering",
+  "icon": "minecraft:iron_sword",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Well of Suffering",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:well_of_suffering"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "well_of_suffering"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "well_of_suffering",
+      "page_type": "ritual_range",
+      "heading": "Damage",
+      "range_name": "damage"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "well_of_suffering",
+      "page_type": "ritual_range",
+      "heading": "Altar",
+      "range_name": "altar"
+    }
+  ]
+}

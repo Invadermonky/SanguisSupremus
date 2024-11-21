@@ -1,0 +1,68 @@
+{
+  "name": "Ritual of the Green Grove",
+  "icon": "minecraft:dye:15",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of the Green Grove",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:green_grove"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "green_grove"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "will_config",
+      "will_type": "raw"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "will_config",
+      "will_type": "corrosive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "will_config",
+      "will_type": "destructive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "will_config",
+      "will_type": "steadfast"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "will_config",
+      "will_type": "vengeful"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "ritual_range",
+      "heading": "Growth",
+      "range_name": "growing"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "ritual_range",
+      "heading": "Corrosive",
+      "range_name": "leech"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "green_grove",
+      "page_type": "ritual_range",
+      "heading": "Steadfast",
+      "range_name": "hydrate"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Res. of the Faceted Crystal",
+  "icon": "bloodmagic:item_demon_crystal:3",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Faceted Crystal",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:crystal_split"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "crystal_split"
+    },
+    {
+      "type": "text",
+      "text": "This ritual takes a fully grown Raw Crystal Cluster (5 spires) located two blocks above the Master Ritual Stone, and splits it into new single spires of each Aspected Will Crystal Clusters located directly above the four elemental Ritual Stones. This spacing is designed to accommodate a Demon Crystallizer on top fo the Master Ritual Stone.$(br2)For information on growing Demon Will Crystals, see Crystallized Will."
+    }
+  ]
+}

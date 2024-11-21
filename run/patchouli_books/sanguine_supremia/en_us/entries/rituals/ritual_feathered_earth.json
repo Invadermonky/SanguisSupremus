@@ -1,0 +1,24 @@
+{
+  "name": "Ritual of the Feathered Earth",
+  "icon": "minecraft:slime",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Feathered Earth",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:feathered_earth"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "feathered_earth"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "feathered_earth",
+      "page_type": "ritual_range",
+      "heading": "Fall Protection",
+      "range_name": "fallProtRange"
+    }
+  ]
+}

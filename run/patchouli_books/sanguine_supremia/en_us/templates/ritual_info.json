@@ -1,5 +1,5 @@
 {
-  "processor": "com.invadermonky.sanguissupremus.compat.patchouli.processors.RitualInfoProcessor",
+  "processor": "com.invadermonky.sanguissupremus.compat.patchouli.processors.ProcessorRitualInfo",
   "components": [
     {
       "type": "text",

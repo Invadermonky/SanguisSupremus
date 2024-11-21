@@ -1,0 +1,24 @@
+{
+  "name": "Ritual of Containment",
+  "icon": "minecraft:iron_bars",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of Containment",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:containment"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "containment"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "containment",
+      "page_type": "ritual_range",
+      "heading": "Containment",
+      "range_name": "containmentRange"
+    }
+  ]
+}

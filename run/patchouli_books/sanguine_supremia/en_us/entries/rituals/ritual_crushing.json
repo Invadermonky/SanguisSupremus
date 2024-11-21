@@ -1,0 +1,61 @@
+{
+  "name": "Ritual of the Crusher",
+  "icon": "minecraft:iron_pickaxe",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of the Crusher",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:crushing"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "crushing"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crushing",
+      "page_type": "will_config",
+      "will_type": "raw"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crushing",
+      "page_type": "will_config",
+      "will_type": "corrosive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crushing",
+      "page_type": "will_config",
+      "will_type": "destructive"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crushing",
+      "page_type": "will_config",
+      "will_type": "steadfast"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crushing",
+      "page_type": "will_config",
+      "will_type": "vengeful"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crushing",
+      "page_type": "ritual_range",
+      "heading": "Crushing",
+      "range_name": "crushingRange"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crushing",
+      "page_type": "ritual_range",
+      "heading": "Chest",
+      "range_name": "chest"
+    }
+  ]
+}

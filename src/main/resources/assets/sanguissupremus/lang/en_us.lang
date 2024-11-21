@@ -91,7 +91,64 @@ item.sanguissupremus:tartaric_amulet_basic.name=Basic Tartaric Amulet
 item.sanguissupremus:tartaric_amulet_pristine.name=Pristine Tartaric Amulet
 item.sanguissupremus:tartaric_amulet_standard.name=Standard Tartaric Amulet
 
-# Rituals
+# Rituals - Names
+ritual.sanguissupremus:chasing_shadows=Ritual of Chasing Shadows
+ritual.sanguissupremus:dulled_mind=Ritual of the Dulled Mind
+ritual.sanguissupremus:ender_access=Ritual of Ender Access
+ritual.sanguissupremus:fading_light=Ritual of Fading Light
+ritual.sanguissupremus:herbivorous_altar=Feast of the Herbivorous Altar
+ritual.sanguissupremus:imprisoned_souls=Ritual of Imprisoned Souls
+ritual.sanguissupremus:peaceful_souls=Ritual of Peaceful Souls
+ritual.sanguissupremus:reforming_void=Ritual of the Reforming Void
+ritual.sanguissupremus:well_of_slaughter=Well of Slaughter
+
+# Rituals - Info
+ritual.bloodmagic.cobblestoneRitual.info=Generates cobblestone in the area above the Master Ritual Stone.
+ritual.bloodmagic.downgradeRitual.info=Consumes items from a linked chest to forcefully downgrade worn Living Armor.
+ritual.bloodmagic.wardOfSacrosanctityRitual.info=Prevents mobs from spawning in an area around the ritual.
+ritual.bloodmagic.veilOfEvilRitual.info=Allows mobs to spawn regardless of light level.
+ritual.sanguissupremus:chasing_shadows.info=Pulls light sources from attached inventory and places them into the world. If no valid light sources are found or the chest is missing, the ritual will spawn Blood Lights at an increased cost.
+ritual.sanguissupremus:dulled_mind.info=Fully pacifies one entity directly above the Master Ritual Stone, removing its ability to perform hostile actions and preventing them from dropping loot. Does not affect bosses.
+ritual.sanguissupremus:ender_access.info=Links the Ender Chest Accessor above the ritual to the player who activated the ritual, allowing full automation of their personal Ender Chest inventory.
+ritual.sanguissupremus:fading_light.info=Removes light source blocks from the world and places them into the attached inventory. If the inventory is full or does not exist, the items will be spawned above the Master Ritual Stone.
+ritual.sanguissupremus:herbivorous_altar.info=Harvests fully grown crops in an area around the Master Ritual Stone and destroys any drops, converting them into LP that is transferred into a nearby altar.
+ritual.sanguissupremus:imprisoned_souls.info=Searches the linked inventory for captured entities and spawns duplicated entities into the world.
+ritual.sanguissupremus:peaceful_souls.info=Spawns passive and neutral animals and creatures.
+ritual.sanguissupremus:reforming_void.info=Voids items in linked input chest and spawns resources once a required threshold is met.
+ritual.sanguissupremus:well_of_slaughter.info=Instantly kills entities within its slaughter area and transfers the LP into a nearby blood altar.
+
+# Rituals - Will Types
+ritual.sanguissupremus:imprisoned_souls.default.info=(Raw) Increases the spawning speed of the ritual based on total will.
+ritual.sanguissupremus:imprisoned_souls.corrosive.info=(Corrosive) Entities will cost 50%% less LP to spawn, but will only have 1 heart of remaining health.
+ritual.sanguissupremus:imprisoned_souls.destructive.info=(Destructive) Doubles the number entities spawned per operation.
+ritual.sanguissupremus:imprisoned_souls.steadfast.info=(Steadfast) Spawned entities will have 50%% more health, but will no longer drop loot. This does not increase the spawn LP cost.
+ritual.sanguissupremus:imprisoned_souls.vengeful.info=(Vengeful) Reduces the entity spawn cost by 30%%.
+ritual.sanguissupremus:reforming_void.default.info=(Raw) Increases the number of items voided per operation. Additional items can only be pulled from the same item stack.
+ritual.sanguissupremus:well_of_slaughter.default.info=(Raw) Allows the ritual to instantly kill buffed entities.
+ritual.sanguissupremus:well_of_slaughter.corrosive.info=(Corrosive) Items dropped into the world will be destroyed and converted into a small amount of LP.
+ritual.sanguissupremus:well_of_slaughter.destructive.info=(Destructive) Allows the ritual to instantly kill some boss entities.
+
+#Rituals - Ranges
+ritual.bloodmagic.condorRitual.flightRange.info=(Flight) The area that players will be granted flight.
+ritual.bloodmagic.eternalSoulRitual.altar.info=(Altar) This range defines the area that the ritual searches for the blood altar. Changing this will either expand or limit the range to a certain region.
+ritual.bloodmagic.featheredEarthRitual.fallProtRange.info=(Fall Protection) The area where entities will be granted protection against fall damage.
+ritual.bloodmagic.groundingRitual.groundingRange.info=(Grounding) The area the ritual will apply its gravitational effects.
+ritual.bloodmagic.meteorRitual.itemRange.info=(Item) The area the ritual will search for offering items.
+ritual.bloodmagic.wardOfSacrosanctityRitual.spawnWard.info=(Ward) The area the ritual will prevent mobs from spawning.
+ritual.bloodmagic.veilOfEvilRitual.veilRange.info=(Veil) The area that mobs will be allowed to spawn. Increasing the size of this area will increase the number of potential spawns.
+ritual.sanguissupremus:chasing_shadows.chest.info=(Chest) The location of the inventory the ritual will grab light sources from to place in the world.
+ritual.sanguissupremus:chasing_shadows.lightRange.info=(Light) The area the ritual will place light sources.
+ritual.sanguissupremus:fading_light.chest.info=(Chest) The location of the inventory the ritual will place light sources into.
+ritual.sanguissupremus:fading_light.darkenRange.info=(Darken) The area the ritual will remove light sources.
+ritual.sanguissupremus:herbivorous_altar.altar.info=(Altar) This range defines the area that the ritual searches for the blood altar. Changing this will either expand or limit the range to a certain region.
+ritual.sanguissupremus:herbivorous_altar.reapRange.info=(Reap) This defines where the ritual will reap crops. All fully grown crops inside of this range will be harvested with no drops.
+ritual.sanguissupremus:imprisoned_souls.chest.info=(Chest) The location of the inventory that will be scanned for captured entities.
+ritual.sanguissupremus:imprisoned_souls.spawnRange.info=(Spawn) The area the ritual will attempt to spawn entities. Very large spawning areas will decrease the chance mobs can find a valid spawn location.
+ritual.sanguissupremus:peaceful_souls.spawnRange.info=(Spawn) The area the ritual will attempt to spawn entities. Very large spawning areas will decrease the chance mobs can find a valid spawn location.
+ritual.sanguissupremus:reforming_void.input.info=(Input) The location of the inventory where items will be removed and destroyed.
+ritual.sanguissupremus:reforming_void.output.info=(Output) The location of the inventory where generated items will be placed. If the inventory is missing or full, items will be spawned on top of this location.
+ritual.sanguissupremus:well_of_slaughter.altar.info=(Altar) This range defines the area that the ritual searches for the blood altar. Changing this will either expand or limit the range to a certain region.
+ritual.sanguissupremus:well_of_slaughter.damage.info=(Slaughter) The area where the ritual will search for mobs. All mobs inside of this range (except for players) will be instantly killed.
 
 
 # Tooltips
@@ -111,3 +168,19 @@ tooltip.sanguissupremus:sacrificial_dagger_safe.desc=Safe for all ages!
 tooltip.sanguissupremus:sickle_natures_reap.desc=The sap runs red...
 tooltip.sanguissupremus:sigil_capture.desc=Captured: §f%s
 tooltip.sanguissupremus:tartaric_amulet.desc=Will Gain Bonus: %d%%
+
+# Patchouli
+guide.sanguissupremus:double_new_line=$(br2)%s
+guide.sanguissupremus:ritual_info.activation_cost=$(br)Activation Cost: $(blood)%d LP$()
+guide.sanguissupremus:ritual_info.counter_formatter=%s%s$()
+guide.sanguissupremus:ritual_info.full_range=Full Range
+guide.sanguissupremus:ritual_info.info_formatter=%s$(br2)%s$(br2)%s$(br)%s%s%s
+guide.sanguissupremus:ritual_info.link_awakened_activation_crystal=$(l:sanguissupremus:rituals/activation_crystals#awakened)%s$(/l)
+guide.sanguissupremus:ritual_info.link_weak_activation_crystal=$(l:sanguissupremus:rituals/activation_crystals#weak)%s$(/l)
+guide.sanguissupremus:ritual_info.range_formatter=$(br) $(li)Max Volume: %s$(li)Horizontal Radius: %s$(li)Vertical Radius: %s
+guide.sanguissupremus:ritual_info.upkeep_cost=$(br)Base Usage Cost: $(blood)%d LP$()$(br)Base Interval: %d Ticks
+guide.sanguissupremus:will_crystal.raw=Raw
+guide.sanguissupremus:will_crystal.corrosive=Corrosive
+guide.sanguissupremus:will_crystal.destructive=Destructive
+guide.sanguissupremus:will_crystal.steadfast=Steadfast
+guide.sanguissupremus:will_crystal.vengeful=Vengeful

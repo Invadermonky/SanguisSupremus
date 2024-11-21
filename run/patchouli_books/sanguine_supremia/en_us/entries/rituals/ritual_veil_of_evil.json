@@ -1,0 +1,24 @@
+{
+  "name": "Veil of Evil",
+  "icon": "minecraft:skull:2",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Veil of Evil",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:veil_of_evil"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "veil_of_evil"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "veil_of_evil",
+      "page_type": "ritual_range",
+      "heading": "Veil",
+      "range_name": "veilRange"
+    }
+  ]
+}

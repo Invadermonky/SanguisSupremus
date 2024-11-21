@@ -8,7 +8,6 @@ import com.invadermonky.sanguissupremus.util.tags.ModTags;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.ai.EntityAITasks;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -33,18 +32,13 @@ public class RitualDulledMind extends Ritual {
         AreaDescriptor checkRange = masterRitualStone.getBlockRange(ENTITY_RANGE);
         List<EntityLiving> entityList = world.getEntitiesWithinAABB(EntityLiving.class, checkRange.getAABB(pos));
         for(EntityLiving entity : entityList) {
-            //TODO: Patchouli Guide
-            //  - Ritual does not affect boss monsters
-            //  - Affected entities no longer drop items on death
-            // Possible config to prevent suppressing AI on buffed entities?
-
             if(entity.isEntityAlive() && entity.isNonBoss() && !ModTags.contains(ModTags.DULLED_MIND_BLACKLIST, entity)) {
                 Set<EntityAITasks.EntityAITaskEntry> taskEntriesCopy = new HashSet<>(entity.targetTasks.taskEntries);
                 for(EntityAITasks.EntityAITaskEntry task : taskEntriesCopy) {
                     entity.targetTasks.removeTask(task.action);
                 }
                 masterRitualStone.setActive(false);
-                world.playSound(null, entity.getPosition(), SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.HOSTILE, 1.0F, 1.0F);
+                entity.playSound(SoundEvents.BLOCK_FIRE_EXTINGUISH, 1.0F, 1.0F);
                 entity.setDropItemsWhenDead(false);
                 break;
             }
@@ -63,7 +57,6 @@ public class RitualDulledMind extends Ritual {
 
     @Override
     public void gatherComponents(Consumer<RitualComponent> components) {
-        //TODO: Actual rune structure.
         this.addParallelRunes(components, 2, -1, EnumRuneType.EARTH);
         this.addCornerRunes(components, 1, 0, EnumRuneType.DUSK);
         this.addParallelRunes(components, 1, 0, EnumRuneType.DUSK);

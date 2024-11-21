@@ -1,0 +1,24 @@
+{
+  "name": "Cry of the Eternal Soul",
+  "icon": "forge:bucketfilled{FluidName:'lifeessence',Amount:1000}",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Eternal Soul",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:eternal_soul"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "eternal_soul"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "eternal_soul",
+      "page_type": "ritual_range",
+      "heading": "Altar",
+      "range_name": "altar"
+    }
+  ]
+}

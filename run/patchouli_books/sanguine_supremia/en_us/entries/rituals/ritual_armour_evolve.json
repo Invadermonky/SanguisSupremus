@@ -1,0 +1,18 @@
+{
+  "name": "Ritual of Living Evolution",
+  "icon": "bloodmagic:living_armour_chest",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Living Evolution",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:armour_evolve"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "armour_evolve",
+      "extra_text": "Stand on the Master Ritual Stone while wearing Living Armor to use this ritual."
+    }
+  ]
+}

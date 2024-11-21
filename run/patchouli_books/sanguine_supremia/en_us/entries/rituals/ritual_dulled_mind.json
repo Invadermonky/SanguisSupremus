@@ -1,0 +1,17 @@
+{
+  "name": "Ritual of the Dulled Mind",
+  "icon": "minecraft:wooden_sword",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Dulled Mind",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:dulled_mind"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "dulled_mind"
+    }
+  ]
+}

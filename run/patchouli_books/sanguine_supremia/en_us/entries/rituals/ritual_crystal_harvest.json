@@ -1,0 +1,24 @@
+{
+  "name": "Crack of the Fract. Crystal",
+  "icon": "bloodmagic:item_demon_crystal:0",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Fractured Crystal",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:crystal_harvest"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "crystal_harvest"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "crystal_harvest",
+      "page_type": "ritual_range",
+      "heading": "Crystal",
+      "range_name": "crystal"
+    }
+  ]
+}

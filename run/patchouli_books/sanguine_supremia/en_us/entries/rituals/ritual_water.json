@@ -1,0 +1,24 @@
+{
+  "name": "Ritual of the Full Spring",
+  "icon": "minecraft:water_bucket",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Full Spring",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:water"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "water"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "water",
+      "page_type": "ritual_range",
+      "heading": "Water",
+      "range_name": "waterRange"
+    }
+  ]
+}

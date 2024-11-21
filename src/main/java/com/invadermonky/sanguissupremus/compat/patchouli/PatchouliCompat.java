@@ -2,6 +2,7 @@ package com.invadermonky.sanguissupremus.compat.patchouli;
 
 import com.invadermonky.sanguissupremus.api.IAddition;
 import com.invadermonky.sanguissupremus.api.IProxy;
+import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
 import com.invadermonky.sanguissupremus.registry.ModItemsSS;
 import net.minecraft.item.Item;
 import vazkii.patchouli.api.PatchouliAPI;
@@ -23,6 +24,9 @@ public class PatchouliCompat implements IProxy {
         addItemAdditionConfigFlag(ModItemsSS.SIGIL_FLOWING_BLOOD);
         addItemAdditionConfigFlag(ModItemsSS.SIGIL_STONE);
         addItemAdditionConfigFlag(ModItemsSS.SIGIL_VAMPIRIC_STRIKES);
+
+        //Rituals
+        PatchouliAPI.instance.setConfigFlag("sanguissupremus:herbivorous_altar_saplings", ConfigHandlerSS.rituals.herbivorous_altar.saplingGrowthSacrifice);
     }
 
     private <T extends Item & IAddition> void addItemAdditionConfigFlag(T item) {

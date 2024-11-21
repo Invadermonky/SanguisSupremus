@@ -109,10 +109,11 @@ public class RitualImprisonedSouls extends AbstractRitualSS {
                             steadfastDrain += steadfastWillDrain;
                         }
 
-                        //Corrosive Will - entities spawn with 1 health (does not reduce cost per entity)
+                        //Corrosive Will - entities spawn with 1 health at 50% less LP per summon
                         if (corrosiveWill > 0) {
-                            entity.setHealth(1.0f);
+                            entity.setHealth(2.0f);
                             corrosiveDrain += corrosiveWillDrain;
+                            spawnCost /= 2;
                         }
 
                         BlockPos spawnPos = spawnPositions.get(world.rand.nextInt(spawnPositions.size()));

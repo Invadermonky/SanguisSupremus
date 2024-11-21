@@ -75,6 +75,7 @@ public class RitualHerbivorousAltar extends AbstractRitualSS {
                             if (altar != null) {
                                 altar.sacrificialDaggerCall(ConfigHandlerSS.rituals.herbivorous_altar.saplingGrowthSacrificeValue, true);
                                 world.playEvent(Constants.WorldEvents.BREAK_BLOCK_EFFECTS, pos, Block.getStateId(state));
+                                world.setBlockToAir(pos);
                                 event.setResult(Event.Result.DENY);
                                 return true;
                             }

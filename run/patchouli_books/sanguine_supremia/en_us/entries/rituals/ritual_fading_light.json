@@ -1,0 +1,35 @@
+{
+  "name": "Ritual of Fading Light",
+  "icon": "minecraft:coal:0",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Fading Light",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:fading_light"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "fading_light"
+    },
+    {
+      "type": "text",
+      "text": "The Ritual of Fading Light will only remove light sources that can be placed into the world by the Ritual of Chasing Shadows."
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "fading_light",
+      "page_type": "ritual_range",
+      "heading": "Darken",
+      "range_name": "darkenRange"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "fading_light",
+      "page_type": "ritual_range",
+      "heading": "Chest",
+      "range_name": "chest"
+    }
+  ]
+}

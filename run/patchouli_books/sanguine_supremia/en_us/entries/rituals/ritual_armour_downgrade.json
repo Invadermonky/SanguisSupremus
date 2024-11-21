@@ -1,0 +1,25 @@
+{
+  "name": "Penance of the Leadened Soul",
+  "icon": "bloodmagic:pack_self_sacrifice",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Leadened Soul",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:armour_downgrade"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "armour_downgrade"
+    },
+    {
+      "type": "text",
+      "text": "This ritual applies downgrades to your Living Armor, granting it additional upgrade points at the cost of reducing the effectiveness of other armor upgrades. You can use these extra points to further specialize your Living Armor.$(br2)For the ritual to function, you must place an Item Frame on the top-most blank rune facing towards the Master Ritual Stone and an inventory of some kind on top of the Dusk ritual stone."
+    },
+    {
+      "type": "text",
+      "text": "You then place the key item into the item frame and any other ingredients into the inventory. Once the ritual is activated, you can sneak while on top of the Master Ritual Stone to acquire the downgrade.$(br2)All ingredients placed in the inventory container will be consumed, but the key item will remain in the item frame.$(br2)For information on downgrades see Living Armor Downgrades."
+    }
+  ]
+}

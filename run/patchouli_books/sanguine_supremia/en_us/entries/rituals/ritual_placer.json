@@ -1,28 +1,28 @@
 {
-  "name": "Call of the Zephyr",
-  "icon": "minecraft:hopper",
+  "name": "Laying of the Filler",
+  "icon": "minecraft:dispenser",
   "category": "patchouli:rituals",
   "pages": [
     {
       "type": "multiblock",
-      "name": "Call of the Zephyr",
+      "name": "Laying of the Filler",
       "text": "Use a Ritual Diviner for easier construction.",
-      "multiblock_id": "sanguissupremus:zephyr"
+      "multiblock_id": "sanguissupremus:placer"
     },
     {
       "type": "ritual_info",
-      "ritual": "zephyr"
+      "ritual": "placer"
     },
     {
       "type": "ritual_data",
-      "ritual": "zephyr",
+      "ritual": "placer",
       "page_type": "ritual_range",
-      "heading": "Suction",
-      "range_name": "zephyrRange"
+      "heading": "Placement",
+      "range_name": "placerRange"
     },
     {
       "type": "ritual_data",
-      "ritual": "zephyr",
+      "ritual": "placer",
       "page_type": "ritual_range",
       "heading": "Chest",
       "range_name": "chest"

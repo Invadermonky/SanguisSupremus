@@ -1,0 +1,17 @@
+{
+  "name": "Ritual of Suppression",
+  "icon": "minecraft:ender_eye",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of Suppression",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:suppression"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "suppression"
+    }
+  ]
+}

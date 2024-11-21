@@ -36,6 +36,17 @@ public class ItemSoulVessel extends Item implements IAddition {
     }
 
     @Override
+    public String getItemStackDisplayName(ItemStack stack) {
+        String displayName = super.getItemStackDisplayName(stack);
+        if(ItemHelper.stackHasStoredEntity(stack)) {
+            displayName += "(" + ItemHelper.getEntityDisplayNameFromStack(stack) + ")";
+        }
+        return displayName;
+    }
+
+
+
+    @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
         ItemStack stack = player.getHeldItem(hand);
         ItemStack thrownStack = player.isCreative() ? stack.copy() : stack.splitStack(1);

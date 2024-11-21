@@ -1,0 +1,25 @@
+{
+  "name": "Hymn of Syphoning",
+  "icon": "minecraft:bucket",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Hymn of Syphoning",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:pump"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "pump",
+      "info_override": "Looks around the world and grabs fluids from the defined area and places them into a linked tank."
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "pump",
+      "page_type": "ritual_range",
+      "heading": "Drain",
+      "range_name": "pumpRange"
+    }
+  ]
+}

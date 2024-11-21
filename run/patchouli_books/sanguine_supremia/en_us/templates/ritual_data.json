@@ -1,5 +1,5 @@
 {
-  "processor": "com.invadermonky.sanguissupremus.compat.patchouli.processors.RitualInfoProcessor",
+  "processor": "com.invadermonky.sanguissupremus.compat.patchouli.processors.ProcessorRitualInfo",
   "components": [
     {
       "type": "header",
@@ -15,12 +15,12 @@
       "u": 0,
       "v": 102,
       "texture_width": 128,
-      "texture_height": 256,
+      "texture_height": 128,
       "width": 66,
       "height": 26
     },
     {
-      "type": "spotlight",
+      "type": "item",
       "item": "#item",
       "x": 50,
       "y": 15

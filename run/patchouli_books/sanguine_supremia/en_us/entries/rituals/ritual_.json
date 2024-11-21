@@ -1,28 +1,28 @@
 {
-  "name": "Call of the Zephyr",
-  "icon": "minecraft:hopper",
+  "name": "",
+  "icon": "",
   "category": "patchouli:rituals",
   "pages": [
     {
       "type": "multiblock",
-      "name": "Call of the Zephyr",
+      "name": "",
       "text": "Use a Ritual Diviner for easier construction.",
-      "multiblock_id": "sanguissupremus:zephyr"
+      "multiblock_id": "sanguissupremus:green_grove"
     },
     {
       "type": "ritual_info",
-      "ritual": "zephyr"
+      "ritual": ""
     },
     {
       "type": "ritual_data",
-      "ritual": "zephyr",
+      "ritual": "",
       "page_type": "ritual_range",
-      "heading": "Suction",
-      "range_name": "zephyrRange"
+      "heading": "",
+      "range_name": ""
     },
     {
       "type": "ritual_data",
-      "ritual": "zephyr",
+      "ritual": "",
       "page_type": "ritual_range",
       "heading": "Chest",
       "range_name": "chest"

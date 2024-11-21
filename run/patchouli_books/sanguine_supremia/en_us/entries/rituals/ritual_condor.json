@@ -1,0 +1,24 @@
+{
+  "name": "Reverence of the Condor",
+  "icon": "minecraft:feather",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Reverence of the Condor",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:condor"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "condor"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "condor",
+      "page_type": "ritual_range",
+      "heading": "Flight",
+      "range_name": "flightRange"
+    }
+  ]
+}

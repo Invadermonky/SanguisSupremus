@@ -1,0 +1,28 @@
+{
+  "name": "Ritual of Magnetism",
+  "icon": "minecraft:iron_ore",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Ritual of Magnetism",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:magnetism"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "magnetism"
+    },
+    {
+      "type": "text",
+      "text": "The Ritual of Magnetism searches a 3 block radius area centered on the Master Ritual Stone down to bedrock. If an ore block is found, the ritual will place it in the area above the MRS. The search radius can be increased by placing an expensive block directly beneath the MRS.$(br2)Default Radii:$(li)$(item)Block of Iron$() - 7 blocks$(li)$(item)Block of Gold$() - 15 blocks$(li)$(item)Block of Diamond$() - 31 blocks"
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "magnetism",
+      "page_type": "ritual_range",
+      "heading": "Placement",
+      "range_name": "placementRange"
+    }
+  ]
+}
