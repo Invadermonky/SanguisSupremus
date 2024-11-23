@@ -12,7 +12,6 @@ public class ModLootTablesSS {
     }
 
     static {
-        //TODO: The slats are not showing up in JER. Need a better way to handle the different metadatas.
         REFORMING_VOID = new ResourceLocation(SanguisSupremus.MOD_ID, "ritual/reforming_void");
     }
 }

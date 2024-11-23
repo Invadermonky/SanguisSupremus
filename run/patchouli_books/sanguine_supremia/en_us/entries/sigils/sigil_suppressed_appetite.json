@@ -1,0 +1,20 @@
+{
+  "name": "Sigil of Supp. Appetite",
+  "icon": "sanguissupremus:sigil_suppressed_appetite",
+  "category": "patchouli:sigils",
+  "pages": [
+    {
+      "type": "text",
+      "text": "While active, the $(item)Sigil of Suppressed Appetite$() will suppress natural health regeneration from food.$(br2)While seemingly useless to most, it is a godsend to any blood mage that practices the art of self-sacrifice.$(br2)Constantly having to eat after draining a small amount of blood can result in many mages"
+    },
+    {
+      "type": "text",
+      "text": "eating their entire food stockpiles in a matter of hours, if not minutes.$(br2)The use of this sigil allows blood mages to rely on, and benefit more from, other means of recovery such as potions, bandages, or spells.$(br2)$(bold)Cost:$() $(blood)0 LP$()"
+    },
+    {
+      "type": "crafting_array",
+      "heading": "Sigil of Supp. Appetite",
+      "output": "sanguissupremus:sigil_suppressed_appetite"
+    }
+  ]
+}

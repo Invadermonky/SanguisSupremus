@@ -154,7 +154,7 @@ public class RitualImprisonedSouls extends AbstractRitualSS {
     }
 
     public int getRefreshTimeForRawWill(double rawWill) {
-        return rawWill > 0.0 ? this.defaultRefreshTime / 2 : this.defaultRefreshTime;
+        return rawWill > 0.0 ? this.getDefaultRefreshTime() / 2 : this.getDefaultRefreshTime();
     }
 
     public int getSpawnCount(double destructiveWill) {

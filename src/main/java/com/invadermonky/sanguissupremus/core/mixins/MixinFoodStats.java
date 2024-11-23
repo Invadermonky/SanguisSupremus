@@ -1,15 +1,20 @@
 package com.invadermonky.sanguissupremus.core.mixins;
 
+import com.invadermonky.sanguissupremus.registry.ModEffectsSS;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.FoodStats;
+import net.minecraft.world.GameRules;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
-@Mixin(FoodStats.class)
+@Mixin(value = FoodStats.class)
 public abstract class MixinFoodStats {
-    /*TODO: I can mixin to the naturalRegeneration gamerule and use that to restrict passive healing and the hunger loss.
-        This will allow me to stop the regeneration while the sigil is active.
-    @Redirect(method = "onUpdate", at = @At(value = "INVOKE", target = ""))
-    private void customNaturalRegenerationFlag(EntityPlayer player, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(player.world.getGameRules().getBoolean("naturalRegeneration") && !player.isPotionActive(ModEffectsSS.SUPPRESSED_APPETITE));
+    @Redirect(
+            method = "onUpdate",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/GameRules;getBoolean(Ljava/lang/String;)Z")
+    )
+    private boolean customNaturalRegenerationFlag(GameRules instance, String name, EntityPlayer player) {
+        return player.world.getGameRules().getBoolean("naturalRegeneration") && !player.isPotionActive(ModEffectsSS.SUPPRESSED_APPETITE);
     }
-     */
 }

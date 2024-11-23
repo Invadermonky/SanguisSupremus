@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sanguissupremus:items/sigil_suppressed_appetite"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "sanguissupremus:enabled": 1
+      },
+      "model": "sanguissupremus:item/sigil/sigil_suppressed_appetite_enabled"
+    }
+  ]
+}

@@ -55,7 +55,7 @@ A list of planned features and their current status. To see details on the speci
 | Bound Striker                       |    DONE     |           |          |  DONE   |
 | Dagger of Fanatical Sacrifice       |    DONE     |           |          |  DONE   |
 | Dagger of Safe-Sacrifice            |    DONE     |           |          |  DONE   |
-| Key of Binding                      |             |           |          |         |
+| Key of Binding                      |    DONE     |           |          |  DONE   |
 | Setting (Basic)                     |    DONE     |           |          |  DONE   |
 | Setting (Standard)                  |    DONE     |           |          |  DONE   |
 | Setting (Pristine)                  |    DONE     |           |          |  DONE   |
@@ -74,16 +74,17 @@ A list of planned features and their current status. To see details on the speci
 ## Rituals
 | Name                            | Programming | Crafttweaker | Patchouli | JEI Integration | Structure |
 |---------------------------------|:-----------:|:------------:|:---------:|:---------------:|:---------:|
+| Cradle of the Blood Moon        |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
 | Ritual of Chasing Shadows       |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
 | Ritual of the Dulled Mind       |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
 | Ritual of Ender Access          |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
-| Ritual of Eldritch Will         |             |     N/A      |           |       N/A       |           |
 | Ritual of Fading Light          |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
-| Ritual of the Herbivorous Altar |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
 | Ritual of Imprisoned Souls      |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
 | Ritual of Peaceful Souls        |    DONE     |              |   DONE    |                 |   DONE    |
-| Ritual of Reforming Void        |    DONE     |     N/A      |   DONE    |                 |   DONE    |
-| Ritual of the Shattered Table   |             |     N/A      |           |       N/A       |           |
+| Ritual of Reforming Void        |    DONE     |     N/A      |   DONE    |   DONE (JER)    |   DONE    |
+| Ritual of the Herbivorous Altar |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
+| Ritual of the Shattered Table   |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
+| Ritual of the Tainted Aura      |             |     N/A      |           |       N/A       |           |
 | Well of Slaughter               |    DONE     |     N/A      |   DONE    |       N/A       |   DONE    |
 
 
@@ -116,9 +117,26 @@ A list of planned features and their current status. To see details on the speci
 | Sigil of Sentience            |             |           |          |         |
 | Sigil of Stone                |    DONE     |   DONE    |          |  DONE   |
 | Sigil of Storms               |    DONE     |   DONE    |          |  DONE   |
-| Sigil of Suppressed Appetite  |             |           |          |         |
+| Sigil of Suppressed Appetite  |    DONE     |   DONE    |          |  DONE   |
 | Sigil of Swapping             |             |           |          |         |
 | Sigil of Vampiric Strikes     |    DONE     |           |          |         |
+
+
+## Patchouli Guide Entries
+| Name           | Description  | Status |
+|----------------|:-------------|:------:|
+| Blood Altars   | Blood Altar  |        |
+| Self Sacrifice | Dagger types |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
+|                |              |        |
 
 
 

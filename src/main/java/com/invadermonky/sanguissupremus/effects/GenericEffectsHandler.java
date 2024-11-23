@@ -1,26 +1,13 @@
 package com.invadermonky.sanguissupremus.effects;
 
-import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
 import com.invadermonky.sanguissupremus.registry.ModEffectsSS;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
-public class PotionVampiricStrikes extends AbstractPotionSS {
-    public PotionVampiricStrikes() {
-        super(false, 0x0);
-    }
-
-    //TODO: Icon
-
-
-    @Override
-    public boolean isEnabled() {
-        return ConfigHandlerSS.sigils.sigil_of_vampiric_strikes;
-    }
-
-    public static void onEntityHurt(LivingHurtEvent event) {
+public class GenericEffectsHandler {
+    public static void vampiricOnEntityHurt(LivingHurtEvent event) {
         if(event.getEntity().world.isRemote)
             return;
 
@@ -42,4 +29,5 @@ public class PotionVampiricStrikes extends AbstractPotionSS {
             }
         }
     }
+
 }

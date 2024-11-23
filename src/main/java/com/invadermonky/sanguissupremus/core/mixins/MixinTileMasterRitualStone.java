@@ -22,9 +22,6 @@ public abstract class MixinTileMasterRitualStone extends TileTicking implements 
     @Shadow public abstract AreaDescriptor getBlockRange(String range);
     @Shadow public abstract void addBlockRange(String range, AreaDescriptor defaultRange);
 
-    //TODO: The way this is written breaks the read/write nbt in the ritual itself.
-    //  Change this to have the area set in the TileEntity class but mixin the Ritual nbt read/write to skip the area.
-
     /**
      * @author Invadermonky
      * @reason Fixes ritual resetting on chunk/world unload.

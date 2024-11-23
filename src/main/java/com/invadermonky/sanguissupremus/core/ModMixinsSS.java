@@ -16,7 +16,7 @@ public class ModMixinsSS implements ILateMixinLoader {
 
     @Override
     public List<String> getMixinConfigs() {
-        LogHelper.info("Initializing mixins.");
+        LogHelper.info("Initializing mod mixins.");
         return Collections.singletonList("mixins." + SanguisSupremus.MOD_ID + ".json");
     }
 }

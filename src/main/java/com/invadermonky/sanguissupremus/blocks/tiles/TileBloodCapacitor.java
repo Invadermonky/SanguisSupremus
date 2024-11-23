@@ -8,6 +8,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.IEnergyStorage;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class TileBloodCapacitor extends AbstractTileBaseSS implements IEnergyStorage {
@@ -36,7 +37,6 @@ public class TileBloodCapacitor extends AbstractTileBaseSS implements IEnergySto
             did = true;
         }
 
-        //TODO: Check this I was really tired when I wrote it.
         if(!this.world.isBlockPowered(this.pos)) {
             did = this.transferToAdjacent();
         }
@@ -68,26 +68,26 @@ public class TileBloodCapacitor extends AbstractTileBaseSS implements IEnergySto
      */
 
     @Override
-    public void readFromNBT(NBTTagCompound compound) {
+    public void readFromNBT(@NotNull NBTTagCompound compound) {
         super.readFromNBT(compound);
         this.energy = compound.getInteger(LibTags.TAG_ENERGY);
     }
 
     @Override
-    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+    public @NotNull NBTTagCompound writeToNBT(@NotNull NBTTagCompound compound) {
         super.writeToNBT(compound);
         compound.setInteger(LibTags.TAG_ENERGY, this.energy);
         return compound;
     }
 
     @Override
-    public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing) {
+    public boolean hasCapability(@NotNull Capability<?> capability, @Nullable EnumFacing facing) {
         return capability == CapabilityEnergy.ENERGY || super.hasCapability(capability, facing);
     }
 
     @Nullable
     @Override
-    public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing) {
+    public <T> T getCapability(@NotNull Capability<T> capability, @Nullable EnumFacing facing) {
         return capability == CapabilityEnergy.ENERGY ? CapabilityEnergy.ENERGY.cast(this) : super.getCapability(capability, facing);
     }
 

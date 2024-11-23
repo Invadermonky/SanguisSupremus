@@ -35,6 +35,7 @@ gui.sanguissupremus:altar_hopper.name=Altar Hopper
 jer.sanguissupremus:reforming_void=Reforming Void Ritual
 
 # Items
+item.sanguissupremus:binding_key.name=Key of Binding
 item.sanguissupremus:blood_orange.name=Blood Orange
 item.sanguissupremus:blood_orange_infused.name=Infused Blood Orange
 item.sanguissupremus:bloodvial_belt_small.name=Bloodvial Belt
@@ -85,6 +86,7 @@ item.sanguissupremus:sigil_flowing_blood.name=Sigil of Flowing Blood
 item.sanguissupremus:sigil_imprisonment.name=Sigil of Eternal Imprisonment
 item.sanguissupremus:sigil_stone.name=Sigil of Stone
 item.sanguissupremus:sigil_storms.name=Sigil of Storms
+item.sanguissupremus:sigil_suppressed_appetite.name=Sigil of Suppressed Appetite
 item.sanguissupremus:sigil_vampiric_strikes.name=Sigil of Vampiric Strikes
 item.sanguissupremus:soul_vessel.name=Soul Vessel
 item.sanguissupremus:tartaric_amulet_basic.name=Basic Tartaric Amulet
@@ -98,8 +100,10 @@ ritual.sanguissupremus:ender_access=Ritual of Ender Access
 ritual.sanguissupremus:fading_light=Ritual of Fading Light
 ritual.sanguissupremus:herbivorous_altar=Feast of the Herbivorous Altar
 ritual.sanguissupremus:imprisoned_souls=Ritual of Imprisoned Souls
+ritual.sanguissupremus:meteor_catcher=Cradle of the Blood Moon
 ritual.sanguissupremus:peaceful_souls=Ritual of Peaceful Souls
 ritual.sanguissupremus:reforming_void=Ritual of the Reforming Void
+ritual.sanguissupremus:shattered_table=Ritual of the Shattered Table
 ritual.sanguissupremus:well_of_slaughter=Well of Slaughter
 
 # Rituals - Info
@@ -113,8 +117,10 @@ ritual.sanguissupremus:ender_access.info=Links the Ender Chest Accessor above th
 ritual.sanguissupremus:fading_light.info=Removes light source blocks from the world and places them into the attached inventory. If the inventory is full or does not exist, the items will be spawned above the Master Ritual Stone.
 ritual.sanguissupremus:herbivorous_altar.info=Harvests fully grown crops in an area around the Master Ritual Stone and destroys any drops, converting them into LP that is transferred into a nearby altar.
 ritual.sanguissupremus:imprisoned_souls.info=Searches the linked inventory for captured entities and spawns duplicated entities into the world.
+ritual.sanguissupremus:meteor_catcher.info=Safely catches meteors created by the Mark of the Falling Tower.
 ritual.sanguissupremus:peaceful_souls.info=Spawns passive and neutral animals and creatures.
 ritual.sanguissupremus:reforming_void.info=Voids items in linked input chest and spawns resources once a required threshold is met.
+ritual.sanguissupremus:shattered_table.info=Transfers enchants from items onto books.
 ritual.sanguissupremus:well_of_slaughter.info=Instantly kills entities within its slaughter area and transfers the LP into a nearby blood altar.
 
 # Rituals - Will Types
@@ -147,6 +153,7 @@ ritual.sanguissupremus:imprisoned_souls.spawnRange.info=(Spawn) The area the rit
 ritual.sanguissupremus:peaceful_souls.spawnRange.info=(Spawn) The area the ritual will attempt to spawn entities. Very large spawning areas will decrease the chance mobs can find a valid spawn location.
 ritual.sanguissupremus:reforming_void.input.info=(Input) The location of the inventory where items will be removed and destroyed.
 ritual.sanguissupremus:reforming_void.output.info=(Output) The location of the inventory where generated items will be placed. If the inventory is missing or full, items will be spawned on top of this location.
+ritual.sanguissupremus:shattered_table.itemRange.info=(Item) The area the ritual will search for enchanted items and books.
 ritual.sanguissupremus:well_of_slaughter.altar.info=(Altar) This range defines the area that the ritual searches for the blood altar. Changing this will either expand or limit the range to a certain region.
 ritual.sanguissupremus:well_of_slaughter.damage.info=(Slaughter) The area where the ritual will search for mobs. All mobs inside of this range (except for players) will be instantly killed.
 

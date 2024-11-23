@@ -67,7 +67,6 @@ public class BlockAltarHopper extends BlockHopper implements IBlockAddition {
         if(!worldIn.isRemote) {
             TileEntity tile = worldIn.getTileEntity(pos);
             if(tile instanceof TileAltarHopper) {
-                //TODO: altar hopper gui
                 playerIn.openGui(SanguisSupremus.instance, ModInventories.ALTAR_HOPPER.ordinal(), worldIn, pos.getX(), pos.getY(), pos.getZ());
             }
         }

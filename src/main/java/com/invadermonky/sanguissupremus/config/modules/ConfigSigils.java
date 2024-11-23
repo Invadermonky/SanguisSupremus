@@ -21,6 +21,8 @@ public class ConfigSigils {
     public boolean sigil_of_storms = true;
     @Config.Comment("Allows lightning strikes from the Sigil of Storms to spawn fish items in the world.")
     public boolean sigil_of_storms_fishing = true;
+    @Config.Comment("Enables the Sigil of Suppressed Appetite, used to suppress health regeneration through food.")
+    public boolean sigil_of_suppressed_appetite = true;
     @Config.Comment("Enables the Sigil of Vampiric Strikes, used to leech health from enemies when dealing damage.")
     public boolean sigil_of_vampiric_strikes = true;
 

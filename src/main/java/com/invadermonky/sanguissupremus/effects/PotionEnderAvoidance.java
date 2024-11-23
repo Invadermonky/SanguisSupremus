@@ -8,9 +8,9 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.event.entity.ProjectileImpactEvent;
 
-public class PotionEnderAvoidance extends AbstractPotionSS {
+public class PotionEnderAvoidance extends PotionGenericSS {
     public PotionEnderAvoidance() {
-        super(false, 0x0);
+        super(ConfigHandlerSS.sigils.sigil_of_ender_avoidance);
     }
 
     @Override
@@ -24,11 +24,6 @@ public class PotionEnderAvoidance extends AbstractPotionSS {
     @Override
     public boolean isReady(int duration, int amplifier) {
         return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return ConfigHandlerSS.sigils.sigil_of_ender_avoidance;
     }
 
     public static void onProjectileHit(ProjectileImpactEvent event) {

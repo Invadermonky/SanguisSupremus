@@ -22,18 +22,19 @@
 
 | Name                          | Description                                                                         |
 |-------------------------------|-------------------------------------------------------------------------------------|
+| Cradle of the Blood Moon      | Addon ritual to Falling Tower, catches meteors without detonating them              |
 | Ritual of Blood Burner        | Uses LP and life essence to generate RF (needs rename)                              |
 | Ritual of Chasing Shadows     | Places light sources into the world                                                 |
 | Ritual of the Dulled Mind     | Removes hostile entity AI from a single creature                                    |
 | Ritual of Ender Access        | Allows Ender Chest insertion/extraction automation                                  |
 | Ritual of Eldritch Will       | Converts Flux into Demonic Will                                                     |
 | Ritual of Fading Light        | Removes light sources from the world                                                |
+| Ritual of Frozen Skies        | Safely "catches" meteors spawned by Ritual of the Falling Tower                     |
 | Ritual of Herbivorous Altar   | Destroys nearby plants and transfers blood into nearby altar                        |
 | Ritual of Imprisoned Souls    | Uses captured mobs (via Capture Sigils) to create spawners for those mobs           |
-| Ritual of Meteor Catching     | Addon ritual to Falling Tower, catches meteors without detonating them              |
 | Ritual of Peaceful Souls      | Spawns peaceful entities                                                            |
 | Ritual of Reforming Void      | Destroys items in in an inventory and creates a random item once a threshold is met |
-| Ritual of Stolen Expertise*   | Steals attributes from one entity and grants it to another entity                   |
+| Ritual of Stolen Expertise *  | Steals attributes from one entity and grants it to another entity                   |
 | Ritual of the Shattered Table | Removes enchants from items and places them onto books                              |
 | Well of Slaughter             | Kills entities instantly and transfers blood into nearby altar                      |
 

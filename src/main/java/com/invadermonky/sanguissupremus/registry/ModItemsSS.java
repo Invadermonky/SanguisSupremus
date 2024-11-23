@@ -11,6 +11,7 @@ import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemBloodvialBel
 import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemSigilRing;
 import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemTartaricAmulet;
 import com.invadermonky.sanguissupremus.items.food.ItemBloodOrange;
+import com.invadermonky.sanguissupremus.items.misc.ItemBindingKey;
 import com.invadermonky.sanguissupremus.items.misc.ItemSoulVessel;
 import com.invadermonky.sanguissupremus.items.sigils.*;
 import com.invadermonky.sanguissupremus.items.tools.*;
@@ -33,6 +34,8 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = SanguisSupremus.MOD_ID)
 public class ModItemsSS {
+    public static final ItemAddition FALLBACK_ICON;
+    public static final ItemBindingKey BINDING_KEY;
     public static final ItemBloodOrange BLOOD_ORANGE;
     public static final ItemBloodOrange BLOOD_ORANGE_INFUSED;
     public static final ItemBloodvialBelt BLOODVIAL_BELT_SMALL;
@@ -83,13 +86,12 @@ public class ModItemsSS {
     public static final ItemSigilImprisonment SIGIL_IMPRISONMENT;
     public static final ItemSigilStone SIGIL_STONE;
     public static final ItemSigilStorms SIGIL_STORMS;
+    public static final ItemSigilSuppressedAppetite SIGIL_SUPPRESSED_APPETITE;
     public static final ItemSigilVampiricStrikes SIGIL_VAMPIRIC_STRIKES;
     public static final ItemSoulVessel SOUL_VESSEL;
     public static final ItemTartaricAmulet TARTARIC_AMULET_BASIC;
     public static final ItemTartaricAmulet TARTARIC_AMULET_STANDARD;
     public static final ItemTartaricAmulet TARTARIC_AMULET_PRISTINE;
-
-    public static final ItemAddition FALLBACK_ICON;
 
     public static final Item.ToolMaterial MATERIAL_BLOODWOOD;
 
@@ -168,6 +170,7 @@ public class ModItemsSS {
         addItemToRegister(REAGENT_VAMPIRIC_STRIKES = new ItemAddition(ConfigHandlerSS.sigils.sigil_of_vampiric_strikes), LibNames.REAGENT_VAMPIRIC_STRIKES);
 
         //Sigils
+        addItemToRegister(SIGIL_SUPPRESSED_APPETITE = new ItemSigilSuppressedAppetite(), LibNames.SIGIL_SUPPRESSED_APPETITE);
         addItemToRegister(SIGIL_DIRT = new ItemSigilDirt(), LibNames.SIGIL_DIRT);
         addItemToRegister(SIGIL_STONE = new ItemSigilStone(), LibNames.SIGIL_STONE);
         addItemToRegister(SIGIL_AQUATIC = new ItemSigilAquatic(), LibNames.SIGIL_AQUATIC);
@@ -187,6 +190,7 @@ public class ModItemsSS {
         addItemToRegister(BLOODWOOD_HOE = new ItemBloodwoodHoe(), LibNames.BLOODWOOD_HOE);
         addItemToRegister(BOUND_SHEARS = new ItemBoundShears(), LibNames.BOUND_SHEARS);
         addItemToRegister(BOUND_STRIKER = new ItemBoundStriker(), LibNames.BOUND_STRIKER);
+        addItemToRegister(BINDING_KEY = new ItemBindingKey(), LibNames.BINDING_KEY);
 
         //Food
         addItemToRegister(BLOOD_ORANGE = new ItemBloodOrange(false), LibNames.BLOOD_ORANGE);

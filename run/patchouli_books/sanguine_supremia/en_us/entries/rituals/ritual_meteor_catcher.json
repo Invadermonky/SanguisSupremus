@@ -1,0 +1,25 @@
+{
+  "name": "Cradle of the Blood Moon",
+  "icon": "minecraft:observer",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Cradle of the Blood Moon",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:meteor_catcher"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "meteor_catcher"
+    },
+    {
+      "type": "text",
+      "text": "The $(thing)Cradle of the Blood Moon$() is an addon ritual for the Mark of the Falling Tower. While its structure is integrated directly into the Mark of the Falling Tower ritual, the Cradle of the Blood Moon will not interfere with the function of its parent ritual.$(br2)While active, the Cradle of the Blood Moon ritual will detect a single meteor directly above the Master Ritual Stone and slow its descent, safely"
+    },
+    {
+      "type": "text",
+      "text": "capturing the potentially destructive object.$(br2)Due to the time it takes to slow meteors, the cradle is only able to halt a single meteor at a time. Each spawned meteor will have to be fully harvested to prevent the risk of two meteors accidentally colliding.$(br2)This ritual does not drain LP passively, but instead drains a significant amount of LP for each fully arrested meteor."
+    }
+  ]
+}

@@ -102,8 +102,8 @@ public class ItemSigilRing extends AbstractModBauble implements ISigilContainer,
 
     @Override
     public void registerRecipe(IForgeRegistry<IRecipe> registry) {
-        registry.register(new RecipeSigilAttach().setRegistryName(new ResourceLocation(SanguisSupremus.MOD_ID, "sigil_attach")));
-        registry.register(new RecipeSigilRemove().setRegistryName(new ResourceLocation(SanguisSupremus.MOD_ID, "sigil_remove")));
+        registry.register(new RecipeSigilAttach().setRegistryName(LibNames.RECIPE_SIGIL_ATTACH));
+        registry.register(new RecipeSigilRemove().setRegistryName(LibNames.RECIPE_SIGIL_REMOVE));
     }
 
     @Override

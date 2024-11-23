@@ -13,12 +13,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
-public class PotionAquaticAffinity extends AbstractPotionSS {
+public class PotionAquaticAffinity extends PotionGenericSS {
     private static final double SPEED_MULT = 1.2;
     private static final double MAX_SPEED = 1.3;
 
     public PotionAquaticAffinity() {
-        super(false, 0x0);
+        super(ConfigHandlerSS.sigils.sigil_of_aquatic_affinity);
     }
 
     @Override
@@ -64,11 +64,6 @@ public class PotionAquaticAffinity extends AbstractPotionSS {
         }
     }
 
-    @Override
-    public boolean isEnabled() {
-        return ConfigHandlerSS.sigils.sigil_of_aquatic_affinity;
-    }
-
     public static boolean isSwimming(EntityLivingBase entity) {
         return entity.isInsideOfMaterial(Material.WATER) || entity.isInsideOfMaterial(Material.LAVA);
     }
@@ -78,7 +73,6 @@ public class PotionAquaticAffinity extends AbstractPotionSS {
         return !stack.isEmpty() && EnchantmentHelper.getEnchantmentLevel(Enchantments.AQUA_AFFINITY, stack) > 0;
     }
 
-    //TODO: attach to event
     public static void onBreakSpeed(PlayerEvent.BreakSpeed event) {
         EntityLivingBase entity = event.getEntityLiving();
         if(entity.isPotionActive(ModEffectsSS.AQUATIC_AFFINITY) && isSwimming(entity) && !hasAquaAffinityEnchant(entity)) {

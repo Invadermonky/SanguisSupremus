@@ -1,5 +1,8 @@
 package com.invadermonky.sanguissupremus.util.libs;
 
+import com.invadermonky.sanguissupremus.SanguisSupremus;
+import net.minecraft.util.ResourceLocation;
+
 public class LibNames {
     //Blocks
     public static final String ALTAR_HOPPER = "altar_hopper";
@@ -21,6 +24,7 @@ public class LibNames {
 
     //Items
     public static final String FALLBACK_ICON = "icon";
+    public static final String BINDING_KEY = "binding_key";
     public static final String BOUND_SHEARS = "bound_shears";
     public static final String BOUND_STRIKER = "bound_striker";
     public static final String BLOOD_DIAMOND = "blood_diamond";
@@ -66,6 +70,7 @@ public class LibNames {
     public static final String SIGIL_IMPRISONMENT = "sigil_imprisonment";
     public static final String SIGIL_STONE = "sigil_stone";
     public static final String SIGIL_STORMS = "sigil_storms";
+    public static final String SIGIL_SUPPRESSED_APPETITE = "sigil_suppressed_appetite";
     public static final String SIGIL_VAMPIRIC_STRIKES = "sigil_vampiric_strikes";
     public static final String SOUL_VESSEL = "soul_vessel";
     public static final String TARTARIC_AMULET_BASE = "tartaric_amulet";
@@ -73,7 +78,15 @@ public class LibNames {
     //Potions
     public static final String EFFECT_AQUATIC_AFFINITY = "aquatic_affinity";
     public static final String EFFECT_ENDER_AVOIDANCE = "ender_avoidance";
+    public static final String EFFECT_SUPPRESSED_APPETITE = "suppressed_appetite";
     public static final String EFFECT_VAMPIRIC_STRIKES = "vampiric_strikes";
+
+    //Recipes
+    public static final ResourceLocation RECIPE_BIND_FROM_KEY = new ResourceLocation(SanguisSupremus.MOD_ID, "bind_from_key");
+    public static final ResourceLocation RECIPE_SIGIL_ATTACH = new ResourceLocation(SanguisSupremus.MOD_ID, "sigil_attach");
+    public static final ResourceLocation RECIPE_SIGIL_REMOVE = new ResourceLocation(SanguisSupremus.MOD_ID, "sigil_remove");
+    public static final ResourceLocation RECIPE_TARTARIC_GEM_ATTACH = new ResourceLocation(SanguisSupremus.MOD_ID, "tartaric_gem_attach");
+    public static final ResourceLocation RECIPE_TARTARIC_GEM_REMOVE = new ResourceLocation(SanguisSupremus.MOD_ID, "tartaric_gem_remove");
 
     //Rituals
     public static final String RITUAL_CHASING_SHADOWS = "chasing_shadows";
@@ -82,8 +95,10 @@ public class LibNames {
     public static final String RITUAL_FADING_LIGHT = "fading_light";
     public static final String RITUAL_HERBIVOROUS_ALTAR = "herbivorous_altar";
     public static final String RITUAL_IMPRISONED_SOULS = "imprisoned_souls";
+    public static final String RITUAL_METEOR_CATCHER = "meteor_catcher";
     public static final String RITUAL_PEACEFUL_SOULS = "peaceful_souls";
     public static final String RITUAL_REFORMING_VOID = "reforming_void";
+    public static final String RITUAL_SHATTERED_TABLE = "shattered_table";
     public static final String RITUAL_SLAUGHTER = "well_of_slaughter";
 
     //Rituals - Imperfect

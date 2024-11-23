@@ -3,13 +3,15 @@ package com.invadermonky.sanguissupremus.config.modules;
 import net.minecraftforge.common.config.Config;
 
 public class ConfigRituals {
+    public SimpleRitualConfig cradle_of_the_blood_moon = new SimpleRitualConfig(1000000, 100000, 1);
     public DulledMindRitualConfig dulled_mind = new DulledMindRitualConfig();
     public EntropicFormationConfig reforming_void = new EntropicFormationConfig();
     public ImprisonedSoulsConfig imprisoned_souls = new ImprisonedSoulsConfig();
     @Config.Comment("Ritual of Chasing Shadows and Ritual of Fading Light settings.")
     public LightingRitualConfig lighting_rituals = new LightingRitualConfig();
     public HerbivorousAltarConfig herbivorous_altar = new HerbivorousAltarConfig();
-    public PeacefulSoulsRitualConfig peaceful_souls = new PeacefulSoulsRitualConfig();
+    public SimpleRitualConfig peaceful_souls = new SimpleRitualConfig(6000, 500, 200);
+    public ShatteredTableConfig shattered_table = new ShatteredTableConfig();
     public SlaughterRitualConfig well_of_slaughter = new SlaughterRitualConfig();
 
     public static class DulledMindRitualConfig {
@@ -27,10 +29,10 @@ public class ConfigRituals {
         public int refreshCost = 5;
         @Config.RangeInt(min = 1, max = 10000)
         @Config.Comment("The minimum number of voided items before a loot drop can be generated.")
-        public int voidedItemsMinimum = 80; //TODO: Change back to 80 after testing.
+        public int voidedItemsMinimum = 80;
         @Config.RangeInt(min = 0, max = 10000)
         @Config.Comment("A value between 0 and this value be added to minimumVoidedItems to determine how many items need to be voided to generate loot.")
-        public int voidedItemsVariance = 40; //TODO: Change back to 40 after testing.
+        public int voidedItemsVariance = 40;
     }
 
     public static class HerbivorousAltarConfig {
@@ -87,28 +89,21 @@ public class ConfigRituals {
         public int refreshTime = 2;
     }
 
-    public static class PeacefulSoulsRitualConfig {
-        public String[] mobSpawns = new String[] {
-                //Bat
-                //Chicken
-                //Cow
-                //Donkey
-                //Horse
-                //Mooshroom
-                //Ocelot
-                //Parrot
-                //Pig
-                //Rabbit
-                //Sheep
-                //Villager
-        };
-
+    public static class ShatteredTableConfig {
         @Config.Comment("The initial activation cost of the ritual.")
-        public int activationCost = 6000;
-        @Config.Comment("The cost each time the ritual is refreshed or the effect is applied.")
-        public int refreshCost = 500;
-        @Config.Comment("The cooldown (in ticks) between each activation of the ritual.")
-        public int refreshTime = 200;
+        public int activationCost = 10000;
+        @Config.Comment("The LP cost for each enchant that is stripped from the item.")
+        public int costPerEnchant = 5000;
+        @Config.RangeInt(min = 0, max = 100)
+        @Config.Comment("The maximum number of enchants removed from the item per activation of the ritual. Set to 0 to make unlimited.")
+        public int maxEnchantsRemoved = 0;
+        @Config.Comment("Once all enchants are removed from an item, the item will be destroyed.")
+        public boolean shatteringDestroysItem = false;
+        @Config.Comment("The ritual will always destroy the item, regardless if there are enchants remaining.")
+        public boolean shatteringDestroysItemAlways = false;
+        @Config.RangeInt(min = 0, max = 100000)
+        @Config.Comment("The amount of damage that will be applied to the item each time an enchant is removed.")
+        public int shatteringDamageAmount = 50;
     }
 
     public static class SlaughterRitualConfig {
@@ -145,8 +140,23 @@ public class ConfigRituals {
         @Config.Comment("The amount of corrosive will drained from the aura each time an item is destroyed.")
         public double killItemsDrainAmount = 0.001;
         @Config.RangeDouble(min = 0, max = 100)
-        @Config.Comment("The amount of LP gain each time an item is destroyed by the Well of Slaughter. Setting this value to 0 will disable\n" +
+        @Config.Comment("The amount of LP gained each time an item is destroyed by the Well of Slaughter. Setting this value to 0 will disable\n" +
                 "both the LP and Demon Will cost for destroying items.")
         public int killItemSacrificialValue = 2;
+    }
+
+    public static class SimpleRitualConfig {
+        @Config.Comment("The initial activation cost of the ritual.")
+        public int activationCost;
+        @Config.Comment("The cost each time the ritual is refreshed or the effect is applied.")
+        public int refreshCost;
+        @Config.Comment("The cooldown (in ticks) between each activation of the ritual.")
+        public int refreshTime;
+
+        public SimpleRitualConfig(int activationCost, int refreshCost, int refreshTime) {
+            this.activationCost = activationCost;
+            this.refreshCost = refreshCost;
+            this.refreshTime = refreshTime;
+        }
     }
 }

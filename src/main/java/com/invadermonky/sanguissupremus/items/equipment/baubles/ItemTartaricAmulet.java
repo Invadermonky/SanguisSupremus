@@ -147,8 +147,8 @@ public class ItemTartaricAmulet extends AbstractModBauble implements IDemonWillG
 
     @Override
     public void registerRecipe(IForgeRegistry<IRecipe> registry) {
-        registry.register(new RecipeTartaricGemAttach().setRegistryName(new ResourceLocation(SanguisSupremus.MOD_ID, "attach_tartaric_gem")));
-        registry.register(new RecipeTartaricGemRemove().setRegistryName(new ResourceLocation(SanguisSupremus.MOD_ID, "remove_tartaric_gem")));
+        registry.register(new RecipeTartaricGemAttach().setRegistryName(LibNames.RECIPE_TARTARIC_GEM_ATTACH));
+        registry.register(new RecipeTartaricGemRemove().setRegistryName(LibNames.RECIPE_TARTARIC_GEM_REMOVE));
     }
 
     @Override

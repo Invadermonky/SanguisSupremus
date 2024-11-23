@@ -19,6 +19,7 @@ public class ImperfectRitualRepairReset extends ImperfectRitual {
                 LibNames.IMPERFECT_REPAIR_RESET,
                 e -> e.getBlock() == Blocks.ANVIL,
                 ConfigHandlerSS.imperfect_rituals.repairResetActivation,
+                true,
                 StringHelper.getTranslationKey("imperfect", "ritual", LibNames.IMPERFECT_REPAIR_RESET)
         );
     }

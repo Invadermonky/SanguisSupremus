@@ -9,9 +9,9 @@ import baubles.api.BaublesApi;
 import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.items.IBloodwoodTool;
 import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
+import com.invadermonky.sanguissupremus.effects.GenericEffectsHandler;
 import com.invadermonky.sanguissupremus.effects.PotionAquaticAffinity;
 import com.invadermonky.sanguissupremus.effects.PotionEnderAvoidance;
-import com.invadermonky.sanguissupremus.effects.PotionVampiricStrikes;
 import com.invadermonky.sanguissupremus.items.equipment.baubles.ItemBloodvialBelt;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -108,7 +108,7 @@ public class CommonEventHandler {
         }
 
         //Handling Vampiric Strikes
-        PotionVampiricStrikes.onEntityHurt(event);
+        GenericEffectsHandler.vampiricOnEntityHurt(event);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)

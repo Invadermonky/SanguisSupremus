@@ -19,8 +19,9 @@ import static WayofTime.bloodmagic.ritual.types.RitualWellOfSuffering.ALTAR_RANG
 public abstract class AbstractRitualSS extends Ritual {
     public static final String CHEST_RANGE = "chest";
 
-    protected BlockPos altarOffsetPos = new BlockPos(0,0,0);
-    protected int defaultRefreshTime;
+    private BlockPos altarOffsetPos = new BlockPos(0,0,0);
+    private final int defaultRefreshTime;
+    private final int defaultRefreshCost;
     protected int refreshTime;
     protected int refreshCost;
 
@@ -29,6 +30,7 @@ public abstract class AbstractRitualSS extends Ritual {
         this.refreshCost = refreshCost;
         this.refreshTime = refreshTime;
         this.defaultRefreshTime = refreshTime;
+        this.defaultRefreshCost = refreshCost;
     }
 
     protected void setDefaultChestRange() {
@@ -93,6 +95,14 @@ public abstract class AbstractRitualSS extends Ritual {
             return true;
         }
         return false;
+    }
+
+    public int getDefaultRefreshCost() {
+        return this.defaultRefreshCost;
+    }
+
+    public int getDefaultRefreshTime() {
+        return this.defaultRefreshTime;
     }
 
     @Override

@@ -2,10 +2,10 @@ package com.invadermonky.sanguissupremus.registry;
 
 import com.invadermonky.sanguissupremus.SanguisSupremus;
 import com.invadermonky.sanguissupremus.api.IConfigurable;
-import com.invadermonky.sanguissupremus.effects.AbstractPotionSS;
+import com.invadermonky.sanguissupremus.config.ConfigHandlerSS;
 import com.invadermonky.sanguissupremus.effects.PotionAquaticAffinity;
 import com.invadermonky.sanguissupremus.effects.PotionEnderAvoidance;
-import com.invadermonky.sanguissupremus.effects.PotionVampiricStrikes;
+import com.invadermonky.sanguissupremus.effects.PotionGenericSS;
 import com.invadermonky.sanguissupremus.util.libs.LibNames;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
@@ -19,9 +19,10 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = SanguisSupremus.MOD_ID)
 public class ModEffectsSS {
-    public static final AbstractPotionSS AQUATIC_AFFINITY;
-    public static final AbstractPotionSS ENDER_AVOIDANCE;
-    public static final AbstractPotionSS VAMPIRIC_STRIKES;
+    public static final PotionGenericSS AQUATIC_AFFINITY;
+    public static final PotionGenericSS ENDER_AVOIDANCE;
+    public static final PotionGenericSS SUPPRESSED_APPETITE;
+    public static final PotionGenericSS VAMPIRIC_STRIKES;
 
     private static final List<Potion> allEffects = new ArrayList<>();
 
@@ -43,6 +44,7 @@ public class ModEffectsSS {
     static {
         addPotionToRegister(AQUATIC_AFFINITY = new PotionAquaticAffinity(), LibNames.EFFECT_AQUATIC_AFFINITY);
         addPotionToRegister(ENDER_AVOIDANCE = new PotionEnderAvoidance(), LibNames.EFFECT_ENDER_AVOIDANCE);
-        addPotionToRegister(VAMPIRIC_STRIKES = new PotionVampiricStrikes(), LibNames.EFFECT_VAMPIRIC_STRIKES);
+        addPotionToRegister(SUPPRESSED_APPETITE = new PotionGenericSS(true), LibNames.EFFECT_SUPPRESSED_APPETITE);
+        addPotionToRegister(VAMPIRIC_STRIKES = new PotionGenericSS(ConfigHandlerSS.sigils.sigil_of_vampiric_strikes), LibNames.EFFECT_VAMPIRIC_STRIKES);
     }
 }

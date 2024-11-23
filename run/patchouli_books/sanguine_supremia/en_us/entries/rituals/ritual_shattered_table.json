@@ -1,0 +1,28 @@
+{
+  "name": "Ritual of the Shattered Table",
+  "icon": "minecraft:enchanted_book",
+  "category": "patchouli:rituals",
+  "pages": [
+    {
+      "type": "multiblock",
+      "name": "Shattered Table",
+      "text": "Use a Ritual Diviner for easier construction.",
+      "multiblock_id": "sanguissupremus:shattered_table"
+    },
+    {
+      "type": "ritual_info",
+      "ritual": "shattered_table"
+    },
+    {
+      "type": "text",
+      "text": "The Ritual of the Shattered table searches in an area above the Master Ritual Stone for any enchanted item and empty books.$(br2)Once found, it will attempt to transfer the enchants from the item onto the books.$(br2)Each enchantment transferred will increase the LP cost of the ritual by an amount equal to the Base Usage Cost times the number of enchantments removed."
+    },
+    {
+      "type": "ritual_data",
+      "ritual": "shattered_table",
+      "page_type": "ritual_range",
+      "heading": "Item",
+      "range_name": "itemRange"
+    }
+  ]
+}
