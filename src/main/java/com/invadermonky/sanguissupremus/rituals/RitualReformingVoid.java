@@ -18,26 +18,32 @@ import net.minecraft.world.WorldServer;
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.storage.loot.LootTable;
 import net.minecraft.world.storage.loot.LootTableManager;
+import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.function.Consumer;
 
 @RitualRegister(LibNames.RITUAL_REFORMING_VOID)
 public class RitualReformingVoid extends AbstractRitualSS {
-    public static final String INPUT_CHEST = "input";
+    public static final String INPUT_RANGE = "input";
     public static final String OUTPUT_CHEST = "output";
 
     public static double rawWillDrain = 0.01;
 
-    private int itemsConsumed;
-    private int itemsConsumedRequirement;
+    private int itemsVoided;
+    private int fluidVoided;
+    private int energyVoided;
+    private int consumedRequirement;
 
     public RitualReformingVoid() {
         super(LibNames.RITUAL_REFORMING_VOID, 1, ConfigHandlerSS.rituals.reforming_void.activationCost, ConfigHandlerSS.rituals.reforming_void.refreshCost, 10);
-        this.setChestRange(INPUT_CHEST, 0, 1, 0);
+        this.setChestRange(INPUT_RANGE, 0, 1, 0);
         this.setChestRange(OUTPUT_CHEST, 0, 2, 0);
     }
 
@@ -52,60 +58,122 @@ public class RitualReformingVoid extends AbstractRitualSS {
             BlockPos mrsPos = masterRitualStone.getBlockPos();
             List<EnumDemonWillType> willConfig = masterRitualStone.getActiveWillConfig();
             double rawWill = this.getWillRespectingConfig(world, mrsPos, EnumDemonWillType.DEFAULT, willConfig);
+            boolean did;
 
-            IItemHandler inputHandler = this.getChestItemHandler(masterRitualStone, INPUT_CHEST);
-            IItemHandler outputHandler = this.getChestItemHandler(masterRitualStone, OUTPUT_CHEST);
+            did = this.handleItemVoiding(masterRitualStone, rawWill);
+            did = this.handleFluidVoiding(masterRitualStone, rawWill) || did;
+            did = this.handleEnergyVoiding(masterRitualStone, rawWill) || did;
 
-            if (inputHandler == null) {
-                return;
+            if(this.shouldGenerateLoot(world.rand)) {
+                this.consumedRequirement = 0;
+                this.handleOutput(masterRitualStone, world);
             }
 
-            for (int i = 0; i < inputHandler.getSlots(); i++) {
-                int extractAmount = rawWill > 0 ? 16 : 1;
-                if (!inputHandler.extractItem(i, extractAmount, false).isEmpty()) {
-                    this.itemsConsumed += inputHandler.extractItem(i, extractAmount, true).getCount();
-                    if (this.shouldGenerateLoot(world)) {
-                        this.itemsConsumed -= this.itemsConsumedRequirement;
-                        this.itemsConsumedRequirement = 0;
-                        for (ItemStack drop : this.getLootDrops(world, masterRitualStone.getOwnerNetwork().getPlayer(), 0)) {
-                            if (outputHandler != null) {
-                                drop = ItemHandlerHelper.insertItem(outputHandler, drop, false);
-                                if(!drop.isEmpty()) {
-                                    List<BlockPos> posList = masterRitualStone.getBlockRange(OUTPUT_CHEST).getContainedPositions(mrsPos);
-                                    BlockPos outputPos = !posList.isEmpty() ? posList.get(0) : mrsPos;
-                                    Utils.spawnStackAtBlock(world, outputPos, EnumFacing.UP, drop);
-                                }
-                            }
-                        }
-                    }
-
-                    if(rawWill > 0.0) {
-                        WorldDemonWillHandler.drainWill(world, mrsPos, EnumDemonWillType.DEFAULT, rawWillDrain, true);
-                    }
-                    masterRitualStone.getOwnerNetwork().syphon(masterRitualStone.ticket(this.getRefreshCost()));
-                    break;
+            if(did) {
+                if(rawWill > 0.0) {
+                    WorldDemonWillHandler.drainWill(world, mrsPos, EnumDemonWillType.DEFAULT, rawWillDrain, true);
                 }
+                masterRitualStone.getOwnerNetwork().syphon(masterRitualStone.ticket(this.getRefreshCost()));
+            }
+        }
+    }
+
+    public boolean handleItemVoiding(IMasterRitualStone masterRitualStone, double rawWill) {
+        IItemHandler inputHandler = this.getChestItemHandler(masterRitualStone, INPUT_RANGE);
+        if(inputHandler != null) {
+            int extractAmount = rawWill > 0 ? 16 : 1;
+            for(int i = 0; i < inputHandler.getSlots(); i++) {
+                ItemStack voidedStack = inputHandler.extractItem(i, extractAmount, false);
+                if(!voidedStack.isEmpty()) {
+                    this.itemsVoided += voidedStack.getCount();
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean handleFluidVoiding(IMasterRitualStone masterRitualStone, double rawWill) {
+        if(ConfigHandlerSS.rituals.reforming_void.enableFluidVoiding) {
+            IFluidHandler handler = this.getTankFluidHandler(masterRitualStone, INPUT_RANGE);
+            if (handler != null) {
+                int extractAmount = rawWill > 0 ? 16000 : 1000;
+                FluidStack drainStack = handler.drain(extractAmount, true);
+                if(drainStack != null) {
+                    this.fluidVoided += drainStack.amount;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean handleEnergyVoiding(IMasterRitualStone masterRitualStone, double rawWill) {
+        if(ConfigHandlerSS.rituals.reforming_void.enableEnergyVoiding) {
+            IEnergyStorage handler = this.getCapacitorEnergyHandler(masterRitualStone, INPUT_RANGE);
+            if (handler != null) {
+                int extractAmount = rawWill > 0 ? 16384 : 4096;
+                int energyDrained = handler.extractEnergy(extractAmount, false);
+                if(energyDrained > 0) {
+                    this.energyVoided += energyDrained;
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void handleOutput(IMasterRitualStone masterRitualStone, World world) {
+        IItemHandler outputHandler = this.getChestItemHandler(masterRitualStone, OUTPUT_CHEST);
+        List<ItemStack> dropStacks = this.getLootDrops(world, masterRitualStone.getOwnerNetwork().getPlayer(), 0);
+        for (ItemStack drop : dropStacks) {
+            if (outputHandler != null) {
+                drop = ItemHandlerHelper.insertItem(outputHandler, drop, false);
+            }
+            if (!drop.isEmpty()) {
+                BlockPos outputPos = masterRitualStone.getBlockRange(OUTPUT_CHEST).getContainedPositions(masterRitualStone.getBlockPos()).get(0);
+                Utils.spawnStackAtBlock(world, outputPos, EnumFacing.UP, drop);
             }
         }
     }
 
     @Override
     public void readFromNBT(NBTTagCompound tag) {
-        this.itemsConsumed = tag.getInteger(LibTags.TAG_CONSUMED);
-        this.itemsConsumedRequirement = tag.getInteger(LibTags.TAG_PROGRESS);
+        this.energyVoided = tag.getInteger(LibTags.TAG_CONSUMED_ENERGY);
+        this.fluidVoided = tag.getInteger(LibTags.TAG_CONSUMED_FLUID);
+        this.itemsVoided = tag.getInteger(LibTags.TAG_CONSUMED_ITEMS);
+        this.consumedRequirement = tag.getInteger(LibTags.TAG_PROGRESS);
     }
 
     @Override
     public void writeToNBT(NBTTagCompound tag) {
-        tag.setInteger(LibTags.TAG_CONSUMED, this.itemsConsumed);
-        tag.setInteger(LibTags.TAG_PROGRESS, this.itemsConsumedRequirement);
+        tag.setInteger(LibTags.TAG_CONSUMED_ENERGY, this.energyVoided);
+        tag.setInteger(LibTags.TAG_CONSUMED_FLUID, this.fluidVoided);
+        tag.setInteger(LibTags.TAG_CONSUMED_ITEMS, this.itemsVoided);
+        tag.setInteger(LibTags.TAG_PROGRESS, this.consumedRequirement);
     }
 
-    public boolean shouldGenerateLoot(World world) {
-        if(this.itemsConsumedRequirement <= 0) {
-            this.itemsConsumedRequirement = ConfigHandlerSS.rituals.reforming_void.voidedItemsMinimum + world.rand.nextInt(ConfigHandlerSS.rituals.reforming_void.voidedItemsVariance + 1);
+    public boolean shouldGenerateLoot(Random rand) {
+        if(this.consumedRequirement <= 0) {
+            this.consumedRequirement = ConfigHandlerSS.rituals.reforming_void.voidedMinimum + rand.nextInt(ConfigHandlerSS.rituals.reforming_void.voidedVariance + 1);
         }
-        return this.itemsConsumed >= this.itemsConsumedRequirement;
+        if(this.itemsVoided >= this.consumedRequirement) {
+            this.itemsVoided -= this.consumedRequirement;
+            return true;
+        } else {
+            int rounded = this.fluidVoided / 1000;
+
+            if(rounded >= this.consumedRequirement) {
+                this.fluidVoided -= (this.consumedRequirement * 1000);
+                return true;
+            }
+            rounded = this.energyVoided / 4096;
+            if(rounded >= this.consumedRequirement) {
+                this.energyVoided -= (this.consumedRequirement * 4096);
+                return true;
+            }
+        }
+        return false;
     }
 
     public List<ItemStack> getLootDrops(World world, EntityPlayer player, float luck) {

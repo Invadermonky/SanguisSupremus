@@ -14,6 +14,10 @@
       "ritual": "reforming_void"
     },
     {
+      "type": "text",
+      "text": "By default, the bottom chest in the ritual structure is the void inventory.$(br2)Resources generated from this ritual will be placed in the top chest or spawned into the world if it is full or missing.$(br2)The input location can support most inventories, tanks or energy containers so long as they allow extraction from the bottom of the block."
+    },
+    {
       "type": "ritual_data",
       "ritual": "reforming_void",
       "page_type": "will_config",

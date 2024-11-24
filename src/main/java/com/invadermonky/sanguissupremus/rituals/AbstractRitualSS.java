@@ -9,6 +9,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 
@@ -47,13 +51,35 @@ public abstract class AbstractRitualSS extends Ritual {
         return this.getChestItemHandler(masterRitualStone, CHEST_RANGE);
     }
 
+    @Nullable
     public IItemHandler getChestItemHandler(IMasterRitualStone masterRitualStone, String rangeName) {
         World world = masterRitualStone.getWorldObj();
         BlockPos mrsPos = masterRitualStone.getBlockPos();
-        AreaDescriptor chestRange = masterRitualStone.getBlockRange(rangeName);
-        TileEntity tile = world.getTileEntity(chestRange.getContainedPositions(mrsPos).get(0));
+        TileEntity tile = world.getTileEntity(masterRitualStone.getBlockRange(rangeName).getContainedPositions(mrsPos).get(0));
         if(tile != null && tile.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.DOWN)) {
             return tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.DOWN);
+        }
+        return null;
+    }
+
+    @Nullable
+    public IFluidHandler getTankFluidHandler(IMasterRitualStone masterRitualStone, String rangeName) {
+        World world = masterRitualStone.getWorldObj();
+        BlockPos mrsPos = masterRitualStone.getBlockPos();
+        TileEntity tile = world.getTileEntity(masterRitualStone.getBlockRange(rangeName).getContainedPositions(mrsPos).get(0));
+        if(tile != null && tile.hasCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, EnumFacing.DOWN)) {
+            return tile.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, EnumFacing.DOWN);
+        }
+        return null;
+    }
+
+    @Nullable
+    public IEnergyStorage getCapacitorEnergyHandler(IMasterRitualStone masterRitualStone, String rangeName) {
+        World world = masterRitualStone.getWorldObj();
+        BlockPos mrsPos = masterRitualStone.getBlockPos();
+        TileEntity tile = world.getTileEntity(masterRitualStone.getBlockRange(rangeName).getContainedPositions(mrsPos).get(0));
+        if(tile != null && tile.hasCapability(CapabilityEnergy.ENERGY, EnumFacing.DOWN)) {
+            return tile.getCapability(CapabilityEnergy.ENERGY, EnumFacing.DOWN);
         }
         return null;
     }

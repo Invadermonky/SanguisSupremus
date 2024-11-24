@@ -4,7 +4,9 @@ import com.invadermonky.sanguissupremus.SanguisSupremus;
 import net.minecraft.util.ResourceLocation;
 
 public class LibTags {
-    public static final String TAG_CONSUMED = "consumed";
+    public static final String TAG_CONSUMED_ENERGY = "consumed_energy";
+    public static final String TAG_CONSUMED_FLUID = "consumed_fluid";
+    public static final String TAG_CONSUMED_ITEMS = "consumed_items";
     public static final String TAG_DISPLAY_NAME = SanguisSupremus.MOD_ID + ".display_name";
     public static final String TAG_ENERGY = "energy";
     public static final String TAG_ENTITY = SanguisSupremus.MOD_ID + ".entity";

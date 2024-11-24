@@ -27,12 +27,16 @@ public class ConfigRituals {
         public int activationCost = 20000;
         @Config.Comment("The cost each time the ritual is refreshed or the effect is applied.")
         public int refreshCost = 5;
+        @Config.Comment("The ritual will be allowed to void fluids if a tank is placed in the input chest location.")
+        public boolean enableFluidVoiding = true;
+        @Config.Comment("The ritual will be allowed to void energy (RF) if a capacitor is placed in the input chest location.")
+        public boolean enableEnergyVoiding = true;
         @Config.RangeInt(min = 1, max = 10000)
         @Config.Comment("The minimum number of voided items before a loot drop can be generated.")
-        public int voidedItemsMinimum = 80;
+        public int voidedMinimum = 80;
         @Config.RangeInt(min = 0, max = 10000)
-        @Config.Comment("A value between 0 and this value be added to minimumVoidedItems to determine how many items need to be voided to generate loot.")
-        public int voidedItemsVariance = 40;
+        @Config.Comment("A value between 0 and this value be added to voidedMinimum to determine how many items need to be voided to generate loot.")
+        public int voidedVariance = 40;
     }
 
     public static class HerbivorousAltarConfig {
